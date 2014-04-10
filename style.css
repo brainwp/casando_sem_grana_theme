@@ -653,16 +653,18 @@ object {
 
 /* HEADER */
 .section-header {
-	height: 312px;
-	background-color: #f1f2f2;
-	display: table;
-	width: 100%;
+	background-color: #F1F2F2;
+    display: table;
+    height: 312px;
+    position: relative;
+    width: 100%;
 }
 .site-branding {
 	clear: both;
-    display: block;
-    position: relative;
-    top: -300px;
+    display: table;
+    position: absolute;
+    top: 150px;
+    width: 100%;
 }
 .site-title {
 	display: table;
