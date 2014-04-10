@@ -1108,6 +1108,7 @@ section.body_menu-list {
 	margin-right: -26px;
 }
 
+<<<<<<< HEAD
 /* Navigation */
 .nagetation-single-pages {
 	/* background-color: #000; */
@@ -1120,6 +1121,6 @@ section.body_menu-list {
 .nagetation-single-pages .next {
 	
 }
-
+=======
 /*  */
-
+>>>>>>> css_diego
