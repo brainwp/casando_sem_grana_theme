@@ -75,7 +75,7 @@ get_header(); ?>
 			<section class="body_content-posts">
 				<div class="content-posts">
 					<ul>
-						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<?php //if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<li>
 							<figure>
 								<div class="th-content-list"></div>
@@ -94,7 +94,7 @@ get_header(); ?>
 						</li>
 					</ul>
 
-					<?php endwhile; ?>
+					<?php //endwhile; ?>
 					<div class="nagetation-single-pages">
 
 						<?php /* Display navigation to next/previous pages when applicable */ ?>
@@ -115,11 +115,11 @@ get_header(); ?>
 								echo '</div>';
 							}
 						?>
-						<?php else: ?>
+						<?php //else: ?>
 
-						<h2 class="title"><?php _e( 'Sua pesquisa acabou sem resultados.', 'portfoliopress' ) ?></h2>
+						<h2 class="title"><?php// _e( 'Sua pesquisa acabou sem resultados.', 'portfoliopress' ) ?></h2>
 
-					<?php endif; ?>
+					<?php //endif; ?>
 					</div><!-- .nagetation-single-pages -->
 
 				</div><!-- .content-posts -->

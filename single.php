@@ -10,25 +10,34 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main single" role="main">
 
-			<section class="body_meu-ret">
-				<nav class="nav-menu-ret">
-					<ul>
-						<li><a id="img-1" class="img-menu-page" href=""></a><a>Titulo</a></li>
-						<li><a id="img-2" class="img-menu-page" href=""></a><a>Titulo</a></li>
-						<li><a id="img-3" class="img-menu-page" href=""></a><a>Titulo</a></li>
-						<li><a id="img-4" class="img-menu-page" href=""></a><a>Titulo</a></li>
-					</ul>
-				</nav>
-				<nav class="menu-hide menu-hide-ret">
-					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-					</ul>
-				</nav>
-			</section><!-- .body_meu-ret -->
+			<section id="body_menu-boxes">
+				<div id="boxes">
+					<div class="box">
+						<!-- <span class="img-bullet"></span> -->
+						<li id="box-1">
+							<a id="img-1" class="img-menu-page" href=""></a><a>Por onde Começar?</a>
+						</li>
+					</div>
+					<div class="box">
+						<!-- <span class="img-bullet"></span> -->
+						<li id="box-2">
+							<a id="img-2" class="img-menu-page" href=""></a><a>Faça você mesmo</a>
+						</li>
+					</div>
+					<div class="box">
+						<!-- <span class="img-bullet"></span> -->
+						<li id="box-3">
+							<a id="img-3" class="img-menu-page" href=""></a><a>Lista de Casamento</a>
+						</li>
+					</div>
+					<div class="box">
+						<!-- <span class="img-bullet"></span> -->
+						<li id="box-4">
+							<a id="img-4" class="img-menu-page" href=""></a><a>Fornecedores Justos</a>
+						</li>
+					</div>
+				</div><!-- #boxes -->
+			</section><!-- #body_slides -->
 
 			<div id="title-page">
 				<span class="icon-single-title"></span>

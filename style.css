@@ -650,9 +650,19 @@ object {
 	max-width: 100%;
 }
 
+
+/* HEADER */
 .section-header {
 	height: 312px;
 	background-color: #f1f2f2;
+	display: table;
+	width: 100%;
+}
+.site-branding {
+	clear: both;
+    display: block;
+    position: relative;
+    top: -300px;
 }
 .site-title {
 	display: table;
@@ -661,6 +671,18 @@ object {
 .site-title #logo {
 	display: table;
 	margin: 112px auto 53px auto;
+}
+#img-header-left {
+	float: left;
+	background: url( "images/header-flor-left.png" ) no-repeat;
+	width: 635px;
+	height: 304px;
+}
+#img-header-right {
+	float: right;
+	background: url( "images/header-flor-right.png" ) no-repeat;
+	width: 437px;
+	height: 178px;
 }
 
 /* Plugin Slides */

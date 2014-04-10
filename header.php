@@ -26,25 +26,27 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<section class="section-header">
-			<div class="site-branding">
-				<h1 class="site-title">
-					<a href="<?php //echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php //bloginfo( 'name' ); ?>
-						<!-- <img  src="<?php //bloginfo( "template_url" ); ?>/images/logo.png"> -->
-						<img id="logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-					</a>
-				</h1>
+			<div id="img-header-left"></div><!-- #img-left -->
+			
+				<div class="site-branding">
+					<h1 class="site-title">
+						<a href="<?php //echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<?php //bloginfo( 'name' ); ?>
+							<!-- <img  src="<?php //bloginfo( "template_url" ); ?>/images/logo.png"> -->
+							<img id="logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+						</a>
+					</h1>
 
-				<h2 class="site-description"><?php //bloginfo( 'description' ); ?></h2>
+					<h2 class="site-description"><?php //bloginfo( 'description' ); ?></h2>
 
-				<div id="img-left">
-					<div id="conh-morando"></div><!-- #conh-morando -->
-				</div><!-- #feed -->
+					<div id="img-left">
+						<div id="conh-morando"></div><!-- #conh-morando -->
+					</div><!-- #feed -->
 
-				<div id="img-left"></div><!-- #img-left -->
-				<div id="img-right"></div><!-- #img-right -->
 
-			</div><!-- .site-branding -->
+				</div><!-- .site-branding -->
+
+			<div id="img-header-right"></div><!-- #img-right -->
 		</section><!-- .section-header -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
