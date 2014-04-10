@@ -28,7 +28,7 @@
 				</li>
 				<li class="link-morando">
 					<span id="img-nav-4"></span>
-					<p>Conheça também o<br /><span>Morando Sem grana</span></p>
+					<p class="texto-morando">Conheça também o<br /><span>Morando Sem grana</span></p>
 				</li>
 			</ul>
 		</section><!-- .site-info -->

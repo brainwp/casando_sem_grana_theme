@@ -768,6 +768,7 @@ ul#menu-footer li{
 	float: left;
     margin: 2%;
     width: 21%;
+	position: relative;
 	list-style: none outside none;
 }
 
@@ -775,47 +776,59 @@ ul#menu-footer li{
 	text-align: center;
 }
 
+.texto-morando {
+	text-transform: uppercase;
+	color: #8B8C8E !important;
+}
+
+.texto-morando span {
+	font-size: 1.2em;
+}
+
 #img-nav-1 {
-	background: url("images/i-button-lista.png") no-repeat scroll 0 0 transparent;
+	background: url("images/i-quem-sou.png") no-repeat scroll 0 0 transparent;
     display: block;
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
 	float: left;
 }
 
 #img-nav-2 {
-	background: url("images/i-button-lista.png") no-repeat scroll 0 0 transparent;
+	background: url("images/i-newsletter.png") no-repeat scroll 0 0 transparent;
     display: block;
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
 	float: left;
 }
 
 #img-nav-3 {
-	background: url("images/i-button-lista.png") no-repeat scroll 0 0 transparent;
+	background: url("images/i-contato.png") no-repeat scroll 0 0 transparent;
     display: block;
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
 	float: left;
 }
 
 #img-nav-4 {
-	background: url("images/i-button-lista.png") no-repeat scroll 0 0 transparent;
+	background: url("images/i-conheca-footer.png") no-repeat scroll 0 0 transparent;
     display: block;
     height: 80px;
     width: 80px;
-	margin: 0 auto;
+	margin: 20px auto 0;
 }
 
 .widget-footer-title {
 	color: #681E39;
 	font-size: 1.1em;
 	text-transform: uppercase;
+	position: absolute;
+	margin: 10px;
 }
 
 ul#menu-footer li p {
 	font-size: 0.8em;
 	color: #681E39;
+	clear: both;
 }
 
 h2#phone {
