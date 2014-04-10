@@ -816,7 +816,6 @@ ul#menu-footer li{
 ul#menu-footer li p {
 	font-size: 0.8em;
 	color: #681E39;
-	clear: both;
 }
 
 h2#phone {
