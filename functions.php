@@ -133,3 +133,8 @@ $args = array(
 	'default-image' => get_template_directory_uri() . '/images/logo.png',
 );
 add_theme_support( 'custom-header', $args );
+
+ /**
+ * Get actions.js.
+ */
+wp_enqueue_script( 'actions', get_stylesheet_directory_uri() . '/inc/js/actions.js', array( 'jquery' ) );

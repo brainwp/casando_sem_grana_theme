@@ -1,105 +1,139 @@
 <?php
 /**
- * The template for displaying Archive pages.
+ * The template for displaying all pages.
  *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
  *
  * @package casando_sem_grana_theme
  */
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<div id="primary" class="content-area content-list-single">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+			<section class="body_menu-list">
+				<nav class="nav-menu-list">
+					<ul>
+						<li><a id="img-1" class="img-menu-page" href=""></a><a>Titulo</a></li>
+						<li><a id="img-2" class="img-menu-page" href=""></a><a>Titulo</a></li>
+						<li><a id="img-3" class="img-menu-page" href=""></a><a>Titulo</a></li>
+						<li><a id="img-4" class="img-menu-page" href=""></a><a>Titulo</a></li>
+					</ul>
+				</nav>
+				<nav class="menu-hide">
+					<ul>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
+				</nav>
+			</section><!-- .body_menu-list -->
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-						if ( is_category() ) :
-							single_cat_title();
+			<div id="title-page"><?php the_title(); ?></div>
 
-						elseif ( is_tag() ) :
-							single_tag_title();
+			<section class="widget-single">				
+				<div class="search">
+					<form id="form-search" action="">
+						<legend>1. Pesquisar</legend>
 
-						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'casando_sem_grana_theme' ), '<span class="vcard">' . get_the_author() . '</span>' );
+						<label for=""></label>
+						<select name="" id="">
+							<option type="text" name="">Categoria Serviço</option>
+						</select>
+						
+						<label for=""></label>
+						<select name="" id=""><!-- multiple="multiple" -->
+							<option type="text" name="">Tipos Serviço</option>
+						</select>
 
-						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'casando_sem_grana_theme' ), '<span>' . get_the_date() . '</span>' );
+					</form><!-- #form-search -->
+				</div><!-- .search -->
 
-						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'casando_sem_grana_theme' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'casando_sem_grana_theme' ) ) . '</span>' );
+				<div class="localidade">
+					<form id="form-localidade" action="">
+						<legend>2. Localidade</legend>
 
-						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'casando_sem_grana_theme' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'casando_sem_grana_theme' ) ) . '</span>' );
+						<label for=""></label>
+						<select name="" id="">
+							<option type="text" name="">Cidade</option>
+						</select>
+						
+						<label for=""></label>
+						<select name="" id="">
+							<option type="text" name="">Estado</option>
+						</select>
 
-						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'casando_sem_grana_theme' );
+					</form><!-- #form-localidade -->
+				</div><!-- .localidade -->
 
-						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'casando_sem_grana_theme');
+				<div class="cadastre-empresa">
+					<span class="icon icon-cad-empresa"></span>
+					<a href=""></a>
+				</div><!-- .cadastre-empresa -->
+			</section><!-- .content-internal-page -->
 
-						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'casando_sem_grana_theme');
+			<section class="body-content-list">
+				<div class="body-breadcrumps">
+					<div>
+						<h3 class="title-single"></h3>
+						<span class="breadcrump-bullet"></span>
+						<h4 class="category"></h4>
+						<span class="cidade"></span>
+					</div>
+				</div><!-- .breadcrumps -->
 
-						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'casando_sem_grana_theme' );
+				<div class="content-list">
+					<ul>
+						<li>
+							<figure>
+								<div class="th-content-list"></div>
+							</figure><!-- .th-single-list -->
 
-						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'casando_sem_grana_theme' );
+							<div class="title-content-list">
+								<h4><?php the_title(); ?></h4>
+								<a class="more" href=""></a><!-- .more -->
+							</div><!-- .title-single-list -->
 
-						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'casando_sem_grana_theme' );
+							<div class="excerpt-content-list"></div><!-- .excerpt-single-list -->
+						</li>
+					</ul>
 
-						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'casando_sem_grana_theme' );
+					<div class="nagetation-single-pages">
+						<span><a href="" class="prev"></a></span>
+						<span><a href="" class="next"></a></span>
+					</div><!-- .nagetation-single-pages -->
 
-						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'casando_sem_grana_theme' );
+				</div><!-- .content-list -->
+			</section><!-- .content-list-single -->
 
-						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'casando_sem_grana_theme' );
+			<section id="body-depoimentos">
+				
+				<div id="depoimentos">
+					<ul>
+						<li>
+							<figure>
+								<div class="thumbnail th-depoimento th-content-list"></div>
+							</figure><!-- .th-single-list -->
 
-						else :
-							_e( 'Archives', 'casando_sem_grana_theme' );
+							<div>
+								<span class="left-quotes"></span>
+								<cite class="user-depoimento"></cite>
+								<span class="right-quotes"></span>
+							</div>
+						</li>
+					</ul>
+				</div>
 
-						endif;
-					?>
-				</h1>
-				<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
-				?>
-			</header><!-- .page-header -->
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php casando_sem_grana_theme_paging_nav(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
+			</section><!-- #body-depoimentos -->
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

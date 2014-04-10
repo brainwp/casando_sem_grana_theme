@@ -58,10 +58,45 @@ get_header(); ?>
 								<div class="thumbnail th-autor"></div>
 							</figure><!-- .th-autor -->
 							
-							<h2>Via:<?php the_content(); ?></h2>
+							<span>
+								<h2>Via:<?php the_author(); ?></h2><!-- .nome-autor -->
+								<a class="more" href=""></a><!-- .more -->
+							</span>
+							<div class="excerpt-autor"></div>
 						</div><!-- .body_autor-post -->
-
 					</div><!-- .post -->
+
+					<div class="post-relacioned">
+						<nav class="content-posts">
+							<ul>
+								<li>
+									<figure>
+										<div class="thumbnail th-post th-single-post"></div>
+									</figure><!-- .th-single-post -->
+
+									<div class="title-single-post"></div><!-- .title-single-post -->
+
+									<figcaption>
+										<div class="excerpt-single-post"></div>
+									</figcaption><!-- .excerpt-single-post -->
+
+									<div class="info-single-post">
+										<div class="date-single-post"></div><!-- .date-single-post -->
+										<div class="coments-single-post"></div><!-- .coments-single-post -->
+									</div><!-- .info-single-post -->
+								</li>
+							</ul>
+
+							<div class="nagetation-single-pages">
+								<span><a href="" class="prev"></a></span>
+								<span><a href="" class="next"></a></span>
+							</div><!-- .nagetation-single-pages -->
+
+						</nav><!-- .content-posts -->
+					</div><!-- .post-relacioned -->
+
+					<div class="coments-post"></div><!-- .coments-post -->
+
 				</div><!-- .content-page -->
 			</section><!-- .body_content-page -->
 

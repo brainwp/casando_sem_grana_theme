@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<section id="pl-slides"><p>Slides - Plugin</p>
+<section id="body_slides"><h1>Slides - Plugin</h1>
 	<div id="boxes">
 		<article id="box-1" class="box">
 			<span class="img-bullet"></span>
@@ -29,27 +29,40 @@
 			<div class="excerpt"></div>
 		</article>
 	</div><!-- #boxes -->
-</section><!-- #pl-slides -->
+</section><!-- #body_slides -->
 
-<section class="body-meu-round">
-	<nav class="nav-menu-round">
+<section class="body_menu-home">
+	<nav class="nav-menu-home">
 		<ul>
-			<li><a id="img-1" class="img-menu" href=""></a><a>Titulo</a></li>
-			<li><a id="img-2" class="img-menu" href=""></a><a>Titulo</a></li>
-			<li><a id="img-3" class="img-menu" href=""></a><a>Titulo</a></li>
-			<li><a id="img-4" class="img-menu" href=""></a><a>Titulo</a></li>
+			<li>
+				<span class="ring"><a id="img-1" class="img-menu"></a></span>
+				<a class="write-menu">Casamentos Reais</a>
+			</li>
+			<li>
+				<span class="ring"><a id="img-2" class="img-menu" ></a></span>
+				<a class="write-menu">O Grande Dia</a>
+			</li>
+			<li>
+				<span class="ring"><a id="img-3" class="img-menu" ></a></span>
+				<a class="write-menu">Tem mais</a>
+			</li>
+			<li>
+				<span class="ring"><a id="img-4" class="img-menu"></a></span>
+				<a class="write-menu">Anuncie</a>
+			</li>
+		</ul>
+	</nav><!-- .nav-menu-home -->
+
+	<nav id="toggler" class="menu-hide-home">
+		<ul>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<li><a href=""></a>Teste</li>
+			<?php endwhile; else: ?>
+			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+			<?php endif; ?>
 		</ul>
 	</nav>
-	<nav class="menu-hide">
-		<ul>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-		</ul>
-	</nav>
-</section><!-- .body-meu-round -->
+</section><!-- .body_menu-home -->
 
 <section id="box-content">
 	<div id="anuncio"></div>
