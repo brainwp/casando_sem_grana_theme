@@ -26,11 +26,7 @@ get_header(); ?>
 				</nav>
 				<nav class="menu-hide">
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li><a href="">Subcategories</a></li>
 					</ul>
 				</nav>
 			</section><!-- .body-meu-round -->

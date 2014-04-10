@@ -45,7 +45,7 @@ get_header(); ?>
 			</section><!-- #body_slides -->
 
 			<section class="body_menu-list">
-				<nav class="nav-menu-list">
+				<nav class="nav-menu-toogle">
 					<ul>
 						<li class="father-category">
 							<a class="write-menu">Casamentos Reais</a>
@@ -61,116 +61,72 @@ get_header(); ?>
 						</li>
 					</ul>
 				</nav>
-				<nav class="menu-hide">
+				<nav id="toggler" class="">
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li class="i-sub_cat">
+							<a href="">Sub Categorias</a>
+						</li>
 					</ul>
 				</nav>
 			</section><!-- .body_menu-list -->
 
-			<div id="title-page"><?php the_title(); ?></div>
-
-			<section class="widget-single">				
-				<div class="search">
-					<form id="form-search" action="">
-						<legend>1. Pesquisar</legend>
-
-						<label for=""></label>
-						<select name="" id="">
-							<option type="text" name="">Categoria Serviço</option>
-						</select>
-						
-						<label for=""></label>
-						<select name="" id=""><!-- multiple="multiple" -->
-							<option type="text" name="">Tipos Serviço</option>
-						</select>
-
-					</form><!-- #form-search -->
-				</div><!-- .search -->
-
-				<div class="localidade">
-					<form id="form-localidade" action="">
-						<legend>2. Localidade</legend>
-
-						<label for=""></label>
-						<select name="" id="">
-							<option type="text" name="">Cidade</option>
-						</select>
-						
-						<label for=""></label>
-						<select name="" id="">
-							<option type="text" name="">Estado</option>
-						</select>
-
-					</form><!-- #form-localidade -->
-				</div><!-- .localidade -->
-
-				<div class="cadastre-empresa">
-					<span class="icon icon-cad-empresa"></span>
-					<a href=""></a>
-				</div><!-- .cadastre-empresa -->
-			</section><!-- .content-internal-page -->
-
-			<section class="body-content-list">
-				<div class="body-breadcrumps">
-					<div>
-						<h3 class="title-single"></h3>
-						<span class="breadcrump-bullet"></span>
-						<h4 class="category"></h4>
-						<span class="cidade"></span>
-					</div>
-				</div><!-- .breadcrumps -->
-
-				<div class="content-list">
+			<div id="title-sub_cat"><span><?php the_title(); ?></span></div>
+			
+			<section class="body_content-posts">
+				<div class="content-posts">
 					<ul>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<li>
 							<figure>
 								<div class="th-content-list"></div>
 							</figure><!-- .th-single-list -->
 
+							<div class="date-single-post">
+								<span><b>22</b><br />FEV</span>
+								<span class="i-comments"><b>23</b></span>
+							</div><!-- .date-single-post -->
+
 							<div class="title-content-list">
 								<h4><?php the_title(); ?></h4>
-								<a class="more" href=""></a><!-- .more -->
 							</div><!-- .title-single-list -->
 
-							<div class="excerpt-content-list"></div><!-- .excerpt-single-list -->
+							<div class="excerpt-content-list">Teste do conteúdo.</div><!-- .excerpt-single-list -->
 						</li>
 					</ul>
 
+					<?php endwhile; ?>
 					<div class="nagetation-single-pages">
-						<span><a href="" class="prev"></a></span>
-						<span><a href="" class="next"></a></span>
+
+						<?php /* Display navigation to next/previous pages when applicable */ ?>
+						<?php
+							global $wp_query;
+							$total_pages = $wp_query->max_num_pages;
+							if ($total_pages > 1){
+								$current_page = max(1, get_query_var('paged'));
+								echo '<div class="page_nav">';
+								echo paginate_links(array(
+								'base' => get_pagenum_link(1) . '%_%',
+								'format' => 'page/%#%',
+								'current' => $current_page,
+								'total' => $total_pages,
+								'prev_text' => '<< Anteriores',
+								'next_text' => 'Pr&oacute;ximos >>'
+								));
+								echo '</div>';
+							}
+						?>
+						<?php else: ?>
+
+						<h2 class="title"><?php _e( 'Sua pesquisa acabou sem resultados.', 'portfoliopress' ) ?></h2>
+
+					<?php endif; ?>
 					</div><!-- .nagetation-single-pages -->
 
-				</div><!-- .content-list -->
-			</section><!-- .content-list-single -->
-
-			<section id="body-depoimentos">
-				
-				<div id="depoimentos">
-					<ul>
-						<li>
-							<figure>
-								<div class="thumbnail th-depoimento th-content-list"></div>
-							</figure><!-- .th-single-list -->
-
-							<div>
-								<span class="left-quotes"></span>
-								<cite class="user-depoimento"></cite>
-								<span class="right-quotes"></span>
-							</div>
-						</li>
-					</ul>
-				</div>
-
-			</section><!-- #body-depoimentos -->
+				</div><!-- .content-posts -->
+			</section><!-- .body_content-posts -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

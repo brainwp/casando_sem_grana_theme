@@ -32,7 +32,7 @@
 </section><!-- #body_slides -->
 
 <section class="body_menu-home">
-	<nav class="nav-menu-home">
+	<nav class="nav-menu-toogle">
 		<ul>
 			<li>
 				<span class="ring"><a id="img-1" class="img-menu"></a></span>
