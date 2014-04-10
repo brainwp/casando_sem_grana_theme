@@ -347,6 +347,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: royalblue;
+	cursor: pointer;
 }
 a:visited {
 	color: purple;
@@ -733,6 +734,90 @@ object {
 .body_menu-home .nav-menu-home #img-2 {}
 .body_menu-home .nav-menu-home #img-3 {}
 .body_menu-home .nav-menu-home #img-4 {}
-.menu-hide-home {
-	/* display: none; */
+.menu-hide-home {}
+
+
+/* Archive */
+#body_menu-boxes {
+	float: left;
+    width: 100%;
 }
+#body_menu-boxes #boxes {
+	display: table;
+    margin: 0 auto;
+}
+#body_menu-boxes #boxes .box {
+    display: inline;
+}
+#body_menu-boxes #boxes .box > li {
+    float: left;
+	display: inline;
+    list-style: none;
+    padding: 6px 10px;
+    margin: 10px;
+}
+#body_menu-boxes #boxes .box > li a {
+    color: #FFFFFF;
+}
+#body_menu-boxes #boxes li#box-1 {
+    border-radius: 7px;
+    background-color: #efe689;
+}
+#body_menu-boxes #boxes li#box-2 {
+    border-radius: 7px;
+    background-color: #d3b6cc;
+}
+#body_menu-boxes #boxes li#box-3 {
+    border-radius: 7px;
+    background-color: #8accc8;
+}
+#body_menu-boxes #boxes li#box-4 {
+    border-radius: 7px;
+    background-color: #f7c6c9;
+}
+.img-menu-page {
+    width: 23px;
+    height: 25px;
+    margin-right: 7px;
+    float: left;
+}
+#body_menu-boxes #boxes .box > li #img-1 {
+    background: url( "images/i-button-por-onde-small.png" ) no-repeat;
+}
+#body_menu-boxes #boxes .box > li #img-2 {
+    background: url( "images/i-button-faca-small.png" ) no-repeat;
+}
+#body_menu-boxes #boxes .box > li #img-3 {
+    background: url( "images/i-button-lista-small.png" ) no-repeat;
+}
+#body_menu-boxes #boxes .box > li #img-4 {
+    background: url( "images/i-button-fornecedor-small.png" ) no-repeat;
+}
+section.body_menu-list {
+	clear: both;
+    float: left;
+    width: 100%;
+}
+.body_menu-list .nav-menu-list {
+	display: table;
+    margin: 0 auto;
+}
+.body_menu-list .nav-menu-list ul {}
+.body_menu-list .nav-menu-list ul li.father-category {
+	float: left;
+	list-style: none;
+	display: inline;
+    background-color: #FFFFFF;
+	border-radius:7px;
+	/* -moz-border-radius:7px;
+	-webkit-border-radius:7px; */
+	border-style:solid;
+	border-color: #bcbec0;
+	padding: 10px;
+}
+.body_menu-list .nav-menu-list ul li.father-category a {
+	border-color: #bcbec0;
+}
+
+
+/*  */

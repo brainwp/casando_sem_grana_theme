@@ -15,13 +15,50 @@ get_header(); ?>
 	<div id="primary" class="content-area content-list-single">
 		<main id="main" class="site-main" role="main">
 
+			<section id="body_menu-boxes">
+				<div id="boxes">
+					<div class="box">
+						<!-- <span class="img-bullet"></span> -->
+						<li id="box-1">
+							<a id="img-1" class="img-menu-page" href=""></a><a>Por onde Começar?</a>
+						</li>
+					</div>
+					<div class="box">
+						<!-- <span class="img-bullet"></span> -->
+						<li id="box-2">
+							<a id="img-2" class="img-menu-page" href=""></a><a>Faça você mesmo</a>
+						</li>
+					</div>
+					<div class="box">
+						<!-- <span class="img-bullet"></span> -->
+						<li id="box-3">
+							<a id="img-3" class="img-menu-page" href=""></a><a>Lista de Casamento</a>
+						</li>
+					</div>
+					<div class="box">
+						<!-- <span class="img-bullet"></span> -->
+						<li id="box-4">
+							<a id="img-4" class="img-menu-page" href=""></a><a>Fornecedores Justos</a>
+						</li>
+					</div>
+				</div><!-- #boxes -->
+			</section><!-- #body_slides -->
+
 			<section class="body_menu-list">
 				<nav class="nav-menu-list">
 					<ul>
-						<li><a id="img-1" class="img-menu-page" href=""></a><a>Titulo</a></li>
-						<li><a id="img-2" class="img-menu-page" href=""></a><a>Titulo</a></li>
-						<li><a id="img-3" class="img-menu-page" href=""></a><a>Titulo</a></li>
-						<li><a id="img-4" class="img-menu-page" href=""></a><a>Titulo</a></li>
+						<li class="father-category">
+							<a class="write-menu">Casamentos Reais</a>
+						</li>
+						<li class="father-category">
+							<a class="write-menu">O Grande Dia</a>
+						</li>
+						<li class="father-category">
+							<a class="write-menu">Tem mais</a>
+						</li>
+						<li class="father-category">
+							<a class="write-menu">Anuncie</a>
+						</li>
 					</ul>
 				</nav>
 				<nav class="menu-hide">
