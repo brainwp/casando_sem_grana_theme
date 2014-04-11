@@ -35,6 +35,14 @@ function optionsframework_options() {
 		$options_pages[$page->ID] = $page->post_title;
 	}
 
+	// Pull all the posts into an array
+	$options_posts = array();
+	$options_posts_obj = get_posts('sort_column=post_parent,menu_order');
+	$options_posts[''] = 'Selecione um Post:';
+	foreach ($options_posts_obj as $post) {
+		$options_posts[$post->ID] = $post->post_title;
+	}
+
 	$options[] = array(
 		'name' => 'Home',
 		'type' => 'heading');
@@ -168,6 +176,18 @@ function optionsframework_options() {
 		'id' => 'anuncio_link',
 		'std' => '',
 		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Post de Destaque da Home',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Selecione um Post',
+		'desc' => 'Escolha um Post para se destacar na Home',
+		'id' => 'destaque_post_home',
+		'type' => 'select',
+		'options' => $options_posts);
 
 	return $options;
 }

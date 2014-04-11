@@ -101,12 +101,21 @@
 		</a>
 	</div><!-- .anuncio -->
 	<div id="box-post">
+	<?php $id_post_destaque = of_get_option('destaque_post_home'); ?>
+
+	<?php
+		$post_destaque = get_post( of_get_option('destaque_post_home') ); 
+	?>
 		<figure>
-			<div id="th-post"></div>
+			<div id="th-post">
+				<?php echo get_the_post_thumbnail( $id_post_destaque, 'post_destaque' ); ?>
+			</div>
 		</figure>
-		<h1 id="title-post"></h1>
+		<h1 id="title-post"><?php echo $post_destaque->post_title; ?></h1>
 		<figcaption>
-			<div id="exerpt"></div>
+			<div id="exerpt">
+				<?php echo apply_filters( 'the_content', $post_destaque->post_content ); ?>
+			</div>
 		</figcaption>
 		<span><a href="" class="more-info"></a></span>
 	</div><!-- #box-post -->
