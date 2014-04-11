@@ -700,7 +700,12 @@ object {
 
 /* MENU-HOME */
 .body_menu-home a {
-	cursor: pointer;
+	clear: both;
+    cursor: pointer;
+    display: table;
+    font-size: 15px;
+    margin: 0 auto;
+    text-decoration: none;
 }
 .body_menu-home {
 	float: left;
@@ -709,10 +714,11 @@ object {
 	background: url( "images/background-category.png" ) repeat-x;
 }
 .body_menu-home ul li {
-	float: left;
 	display: inline;
-	list-style: none;
-	margin-right: 8%;
+    float: left;
+    list-style: none outside none;
+    margin-right: 8%;
+    width: 120px;
 }
 .body_menu-home .nav-menu-toogle {
 	display: table;
@@ -743,17 +749,17 @@ object {
     display: table;
     margin: 0 auto;
 }
-.body_menu-home .nav-menu-toogle #img-1 {
-	background: url( "images/menu-content-1.png" ) no-repeat;
+.body_menu-home .nav-menu-toogle .cat-item-6 {
+	background: url("images/menu-content-1.png") no-repeat scroll 8px 8px rgba(0, 0, 0, 0);
 }
-.body_menu-home .nav-menu-toogle #img-2 {
-	background: url( "images/menu-content-2.png" ) no-repeat;
+.body_menu-home .nav-menu-toogle .cat-item-7 {
+	background: url( "images/menu-content-2.png" ) no-repeat scroll 8px 8px rgba(0, 0, 0, 0);
 }
-.body_menu-home .nav-menu-toogle #img-3 {
-	background: url( "images/menu-content-3.png" ) no-repeat;
+.body_menu-home .nav-menu-toogle .cat-item-8 {
+	background: url( "images/menu-content-3.png" ) no-repeat scroll 8px 8px rgba(0, 0, 0, 0);
 }
-.body_menu-home .nav-menu-toogle #img-4 {
-	background: url( "images/menu-content-4.png" )no-repeat;
+.body_menu-home .nav-menu-toogle .cat-item-9 {
+	background: url( "images/menu-content-4.png" )  no-repeat scroll 8px 8px rgba(0, 0, 0, 0);
 }
 .body_menu-home .nav-menu-toogle #img-2 {}
 .body_menu-home .nav-menu-toogle #img-3 {}

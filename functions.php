@@ -184,59 +184,15 @@ function admin_casando_scripts() {
 	}
 add_action('admin_head', 'admin_casando_scripts');
 
-/**
-* Disable Admin Bar for All Users Except for Administrators.
-*/
-/*add_action('after_setup_theme', 'remove_admin_bar');
-function remove_admin_bar() {
-	if (!current_user_can('administrator') && !is_admin()) {
-	  show_admin_bar(false);
-	}
-}*/
 
 /**
 * Disable Admin Bar for All Users.
 */
 show_admin_bar(false);
 
-/**
- * Add Favicon
- */
- 
-/*add_action('wp_head', 'blog_favicon');
-function blog_favicon() {
-echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo( 'template_url' ).'/arq/img/favicon.ico" />';
-}*/
 
-/* Limit excerpt */
-//add_filter( 'excerpt_length', 'igreja_excerpt_length' );
-/*function igreja_excerpt_length( $length ) {
-	return 40;
-}*/
-
-/*function meu_excerpt($limit = 5) {
-	$excerpt = explode(' ', get_the_excerpt(), $limit);
-	if (count($excerpt) >= $limit) {
-		array_pop($excerpt);
-		$excerpt = implode(" ", $excerpt);
-		$excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
-		echo "<p>" . $excerpt . " [...]</p>";
-
-	} else {
-		$excerpt = implode(" ", $excerpt);
-		$excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
-		echo "<p>" . $excerpt . "</p>";
-	}
-}*/
-
-
-/* Feed */
-//add_filter('request', 'myfeed_request');
-/*function myfeed_request($qv) {
-	if (isset($qv['feed']))
-		$qv['post_type'] = get_post_types();
-	return $qv;
-}*/
-
-wp_enqueue_script( 'actions', get_stylesheet_directory_uri() . '/inc/js/actions.js', array( 'jquery' ) );
-
+add_filter ( 'wp_list_categories', 'span_before_link_list_categories' );
+function span_before_link_list_categories( $list ) {
+$list = str_replace('<a href=','<span class="ring"></span><a href=', $list);
+return $list;
+}
