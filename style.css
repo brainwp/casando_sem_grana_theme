@@ -752,6 +752,13 @@ a.home {
 	background: #f7c6c9;
 }
 
+#box-content {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+
 #box-content .anuncio {
 	clear: both;
 	max-width: 730px;
@@ -764,6 +771,13 @@ a.home {
 	max-width: 730px;
 	margin: 20px 0;
 	float: left;
+}
+
+#box-post h1#title-post {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 25px 0 10px;
+    text-transform: uppercase;
 }
 
 #th-post {
@@ -798,11 +812,13 @@ a.home {
 /* MENU-HOME */
 .body_menu-home a {
 	clear: both;
+    color: #4C4C4C;
     cursor: pointer;
     display: table;
     font-size: 15px;
     margin: 0 auto;
     text-decoration: none;
+    text-transform: uppercase;
 }
 .body_menu-home {
 	float: left;
@@ -828,6 +844,7 @@ a.home {
     height: 120px;
 	background: url( "images/ring-menu.png" ) no-repeat;
 	position: relative;
+	margin-bottom: 10px;
 }
 /* .body_menu-home .nav-menu-toogle .ring a:hover {
 	background: url( "images/ring-menu-hover.png" ) no-repeat !important;
@@ -944,7 +961,7 @@ ul#menu-footer li{
     display: block;
     height: 80px;
     width: 80px;
-	margin: 20px auto 0;
+	margin: 25px auto 0;
 }
 
 .widget-footer-title {
