@@ -672,12 +672,12 @@ object {
     height: 312px;
     position: relative;
     width: 100%;
+	z-index: -2;
 }
 .site-branding {
 	clear: both;
     display: table;
     position: absolute;
-    top: 150px;
     width: 100%;
 }
 .site-title {
@@ -693,12 +693,20 @@ object {
 	background: url( "images/header-flor-left.png" ) no-repeat;
 	width: 635px;
 	height: 304px;
+	z-index: -1;
 }
+a.home {
+	z-index: 2;
+}
+
 #img-header-right {
-	float: right;
-	background: url( "images/header-flor-right.png" ) no-repeat;
-	width: 437px;
-	height: 178px;
+  background: url("images/header-flor-right.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    bottom: 0;
+    height: 178px;
+    position: absolute;
+    right: 0;
+    width: 437px;
+	z-index: -1;
 }
 
 /* Plugin Slides */
@@ -715,6 +723,13 @@ object {
 }
 
 /* Boxes Home */
+
+#boxes h3.title {
+	text-transform: uppercase;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
 .boxes-home {
 	max-width: 1000px;
 	margin: 0 auto;
@@ -742,6 +757,13 @@ object {
 	max-width: 730px;
 	height: 90px;
 	background: #F1F1F1;
+}
+
+#box-post {
+	clear: both;
+	max-width: 730px;
+	margin: 20px 0;
+	float: left;
 }
 
 #th-post {
@@ -1337,11 +1359,32 @@ section.body_content-single {
 /* SIDEBAR-SINGLE */
 #side-single {
 	float: left;
-	background-color: #CCC;
-	width: 320px;
 	height: auto;
-	margin: 0 16px 0 10px;
+	margin: 0 0 0 20px;
+    width: 250px;
 }
+
+h1.widget-title {
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: #5C1A3E;
+}
+
+.widget-area ul {
+	margin: 5px;
+}
+
+.widget-area li {
+	list-style: none outside none;
+}
+
+.widget-area li a{
+	text-decoration: none;
+	font-size: 0.9em;
+	
+}
+
+
 
 /* Navigation */
 .nagetation-single-pages {
