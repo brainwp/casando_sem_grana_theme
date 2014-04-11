@@ -85,36 +85,57 @@
 </div><!-- #boxes -->
 
 <section class="body_menu-home">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<nav class="nav-menu-toogle">
 		<ul>
-			<li>
-				<span class="ring"><a id="img-1" class="img-menu"></a></span>
-				<a class="write-menu">Casamentos Reais</a>
-			</li>
-			<li>
-				<span class="ring"><a id="img-2" class="img-menu" ></a></span>
-				<a class="write-menu">O Grande Dia</a>
-			</li>
-			<li>
-				<span class="ring"><a id="img-3" class="img-menu" ></a></span>
-				<a class="write-menu">Tem mais</a>
-			</li>
-			<li>
-				<span class="ring"><a id="img-4" class="img-menu"></a></span>
-				<a class="write-menu">Anuncie</a>
-			</li>
+			<?php
+				$args = array(
+					'show_option_all'    => '',
+					'orderby'            => 'ID',
+					'order'              => 'ASC',
+					'style'              => 'list',
+					'show_count'         => 0,
+					'hide_empty'         => 0,
+					'use_desc_for_title' => 1,
+					'child_of'           => 0,
+					'feed'               => '',
+					'feed_type'          => '',
+					'feed_image'         => '',
+					'exclude'            => '1',
+					'exclude_tree'       => '',
+					'include'            => '',
+					'hierarchical'       => 1,
+					'title_li'           => __( '' ),
+					'show_option_none'   => __('No categories'),
+					'number'             => null,
+					'echo'               => 1,
+					'depth'              => 1,
+					'current_category'   => 0,
+					'pad_counts'         => 0,
+					'taxonomy'           => 'category',
+					'walker'             => null
+				);
+				wp_list_categories($args);
+			?>
 		</ul>
 	</nav><!-- .nav-menu-home -->
 
+<?php global $post;
+				$categories = get_the_category($post->ID);
+				var_dump($categories); ?>
+
 	<nav id="toggler" class="menu-hide-home">
 		<ul>
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<li><a href=""></a>Teste</li>
-			<?php endwhile; else: ?>
-			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-			<?php endif; ?>
+			<?php
+				/*global $post;
+				$categories = get_the_category($post->ID);
+				var_dump($categories);*/
+			?>
 		</ul>
 	</nav>
+	<?php endwhile; else: ?>
+		<p><?php //_e('Sorry, no posts matched your criteria.'); ?></p>
+	<?php endif; ?>
 </section><!-- .body_menu-home -->
 
 <section id="box-content">
@@ -144,5 +165,5 @@
 	</div><!-- #box-post -->
 </section><!-- #box-content -->
 
-<?php get_sidebar(); ?>
+<?php get_sidebar( "single" ); ?>
 <?php get_footer(); ?>
