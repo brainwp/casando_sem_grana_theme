@@ -753,7 +753,7 @@ a.home {
 }
 
 #box-content {
-	position: relative;
+	clear: both;
 	margin: 0;
 	padding: 0;
 }
@@ -819,6 +819,7 @@ a.home {
     margin: 0 auto;
     text-decoration: none;
     text-transform: uppercase;
+	clear: both;
 }
 .body_menu-home {
 	float: left;
