@@ -139,6 +139,14 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em ; }
+h4 { font-size: 1.0em; }
+h5 { font-size: 0.9em; }
+h6 { font-size: 0.8em; }
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -705,6 +713,64 @@ object {
 #body_slides h1 {
 	margin: 40%;
 }
+
+/* Boxes Home */
+.boxes-home {
+	max-width: 1000px;
+	margin: 0 auto;
+	clear: both;
+}
+
+.boxes-home #box-1 {
+	background: #efe689;
+}
+
+.boxes-home #box-2 {
+	background: #d3b6cc;
+}
+
+.boxes-home #box-3 {
+	background: #8accc8;
+}
+
+.boxes-home #box-4 {
+	background: #f7c6c9;
+}
+
+#box-content .anuncio {
+	clear: both;
+	max-width: 730px;
+	height: 90px;
+	background: #F1F1F1;
+}
+
+#th-post {
+	max-width: 730px;
+	height: 250px;
+	overflow: hidden;
+}
+
+.boxes-home .box {
+	width: 24%;
+	float: left;
+	margin: 0 1% 0 0;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	padding: 25px 20px;
+	text-align: center;
+	color: #FFF;
+}
+
+.boxes-home .box img {
+	margin: 5px auto;
+}
+
+.boxes-home .box .excerpt {
+	font-size: 0.8em;
+	margin-top: 5px;
+}
+
 
 
 /* MENU-HOME */
