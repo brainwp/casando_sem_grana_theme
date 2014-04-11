@@ -1047,10 +1047,10 @@ section.body_menu-list {
 /* Posts Archive */
 .body_content-posts {
 	float: left;
+	margin-bottom: 30px;
 }
 .content-posts {
     display: table;
-    height: 1000px;
     width: 1000px;
 }
 .content-posts ul {
@@ -1121,6 +1121,113 @@ section.body_menu-list {
 	color: #d3b6cc;
 	font-size: 18px;
 	margin-right: -26px;
+}
+
+
+/* SINGLE */
+section.body_content-single {
+	float: left;
+    width: 65%
+}
+.body_content-single > .content-single {
+	display: table;
+    margin: 0 auto;
+    width: 100%;
+}
+.content-single > .post {
+	float: left;
+    width: 65%;
+}
+.content-single > .post .th-content-post {
+	float: left;
+    width: 653px;
+    height: 490px;
+    background-color: #000;
+}
+.content-single > .post-relacioned {
+	float: left;
+}
+.content-single > .coments-post {
+	float: left;
+}
+.title-content-post {
+	float: left;
+	width: 100%;
+}
+.title-content-post h2 {
+	display: table;
+	margin: 5px auto 10px auto;
+	color: #d7c61a;
+	font-size: 33px;
+	text-transform: lowercase;
+}
+.content-post {
+}
+.content-post p {
+	font: normal 16px/20px Verdana, Helvetica, sans-serif;
+	margin-bottom: 20px;
+}
+.body_autor-post {
+	float: left;
+	width: 100%;
+	height: 185px;
+	padding: 20px;
+	border: 2px solid #d7c61a;
+	border-right-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+}
+.body_autor-post span {
+	float: left;
+	margin: 20px;
+	width: 70%;
+}
+.body_autor-post .more {
+	float: right;
+	background: url( "images/more.png" ) no-repeat;
+	height: 25px;
+	width: 25px;
+	margin: -25px 0 10px 0;
+}
+.excerpt-autor {
+	float: left;
+}
+.body_autor-post span h2 {
+	text-transform: uppercase;
+}
+.body_autor-post span p {
+	color: #4c4c4c;
+	font-size: 15px;
+}
+.thumbnail {
+	float: left;
+}
+.th-autor {
+	width: 140px;
+	height: 140px;
+	background: url( "images/th-author.jpg" ) no-repeat;
+}
+.post-relacioned {
+	float: left;
+}
+.sub-title-content {
+	text-transform: uppercase;
+	font: normal 16px Verdana, Helvetica, sans-serif;
+	color: #5c1b3e;
+	font-weight: bold;
+	margin: 20px 0;
+}
+.coments-single-post {
+	float: left;
+	width: 65%;
+}
+
+/* SIDEBAR-SINGLE */
+#side-single {
+	float: left;
+	background-color: #CCC;
+	width: 320px;
+	height: auto;
+	margin: 0 16px 0 10px;
 }
 
 <<<<<<< HEAD

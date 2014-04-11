@@ -138,3 +138,19 @@ add_theme_support( 'custom-header', $args );
  * Get actions.js.
  */
 wp_enqueue_script( 'actions', get_stylesheet_directory_uri() . '/inc/js/actions.js', array( 'jquery' ) );
+
+
+/**
+* Disable Admin Bar for All Users Except for Administrators.
+*/
+/*add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+	if (!current_user_can('administrator') && !is_admin()) {
+	  show_admin_bar(false);
+	}
+}*/
+
+/**
+* Disable Admin Bar for All Users.
+*/
+show_admin_bar(false);

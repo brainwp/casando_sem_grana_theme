@@ -1,92 +1,156 @@
 <?php
 /**
- * The Template for displaying all single posts.
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
  *
  * @package casando_sem_grana_theme
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main single" role="main">
+<div id="primary" class="page content-area">
+	<main id="main" class="site-main" role="main">
 
-			<section id="body_menu-boxes">
-				<div id="boxes">
-					<div class="box">
-						<!-- <span class="img-bullet"></span> -->
-						<li id="box-1">
-							<a id="img-1" class="img-menu-page" href=""></a><a>Por onde Começar?</a>
-						</li>
-					</div>
-					<div class="box">
-						<!-- <span class="img-bullet"></span> -->
-						<li id="box-2">
-							<a id="img-2" class="img-menu-page" href=""></a><a>Faça você mesmo</a>
-						</li>
-					</div>
-					<div class="box">
-						<!-- <span class="img-bullet"></span> -->
-						<li id="box-3">
-							<a id="img-3" class="img-menu-page" href=""></a><a>Lista de Casamento</a>
-						</li>
-					</div>
-					<div class="box">
-						<!-- <span class="img-bullet"></span> -->
-						<li id="box-4">
-							<a id="img-4" class="img-menu-page" href=""></a><a>Fornecedores Justos</a>
-						</li>
-					</div>
-				</div><!-- #boxes -->
-			</section><!-- #body_slides -->
+		<section id="body_menu-boxes">
+			<div id="boxes">
+				<div class="box">
+					<!-- <span class="img-bullet"></span> -->
+					<li id="box-1">
+						<a id="img-1" class="img-menu-page" href=""></a><a>Por onde Começar?</a>
+					</li>
+				</div>
+				<div class="box">
+					<!-- <span class="img-bullet"></span> -->
+					<li id="box-2">
+						<a id="img-2" class="img-menu-page" href=""></a><a>Faça você mesmo</a>
+					</li>
+				</div>
+				<div class="box">
+					<!-- <span class="img-bullet"></span> -->
+					<li id="box-3">
+						<a id="img-3" class="img-menu-page" href=""></a><a>Lista de Casamento</a>
+					</li>
+				</div>
+				<div class="box">
+					<!-- <span class="img-bullet"></span> -->
+					<li id="box-4">
+						<a id="img-4" class="img-menu-page" href=""></a><a>Fornecedores Justos</a>
+					</li>
+				</div>
+			</div><!-- #boxes -->
+		</section><!-- #body_slides -->
 
-			<div id="title-page">
-				<span class="icon-single-title"></span>
-				<?php the_title(); ?>
-			</div><!-- .title-page -->
+		<section class="body_menu-list">
+			<nav class="nav-menu-toogle">
+				<ul>
+					<li class="father-category">
+						<a class="write-menu">Casamentos Reais</a>
+					</li>
+					<li class="father-category">
+						<a class="write-menu">O Grande Dia</a>
+					</li>
+					<li class="father-category">
+						<a class="write-menu">Tem mais</a>
+					</li>
+					<li class="father-category">
+						<a class="write-menu">Anuncie</a>
+					</li>
+				</ul>
+			</nav>
+			<nav id="toggler" class="">
+				<ul>
+					<li class="i-sub_cat">
+						<a href="">Sub Categorias</a>
+					</li>
+				</ul>
+			</nav>
+		</section><!-- .body_menu-list -->
 
-			<section class="body_content-posts">
-				<nav class="content-posts">
-					<ul>
-						<li>
-							<figure>
-								<div class="thumbnail th-post th-single-post"></div>
-							</figure><!-- .th-single-post -->
+		<section class="body-breadcrumps">
+			<div id="title-sub_cat">
+				<span><?php the_title(); ?></span>
+			</div>
+		</section><!-- .body-breadcrumps -->
 
-							<div class="title-single-post"></div><!-- .title-single-post -->
+		<section class="body_content-single">
+			<div class="content-single">
 
-							<figcaption>
-								<div class="excerpt-single-post"></div>
-							</figcaption><!-- .excerpt-single-post -->
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-							<div class="info-single-post">
-								<div class="date-single-post"></div><!-- .date-single-post -->
-								<div class="coments-single-post"></div><!-- .coments-single-post -->
-							</div><!-- .info-single-post -->
-						</li>
-					</ul>
+				<div class="post">
+					<figure>
+						<div class="th-content-post"></div>
+						<div class="date-post"></div>
+					</figure><!-- .th-single-list -->
 
-					<div class="nagetation-single-pages">
-						<span><a href="" class="prev"></a></span>
-						<span><a href="" class="next"></a></span>
-					</div><!-- .nagetation-single-pages -->
+					<div class="info-single-post">
+						<div class="date-single-post"></div><!-- .date-single-post -->
+						<div class="coments-single-post"></div><!-- .coments-single-post -->
+					</div><!-- .info-single-post -->
 
-				</nav><!-- .content-posts -->
-			</section><!-- .body_content-posts -->
+					<div class="title-content-post">
+						<h2><?php the_title(); ?></h2>
+					</div><!-- .title-content-single -->
+					
+					<div class="content-post">
+						<?php the_content(); ?>
+					</div><!-- .content-post -->
 
+					<div class="body_autor-post">
+						<figure>
+							<div class="thumbnail th-autor"></div>
+						</figure><!-- .th-autor -->
+						
+						<span>
+							<h2>Via: <?php the_author(); ?></h2><!-- .nome-autor -->
+							<a class="more" href="<?php the_permalink(); ?>"></a><!-- .more -->
+							<div class="excerpt-autor"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim </p></div>
+						</span>
+					</div><!-- .body_autor-post -->
+				</div><!-- .post -->
 
-		<?php// while ( have_posts() ) : the_post(); ?>
-			<?php //get_template_part( 'content', 'single' ); ?>
-			<?php //casando_sem_grana_theme_post_nav(); ?>
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				//if ( comments_open() || '0' != get_comments_number() ) :
-					//comments_template();
-				//endif;
-			?>
-		<?php //endwhile; // end of the loop. ?>
+				<?php endwhile; else: ?>
+					<p><?php //_e('Sorry, no posts matched your criteria.'); ?></p>
+				<?php endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				<div class="post-relacioned">
+					<h2 class="sub-title-content">Posts Relacionados</h2>
+					<nav class="content-posts">
+						<ul>
+							<li>
+								<figure>
+									<div class="thumbnail th-post th-single-post"></div>
+								</figure><!-- .th-single-post -->
 
-<?php get_sidebar(); ?>
+								<div class="title-single-post"></div><!-- .title-single-post -->
+
+								<figcaption>
+									<div class="excerpt-single-post"></div>
+								</figcaption><!-- .excerpt-single-post -->
+
+								<div class="info-single-post">
+									<div class="date-single-post"></div><!-- .date-single-post -->
+								</div><!-- .info-single-post -->
+
+							</li>
+						</ul>
+					</nav><!-- .content-posts -->
+				</div><!-- .post-relacioned -->
+
+				<div class="coments-single-post">
+					<h2 class="sub-title-content">Comentários</h2>
+					<?php comments_template(); ?>
+				</div><!-- .coments-single-post -->
+
+			</div><!-- .content-single -->
+		</section><!-- .body_content-single -->
+
+	</main><!-- #main -->
+</div><!-- #primary -->
+
+<?php get_sidebar( "single" ); ?>
 <?php get_footer(); ?>
