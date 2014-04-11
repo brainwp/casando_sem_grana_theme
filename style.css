@@ -1073,7 +1073,8 @@ section.body_menu-list {
 .content-posts ul li:last-child {
 	margin-left: 15px;
 }
-.content-posts ul li figure {
+/* .content-posts ul li figure { */
+.content-posts ul li .th-content-list {
 	float: left;
 	width: 276px;
 	height: 190px;
@@ -1161,8 +1162,6 @@ section.body_content-single {
 	font-size: 33px;
 	text-transform: lowercase;
 }
-.content-post {
-}
 .content-post p {
 	font: normal 16px/20px Verdana, Helvetica, sans-serif;
 	margin-bottom: 20px;
@@ -1219,6 +1218,39 @@ section.body_content-single {
 .coments-single-post {
 	float: left;
 	width: 65%;
+}
+.post-relacioned .content-posts ul li {
+	float: left;
+	border-radius: 10px;
+	border: 1px solid #bcbec0;
+	width: 207px;
+	height: 203px;
+	list-style: none;
+	margin: 0;
+	position: relative;
+}
+.post-relacioned .content-posts ul li .th-single-post {
+	float: left;
+	width: 184px;
+	height: 126px;
+	margin: 10px;
+
+	background-color: #000;
+}
+.post-relacioned .content-posts ul li .date-single-post {
+    background: url("images/bullet-date-post-relations.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    bottom: 39px;
+    color: #FFFFFF;
+    float: right;
+    font-size: 20px;
+    height: 44px;
+    line-height: 20px;
+    margin: 10px;
+    padding: 10px;
+    position: absolute;
+    right: -4px;
+    text-align: center;
+    width: 44px;
 }
 
 /* SIDEBAR-SINGLE */

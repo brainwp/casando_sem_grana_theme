@@ -87,11 +87,6 @@ get_header(); ?>
 						<div class="date-post"></div>
 					</figure><!-- .th-single-list -->
 
-					<div class="info-single-post">
-						<div class="date-single-post"></div><!-- .date-single-post -->
-						<div class="coments-single-post"></div><!-- .coments-single-post -->
-					</div><!-- .info-single-post -->
-
 					<div class="title-content-post">
 						<h2><?php the_title(); ?></h2>
 					</div><!-- .title-content-single -->
