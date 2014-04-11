@@ -545,6 +545,12 @@ a:active {
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+
+#page {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
 .sticky {
 }
 .hentry {
@@ -691,7 +697,9 @@ object {
 #body_slides {
 	float: left;
 	background-color: #ccc;
-	height: 655px;
+	width: 1000px;
+	height: 390px;
+	
 }
 #body_slides h1 {
 	margin: 40%;
@@ -865,7 +873,7 @@ h2#phone {
 
 #menu-creditos {
 	float: left;
-	width: 60%;
+	width: 50%;
 	margin: 7px 15px;
 }
 
@@ -898,7 +906,7 @@ h2#phone {
 
 #social-area {
 	float: right;
-	width: 30%;
+	width: 40%;
 	margin: 13px;
 }
 

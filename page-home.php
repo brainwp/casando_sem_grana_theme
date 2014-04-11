@@ -6,7 +6,10 @@
 
 <?php get_header(); ?>
 
-<section id="body_slides"><h1>Slides - Plugin</h1>
+<section id="body_slides">
+<?php if(function_exists("insert_post_highlights")) insert_post_highlights(); ?>
+</section><!-- #body_slides -->
+
 	<div id="boxes">
 		<article id="box-1" class="box">
 			<span class="img-bullet"></span>
@@ -29,7 +32,6 @@
 			<div class="excerpt"></div>
 		</article>
 	</div><!-- #boxes -->
-</section><!-- #body_slides -->
 
 <section class="body_menu-home">
 	<nav class="nav-menu-toogle">
