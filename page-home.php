@@ -95,7 +95,11 @@
 </section><!-- .body_menu-home -->
 
 <section id="box-content">
-	<div id="anuncio"></div>
+	<div class="anuncio">
+		<a href="<?php echo of_get_option('anuncio_link'); ?>" target="_blank">
+			<img src="<?php echo of_get_option('anuncio_img'); ?>" alt="Anúncio Casando sem Grana">
+		</a>
+	</div><!-- .anuncio -->
 	<div id="box-post">
 		<figure>
 			<div id="th-post"></div>

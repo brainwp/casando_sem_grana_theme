@@ -728,6 +728,13 @@ object {
 	background: #f7c6c9;
 }
 
+#box-content .anuncio {
+	clear: both;
+	max-width: 730px;
+	height: 90px;
+	background: #F1F1F1;
+}
+
 
 
 .boxes-home .box {

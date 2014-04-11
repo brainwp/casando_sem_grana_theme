@@ -151,5 +151,23 @@ function optionsframework_options() {
 		'std' => '',
 		'type' => 'textarea');
 
+	$options[] = array(
+		'name' => 'Anúncio da Home',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Imagem do Anúncio',
+		'desc' => 'Faça o upload da imagem do anúncio. A medida deve ser de 730x90px',
+		'id' => 'anuncio_img',
+		'type' => 'upload');
+
+	$options[] = array(
+		'name' => 'Link do Anúncio',
+		'desc' => 'Adicione aqui a URL para onde o anúncio deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'anuncio_link',
+		'std' => '',
+		'type' => 'text');
+
 	return $options;
 }
