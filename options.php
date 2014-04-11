@@ -85,6 +85,14 @@ function optionsframework_options() {
 		'type' => 'textarea');
 
 	$options[] = array(
+		'name' => 'Link do Box 1',
+		'desc' => 'Adicione aqui a URL para onde o primeiro Box deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_um',
+		'std' => '',
+		'type' => 'text');
+
+
+	$options[] = array(
 		'name' => 'Segundo Bloco',
 		'desc' => '',
 		'type' => 'info');
@@ -110,6 +118,13 @@ function optionsframework_options() {
 		'type' => 'textarea');
 
 	$options[] = array(
+		'name' => 'Link do Box 2',
+		'desc' => 'Adicione aqui a URL para onde o segundo Box deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_dois',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
 		'name' => 'Terceiro Bloco',
 		'desc' => '',
 		'type' => 'info');
@@ -133,6 +148,13 @@ function optionsframework_options() {
 		'id' => 'resumo_feature_tres',
 		'std' => '',
 		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Link do Box 3',
+		'desc' => 'Adicione aqui a URL para onde o terceiro Box deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_tres',
+		'std' => '',
+		'type' => 'text');
 	
 	$options[] = array(
 		'name' => 'Quarto Bloco',
@@ -155,9 +177,16 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => 'Resumo',
 		'desc' => 'Adicione um breve resumo para o quarto destaque',
-		'id' => 'resumo_feature_quarto',
+		'id' => 'resumo_feature_quatro',
 		'std' => '',
 		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Link do Box 4',
+		'desc' => 'Adicione aqui a URL para onde o quarto Box deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_quatro',
+		'std' => '',
+		'type' => 'text');
 
 	$options[] = array(
 		'name' => 'Anúncio da Home',

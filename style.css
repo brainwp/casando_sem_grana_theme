@@ -824,16 +824,16 @@ object {
     display: table;
     margin: 0 auto;
 }
-.body_menu-home .nav-menu-toogle .cat-item-6 {
+.body_menu-home .nav-menu-toogle .cat-item-2 {
 	background: url("images/menu-content-1.png") no-repeat scroll 8px 8px rgba(0, 0, 0, 0);
 }
-.body_menu-home .nav-menu-toogle .cat-item-7 {
+.body_menu-home .nav-menu-toogle .cat-item-3 {
 	background: url( "images/menu-content-2.png" ) no-repeat scroll 8px 8px rgba(0, 0, 0, 0);
 }
-.body_menu-home .nav-menu-toogle .cat-item-8 {
+.body_menu-home .nav-menu-toogle .cat-item-4 {
 	background: url( "images/menu-content-3.png" ) no-repeat scroll 8px 8px rgba(0, 0, 0, 0);
 }
-.body_menu-home .nav-menu-toogle .cat-item-9 {
+.body_menu-home .nav-menu-toogle .cat-item-5 {
 	background: url( "images/menu-content-4.png" )  no-repeat scroll 8px 8px rgba(0, 0, 0, 0);
 }
 .body_menu-home .nav-menu-toogle #img-2 {}
