@@ -67,17 +67,9 @@
 		</ul>
 	</nav><!-- .nav-menu-home -->
 
-<?php global $post;
-				$categories = get_the_category($post->ID);
-				var_dump($categories); ?>
-
 	<nav id="toggler" class="menu-hide-home">
 		<ul>
-			<?php
-				/*global $post;
-				$categories = get_the_category($post->ID);
-				var_dump($categories);*/
-			?>
+			<li><a href="">Teste</a></li>
 		</ul>
 	</nav>
 	<?php endwhile; else: ?>
