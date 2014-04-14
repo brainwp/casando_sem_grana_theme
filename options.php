@@ -229,5 +229,12 @@ function optionsframework_options() {
 		'type' => 'select',
 		'options' => $options_posts);
 
+	$options[] = array(
+		'name' => 'Quantidade de Palavras do Destaque da Home',
+		'desc' => 'Coloque aqui a quantidade de palavras que deseja que apareça no destaque da home. Caso não esteja setado aqui, o valor padrão é 50 palavras.',
+		'id' => 'qtd_destaque',
+		'std' => '',
+		'type' => 'text');
+
 	return $options;
 }

@@ -196,6 +196,6 @@ show_admin_bar(false);
 
 add_filter ( 'wp_list_categories', 'span_before_link_list_categories' );
 function span_before_link_list_categories( $list ) {
-$list = str_replace('<a href=','<span class="ring"></span><a href=', $list);
-return $list;
+	$list = str_replace('<a href=','<span class="ring"></span><a href=', $list);
+	return $list;
 }

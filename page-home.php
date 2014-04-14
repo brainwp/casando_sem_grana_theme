@@ -157,9 +157,9 @@
 		</a>
 	</div><!-- .anuncio -->
 	<div id="box-post">
-	<?php $id_post_destaque = of_get_option('destaque_post_home'); ?>
+	<?php $id_post_destaque = of_get_option( 'destaque_post_home' ); ?>
 
-	<?php $post_destaque = get_post( of_get_option('destaque_post_home') ); ?>
+	<?php $post_destaque = get_post( of_get_option( 'destaque_post_home' ) ); ?>
 		<figure>
 			<div id="th-post">
 				<?php echo get_the_post_thumbnail( $id_post_destaque, 'post_destaque' ); ?>
@@ -168,7 +168,13 @@
 		<h1 id="title-post"><?php echo $post_destaque->post_title; ?></h1>
 		<figcaption>
 			<div id="exerpt">
-				<?php echo apply_filters( 'the_content', $post_destaque->post_content ); ?>
+				<?php
+				$qtd_destaque = of_get_option( 'qtd_destaque' );
+				if ( empty ( $qtd_destaque ) ) {
+					$qtd_destaque = 50;
+				}
+				$quantas = 10; echo wp_trim_words( $post_destaque->post_content, $qtd_destaque ); ?>
+				<?php // echo apply_filters( 'the_content', $post_destaque->post_content ); ?>
 			</div>
 		</figcaption>
 		<span><a href="" class="more-info"></a></span>
