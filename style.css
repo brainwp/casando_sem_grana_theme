@@ -750,18 +750,15 @@ a.home {
 /* Plugin Slides */
 #body_slides {
 	float: left;
-	background-color: #ccc;
 	width: 1000px;
 	height: 390px;
 	margin: 20px 0;
-	
 }
 #body_slides h1 {
 	margin: 40%;
 }
 
 /* Boxes Home */
-
 #boxes h3.title {
 	text-transform: uppercase;
 	font-size: 0.9em;
@@ -1463,4 +1460,49 @@ h1.widget-title {
 }
 
 /*  */
+div.pointelle-excerpt {
+	margin: 0 100px 30px 0;
+	background: url('images/bg-slider.png') !important;
+	padding-top: 20px !important;
+}
 
+div.pointelle-excerpt h4, div.pointelle-excerpt h4 a, div.pointelle-excerpt p, .pointelle_slider p.more a, .pointelle_slider p.more a:hover {
+	color: #5c1b3e !important;
+}
+
+div.pointelle-slider-nav {
+	border: none !important;
+	height: 88px !important;
+}
+
+div.pointelle-slider-nav h2, div.pointelle-active h2 {
+	text-transform: uppercase;
+	margin-top: 14px !important;
+	background: none !important;
+}
+
+div.pointelle-active h2 {
+}
+
+span.pointelle-meta {
+	display: none !important;
+}
+
+div.pointelle-active {
+	background: url('images/arrow_bg.png') left no-repeat !important;
+}
+
+.pointelle_nav_thumb {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	box-shadow: 0px 0px 0px 1px #5c1b3e;
+}
+
+div.pointelle-slider-control {
+	border: none !important;
+}
+
+.pointelle_nav_next, .pointelle_nav_prev {
+	display: none !important;
+}
