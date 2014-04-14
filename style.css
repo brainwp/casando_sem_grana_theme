@@ -1682,6 +1682,9 @@ h1.widget-title {
 	clear: both;
 }
 
+#body_search {
+	padding: 0 20px;
+}
 
 .widget-area li a{
 	text-decoration: none;
