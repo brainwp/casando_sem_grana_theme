@@ -28,8 +28,8 @@
 		<section class="section-header">
 
 			<div class="box-rss">
-				<h2><a href=""><?php bloginfo( 'description' ); ?></a></h2>
-				<a href=""><?php echo of_get_option('rss_info'); ?></a>
+				<h2><a href="<?php echo home_url( '/feed' ); ?>" target="_blank"><?php bloginfo( 'description' ); ?></a></h2>
+				<a href="<?php echo home_url( '/feed' ); ?>" target="_blank"><?php echo of_get_option('rss_info'); ?></a>
 			</div><!-- .box-rss -->
 
 			<div id="img-header-left"></div><!-- #img-left -->
