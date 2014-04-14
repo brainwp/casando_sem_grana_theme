@@ -32,7 +32,11 @@
 				<a href="<?php echo home_url( '/feed' ); ?>" target="_blank"><?php echo of_get_option('rss_info'); ?></a>
 			</div><!-- .box-rss -->
 
-			<div id="img-header-left"></div><!-- #img-left -->
+			<a class="conh-morando" href="http://www.morandosemgrana.com.br" target="_blank">
+			</a><!-- .conh-morando -->
+
+			<div id="img-header-left">
+			</div><!-- #img-header-left -->
 			
 				<div class="site-branding">
 					<h1 class="site-title">
@@ -43,11 +47,6 @@
 						</a>
 					</h1>
 					
-					<div id="img-left">
-						<div id="conh-morando"></div><!-- #conh-morando -->
-					</div><!-- #img-left -->
-
-
 				</div><!-- .site-branding -->
 
 			<div id="img-header-right"></div><!-- #img-right -->

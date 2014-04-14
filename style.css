@@ -691,6 +691,16 @@ object {
 	padding: 13px 0 5px 0;
 }
 
+.conh-morando {
+	background: url('images/icon-morando.jpg') no-repeat;
+	width: 191px;
+	height: 48px;
+	position: absolute;
+	top: 120px;
+	right: 105px;
+	z-index: 999;	
+}
+
 .section-header {
 	background-color: #F1F2F2;
     display: table;
