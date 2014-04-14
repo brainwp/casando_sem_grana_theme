@@ -6,7 +6,7 @@
  */
 ?>
 <section id="side-single">	
-	<div id="secondary" class="widget-area" role="complementary">
+	<div id="secondary" class="widget-area secondary-home" role="complementary">
 		<?php if ( ! dynamic_sidebar( 'sidebar-home' ) ) : ?>
 
 			<aside id="search" class="widget widget_search">
