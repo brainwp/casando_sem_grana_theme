@@ -1286,12 +1286,18 @@ section.body_menu-list {
 	clear: both;
     float: left;
     width: 100%;
+    margin-bottom: 30px;
 }
 .body_menu-list .nav-menu-toogle {
 	display: table;
     margin: 0 auto;
+    width: 100%;
 }
-.body_menu-list .nav-menu-toogle ul {}
+.body_menu-list .nav-menu-toogle ul {
+	display: table;
+    margin: 0 auto;
+    width: 43%;
+}
 .body_menu-list .nav-menu-toogle ul li.father-category {
 	float: left;
 	list-style: none;
@@ -1566,6 +1572,7 @@ h1.widget-title {
 	font-size: 18px;
 	font-weight: bold;
 	text-align: center;
+	background-color: #ccc;
 }
 aside.widget_search {
 	display: table;
@@ -1592,7 +1599,7 @@ h1.widget-title {
 	list-style: none outside none;
     height: 34px;
     position: relative;
-    width: 91%;
+    width: 100%;
 }
 .search-form .search-field {
 	border-color: #5C1B3E;
@@ -1607,12 +1614,74 @@ h1.widget-title {
     float: right;
     height: 34px;
     position: absolute;
-    right: -30px;
+    right: -11px;
     text-indent: -999px;
     width: 44px;
 }
-#history {}
-#video {}
+.search-results .widget-footer {
+	float: left;
+	width: 485px;
+	height: 150px;
+	background-color: #5c1b3e;
+}
+.search-results #history {
+	margin-right: 30px;
+}
+.search-results #video {}
+
+#body_search {
+	clear: both;
+}
+#body_search a {
+	clear: both;
+	text-decoration: none;
+	color: #000;
+}
+#body_search a:hover {
+	clear: both;
+	text-decoration: underline;
+}
+#body_search header#title-sub_cat {
+	
+}
+#body_search header#title-sub_cat h1.page-title {
+	display: table;
+    margin: 0 auto;
+    width: 100%;
+}
+#body_search #title-sub_cat span {
+	display: inline;
+}
+.search-results section.body_menu-list .nav-menu-toogle {
+    width: 100%;
+}
+.search-results section.body_menu-list .nav-menu-toogle ul {
+    display: table;
+    width: 43%;
+	margin: 0 auto;
+}
+.search-results .menu-hide-home {}
+.menu-hide-home a {
+	text-decoration: none;
+	color: #000;
+	text-transform: uppercase;
+}
+.menu-hide-home a:hover {
+	text-decoration: underline;
+}
+
+
+/* PAGE */
+.body_content-page {
+	clear: both;
+	float: left;
+	margin-top: 30px;
+	width: 69% !important;
+}
+.clear {
+	clear: both;
+}
+
 
 .widget-area li a{
 	text-decoration: none;
