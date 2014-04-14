@@ -167,7 +167,7 @@
 		</figure>
 		<h1 id="title-post"><?php echo $post_destaque->post_title; ?></h1>
 		<figcaption>
-			<div id="exerpt">
+			<div class="exerpt-home-destaque">
 				<?php
 				$qtd_destaque = of_get_option( 'qtd_destaque' );
 				if ( empty ( $qtd_destaque ) ) {
@@ -175,7 +175,7 @@
 				}
 				$quantas = 10; echo wp_trim_words( $post_destaque->post_content, $qtd_destaque ); ?>
 				<?php // echo apply_filters( 'the_content', $post_destaque->post_content ); ?>
-			</div>
+			</div><!-- .exerpt-home-destaque -->
 		</figcaption>
 		<span><a href="" class="more-info"></a></span>
 	</div><!-- #box-post -->

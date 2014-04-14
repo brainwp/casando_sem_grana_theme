@@ -558,6 +558,10 @@ a:active {
 	max-width: 1000px;
 	margin: 0 auto;
 	position: relative;
+	background: #FFF;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.20);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.20);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.20);
 }
 
 .sticky {
@@ -765,7 +769,7 @@ a.home {
 }
 
 .boxes-home {
-	max-width: 1000px;
+	max-width: 960px;
 	margin: 0 auto;
 	clear: both;
 }
@@ -841,7 +845,13 @@ a.home {
 	margin-top: 5px;
 }
 
+.exerpt-home-destaque {
+	padding: 10px 20px 0 20px;
+}
 
+#title-post {
+	padding: 0 20px;
+}
 
 /* MENU-HOME */
 .body_menu-home a {
@@ -860,6 +870,7 @@ a.home {
 	width: 100%;
 	padding: 40px 0;
 	background: url( "images/background-category.png" ) repeat-x;
+	margin-top: 20px;
 }
 .body_menu-home ul li {
 	display: inline;
