@@ -131,9 +131,6 @@
 		</ul>
 	</nav><!-- .nav-menu-home -->
 
-	
-
-
 	<nav id="toggler" class="menu-hide-home">
 		<ul>
 			<span class="hide-cat">
