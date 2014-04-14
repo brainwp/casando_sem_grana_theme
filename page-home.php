@@ -102,47 +102,127 @@
 		<ul>
 			<?php
 				$args = array(
-					'show_option_all'    => '',
-					'orderby'            => 'ID',
-					'order'              => 'ASC',
-					'style'              => 'list',
-					'show_count'         => 0,
-					'hide_empty'         => 0,
-					'use_desc_for_title' => 1,
-					'child_of'           => 0,
-					'feed'               => '',
-					'feed_type'          => '',
-					'feed_image'         => '',
-					'exclude'            => '1',
-					'exclude_tree'       => '',
-					'include'            => '',
-					'hierarchical'       => 1,
-					'title_li'           => __( '' ),
-					'show_option_none'   => __('No categories'),
-					'number'             => null,
-					'echo'               => 1,
-					'depth'              => 1,
-					'current_category'   => 0,
-					'pad_counts'         => 0,
-					'taxonomy'           => 'category',
-					'walker'             => null
-				);
-				wp_list_categories($args);
+				'type'                     => '',
+				'child_of'                 => 0,
+				'parent'                   => '',
+				'orderby'                  => 'ID',
+				'order'                    => 'ASC',
+				'hide_empty'               => 0,
+				'hierarchical'             => 1,
+				'exclude'                  => '1',
+				'include'                  => '',
+				'number'                   => '',
+				'taxonomy'                 => 'category',
+				'pad_counts'               => false );
+
+				$categories = get_categories( $args );
+
+
+				foreach( $categories as $category ) {
+
+					$cat_ID = $category->term_id; // Get ID the category.
+
+					if( $category->parent == 0 ){
+						echo '<div class="ring"><span class="img-cat parent-item-'.$cat_ID.'"></span><li>' . $category->name.'</li>';
+						echo '<div class="hover-cat"><span></span></div></div>';
+					}
+				}
 			?>
 		</ul>
 	</nav><!-- .nav-menu-home -->
 
-<?php global $post;
-				$categories = get_the_category($post->ID);
-				var_dump($categories); ?>
+	
+
 
 	<nav id="toggler" class="menu-hide-home">
 		<ul>
-			<?php
-				/*global $post;
-				$categories = get_the_category($post->ID);
-				var_dump($categories);*/
-			?>
+			<span class="hide-cat">
+				<?php
+					$args = array(
+						'show_option_all'    => '',
+						'orderby'            => 'ID',
+						'order'              => 'ASC',
+						'style'              => 'none',
+						'hide_empty'         => 0,
+						'child_of'           => 2,
+						'title_li'           => __( '' ),
+						'show_option_none'   => __('No categories'),
+						'taxonomy'           => 'category',
+					);
+
+					$my_categories = get_categories($args);
+				?>
+
+				<?php foreach( $my_categories as $category ): ?>
+					<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
+				<?php endforeach; ?>
+			</span>
+
+			<span class="hide-cat">
+				<?php
+					$args = array(
+						'show_option_all'    => '',
+						'orderby'            => 'ID',
+						'order'              => 'ASC',
+						'style'              => 'none',
+						'hide_empty'         => 0,
+						'child_of'           => 3,
+						'title_li'           => __( '' ),
+						'show_option_none'   => __('No categories'),
+						'taxonomy'           => 'category',
+					);
+
+					$my_categories = get_categories($args);
+				?>
+
+				<?php foreach( $my_categories as $category ): ?>
+					<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
+				<?php endforeach; ?>
+			</span>
+
+			<span class="hide-cat">
+				<?php
+					$args = array(
+						'show_option_all'    => '',
+						'orderby'            => 'ID',
+						'order'              => 'ASC',
+						'style'              => 'none',
+						'hide_empty'         => 0,
+						'child_of'           => 4,
+						'title_li'           => __( '' ),
+						'show_option_none'   => __('No categories'),
+						'taxonomy'           => 'category',
+					);
+
+					$my_categories = get_categories($args);
+				?>
+
+				<?php foreach( $my_categories as $category ): ?>
+					<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
+				<?php endforeach; ?>
+			</span>
+
+			<span class="hide-cat">
+				<?php
+					$args = array(
+						'show_option_all'    => '',
+						'orderby'            => 'ID',
+						'order'              => 'ASC',
+						'style'              => 'none',
+						'hide_empty'         => 0,
+						'child_of'           => 5,
+						'title_li'           => __( '' ),
+						'show_option_none'   => __('No categories'),
+						'taxonomy'           => 'category',
+					);
+
+					$my_categories = get_categories($args);
+				?>
+
+				<?php foreach( $my_categories as $category ): ?>
+					<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
+				<?php endforeach; ?>
+			</span>
 		</ul>
 	</nav>
 	<?php endwhile; else: ?>
@@ -157,9 +237,11 @@
 		</a>
 	</div><!-- .anuncio -->
 	<div id="box-post">
+
 	<?php $id_post_destaque = of_get_option( 'destaque_post_home' ); ?>
 
 	<?php $post_destaque = get_post( of_get_option( 'destaque_post_home' ) ); ?>
+
 		<figure>
 			<div id="th-post">
 				<?php echo get_the_post_thumbnail( $id_post_destaque, 'post_destaque' ); ?>
@@ -167,6 +249,7 @@
 		</figure>
 		<h1 id="title-post"><?php echo $post_destaque->post_title; ?></h1>
 		<figcaption>
+
 			<div class="exerpt-home-destaque">
 				<?php
 				$qtd_destaque = of_get_option( 'qtd_destaque' );
@@ -176,10 +259,11 @@
 				$quantas = 10; echo wp_trim_words( $post_destaque->post_content, $qtd_destaque ); ?>
 				<?php // echo apply_filters( 'the_content', $post_destaque->post_content ); ?>
 			</div><!-- .exerpt-home-destaque -->
+
 		</figcaption>
 		<span><a href="" class="more-info"></a></span>
 	</div><!-- #box-post -->
 </section><!-- #box-content -->
 
-<?php get_sidebar( "single" ); ?>
+<?php get_sidebar( "home" ); ?>
 <?php get_footer(); ?>
