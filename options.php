@@ -44,6 +44,17 @@ function optionsframework_options() {
 	}
 
 	$options[] = array(
+		'name' => 'Cabeçalho',
+		'type' => 'heading');
+
+	$options[] = array(
+		'name' => 'Blogo do RSS',
+		'desc' => 'Adicione um breve resumo para o box do RSS',
+		'id' => 'rss_info',
+		'std' => '',
+		'type' => 'textarea');
+
+	$options[] = array(
 		'name' => 'Home',
 		'type' => 'heading');
 

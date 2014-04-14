@@ -26,6 +26,12 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<section class="section-header">
+
+			<div class="box-rss">
+				<h2><a href=""><?php bloginfo( 'description' ); ?></a></h2>
+				<a href=""><?php echo of_get_option('rss_info'); ?></a>
+			</div><!-- .box-rss -->
+
 			<div id="img-header-left"></div><!-- #img-left -->
 			
 				<div class="site-branding">
@@ -36,12 +42,10 @@
 							<img id="logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 						</a>
 					</h1>
-
-					<h2 class="site-description"><?php //bloginfo( 'description' ); ?></h2>
-
+					
 					<div id="img-left">
 						<div id="conh-morando"></div><!-- #conh-morando -->
-					</div><!-- #feed -->
+					</div><!-- #img-left -->
 
 
 				</div><!-- .site-branding -->

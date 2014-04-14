@@ -557,6 +557,7 @@ a:active {
 #page {
 	max-width: 1000px;
 	margin: 0 auto;
+	position: relative;
 }
 
 .sticky {
@@ -666,11 +667,34 @@ object {
 
 
 /* HEADER */
+.box-rss {
+	width: 35%;
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	font-size: 0.75em;
+	line-height: 1.3em;
+	z-index: 999;
+}
+.box-rss a {
+	text-decoration: none;
+	color: #6d6c71;
+}
+
+.box-rss h2 {
+	margin: 10px 0 5px 0;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	display: block;
+	background: url('images/icon-rss.png') no-repeat left;
+	text-indent: 30px;
+	padding: 13px 0 5px 0;
+}
+
 .section-header {
 	background-color: #F1F2F2;
     display: table;
     height: 312px;
-    position: relative;
     width: 100%;
 	z-index: -2;
 }
