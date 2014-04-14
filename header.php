@@ -40,7 +40,7 @@
 			
 				<div class="site-branding">
 					<h1 class="site-title">
-						<a href="<?php //echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php //bloginfo( 'name' ); ?>
 							<!-- <img  src="<?php //bloginfo( "template_url" ); ?>/images/logo.png"> -->
 							<img id="logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
