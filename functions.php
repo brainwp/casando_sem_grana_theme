@@ -77,7 +77,10 @@ function casando_sem_grana_theme_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
+	if ( function_exists( 'add_image_size' ) ) { 
+		add_image_size( 'post_destaque', 730, 9999 ); //730 pixels wide (and unlimited height)
+	}
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -194,5 +197,21 @@ show_admin_bar(false);
 add_filter ( 'wp_list_categories', 'span_before_link_list_categories' );
 function span_before_link_list_categories( $list ) {
 $list = str_replace('<a href=','<span class="ring"></span><a href=', $list);
-return $list;
+	return $list;
 }
+
+
+/*add_filter ( 'wp_list_categories', 'img_before_link_list_categories' );
+function img_before_link_list_categories( $list ) {
+  $cats = get_categories();
+    foreach($cats as $cat) {
+
+        $find = $cat->name.'</a>';
+        $replace = '<img src="'.$cat->slug.'.png" alt="x"/>'.$cat->name.'</a>';
+        $list = str_replace( $find, $replace, $list );
+
+        $list = preg_replace('%<li class=".*">|</?ul>%U', '<h2>', $list);
+        $list = str_replace('</li>', '</h2>', $list);
+    }
+ return $list;
+}*/

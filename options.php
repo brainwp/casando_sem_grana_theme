@@ -35,6 +35,14 @@ function optionsframework_options() {
 		$options_pages[$page->ID] = $page->post_title;
 	}
 
+	// Pull all the posts into an array
+	$options_posts = array();
+	$options_posts_obj = get_posts('sort_column=post_parent,menu_order');
+	$options_posts[''] = 'Selecione um Post:';
+	foreach ($options_posts_obj as $post) {
+		$options_posts[$post->ID] = $post->post_title;
+	}
+
 	$options[] = array(
 		'name' => 'Home',
 		'type' => 'heading');
@@ -77,6 +85,14 @@ function optionsframework_options() {
 		'type' => 'textarea');
 
 	$options[] = array(
+		'name' => 'Link do Box 1',
+		'desc' => 'Adicione aqui a URL para onde o primeiro Box deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_um',
+		'std' => '',
+		'type' => 'text');
+
+
+	$options[] = array(
 		'name' => 'Segundo Bloco',
 		'desc' => '',
 		'type' => 'info');
@@ -102,6 +118,13 @@ function optionsframework_options() {
 		'type' => 'textarea');
 
 	$options[] = array(
+		'name' => 'Link do Box 2',
+		'desc' => 'Adicione aqui a URL para onde o segundo Box deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_dois',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
 		'name' => 'Terceiro Bloco',
 		'desc' => '',
 		'type' => 'info');
@@ -125,6 +148,13 @@ function optionsframework_options() {
 		'id' => 'resumo_feature_tres',
 		'std' => '',
 		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Link do Box 3',
+		'desc' => 'Adicione aqui a URL para onde o terceiro Box deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_tres',
+		'std' => '',
+		'type' => 'text');
 	
 	$options[] = array(
 		'name' => 'Quarto Bloco',
@@ -147,9 +177,46 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => 'Resumo',
 		'desc' => 'Adicione um breve resumo para o quarto destaque',
-		'id' => 'resumo_feature_quarto',
+		'id' => 'resumo_feature_quatro',
 		'std' => '',
 		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Link do Box 4',
+		'desc' => 'Adicione aqui a URL para onde o quarto Box deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_quatro',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Anúncio da Home',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Imagem do Anúncio',
+		'desc' => 'Faça o upload da imagem do anúncio. A medida deve ser de 730x90px',
+		'id' => 'anuncio_img',
+		'type' => 'upload');
+
+	$options[] = array(
+		'name' => 'Link do Anúncio',
+		'desc' => 'Adicione aqui a URL para onde o anúncio deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'anuncio_link',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Post de Destaque da Home',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Selecione um Post',
+		'desc' => 'Escolha um Post para se destacar na Home',
+		'id' => 'destaque_post_home',
+		'type' => 'select',
+		'options' => $options_posts);
 
 	return $options;
 }
