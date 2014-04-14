@@ -802,7 +802,6 @@ a.home {
 
 #box-content .anuncio {
 	clear: both;
-	max-width: 730px;
 	width: 682px;
 	height: 90px;
 	background: #e17c0a;
@@ -810,7 +809,7 @@ a.home {
 
 #box-post {
 	clear: both;
-	max-width: 730px;
+	max-width: 682px;
 	margin: 20px 0;
 	float: left;
 }
@@ -823,7 +822,7 @@ a.home {
 }
 
 #th-post {
-	max-width: 730px;
+	max-width: 682px;
 	height: 250px;
 	overflow: hidden;
 }
@@ -874,7 +873,7 @@ a.home {
 	width: 100%;
 	padding: 40px 0;
 	background: url( "images/background-category.png" ) repeat-x;
-	margin-top: 20px;
+	margin: 30px 0;
 }
 .body_menu-home ul li {
 	/* display: inline;
@@ -991,6 +990,7 @@ div.hover-cat {
     height: 45px;
     margin-left: -23px;
     width: 166px;
+	display: none;
 }
 /* .body_menu-home .nav-menu-toogle .ring a:hover {
 	background: url( "images/ring-menu-hover.png" ) no-repeat !important;
