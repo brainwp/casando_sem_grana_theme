@@ -207,3 +207,55 @@ function span_before_link_list_categories( $list ) {
 	$list = str_replace('<a href=','<span class="ring"></span><a href=', $list);
 	return $list;
 }
+
+add_action('thesis_hook_after_post','my_related_posts');
+function my_related_posts() {
+	if (is_single()) {
+
+		global $post;
+		$current_post = $post->ID;
+		$categories = get_the_category();
+
+	foreach ($categories as $category) : ?>
+
+	<div class="content-posts">
+		<ul>
+			<?php $posts = get_posts('numberposts=3&category='. $category->term_id . '&exclude=' . $current_post);
+			foreach($posts as $post) : ?>
+
+			<li>
+				<figure>
+					<div class="thumbnail th-post th-single-post">
+						<?php the_post_thumbnail(); ?>
+					</div>
+				</figure><!-- .th-single-post -->
+
+				<div class="title-single-post"><?php the_title(); ?></div><!-- .title-single-post -->
+
+				<figcaption>
+					<div class="excerpt-single-post"></div>
+				</figcaption><!-- .excerpt-single-post -->
+
+				<div class="info-single-post">
+					<div class="date-single-post"></div><!-- .date-single-post -->
+				</div><!-- .info-single-post -->
+			</li>
+
+		<?php endforeach; ?>
+	<?php endforeach; ?>
+		</ul>
+	</div>
+	<?php }	wp_reset_query();
+}
+	
+/* My Excerpt Post Relacionados */
+function my_excerpt_caracter( $limit = 25 ) {
+	if ( strlen( get_the_excerpt() ) > $limit ) {
+		$ini = strlen( get_the_excerpt() ) - $limit;
+		$excerpt = substr(get_the_excerpt(), 0, -( $ini ));
+	} else {
+		$excerpt = get_the_excerpt() . '[...]';
+	}
+
+	echo $excerpt;
+}

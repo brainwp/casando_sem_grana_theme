@@ -171,16 +171,74 @@ get_header(); ?>
 				</nav>
 			</section><!-- .body_menu-list -->
 			
-			<div class="clear"><hr></div>
+			<!-- <div class="clear"><hr></div> -->
+			<section class="body-breadcrumps">
+				<div id="title-sub_cat">
+					<span><?php single_cat_title('',true); ?></span>
+				</div>
+			</section><!-- .body-breadcrumps -->
 
-			<?php while ( have_posts() ) : the_post(); ?>
-			<section class="body_content-single body_content-page">
+			<section class="body_content-single body_content-page body_content-category"><!--  -->
 				
+				<div class="post-relacioned post-category">
+					<nav class="content-posts">
+
+						<ul>
+							<?php while ( have_posts() ) : the_post(); ?>
+							<li>
+								<figure>
+									<div class="thumbnail th-post th-single-post">
+										<?php the_post_thumbnail(); ?>
+									</div>
+								</figure><!-- .th-single-post -->
+
+								<div class="title-single-post">
+									<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+								</div><!-- .title-single-post -->
+
+								<figcaption>
+									<div class="excerpt-single-post"><?php my_excerpt_caracter(); ?></div>
+								</figcaption><!-- .excerpt-single-post -->
+
+								<div class="info-single-post">
+									<div class="date-single-post"><?php the_time('j F') ?></div><!-- .date-single-post -->
+								</div><!-- .info-single-post -->
+							</li>
+							<?php endwhile; // end of the loop. ?>
+						</ul>
+					</nav><!-- .content-posts -->
+
+					<div class="nagetation-single-pages">
+
+					<?php /* Display navigation to next/previous pages when applicable */ ?>
+					<?php
+						global $wp_query;
+						$total_pages = $wp_query->max_num_pages;
+						if ($total_pages > 1){
+							$current_page = max(1, get_query_var('paged'));
+							echo '<div class="page_nav">';
+							echo paginate_links(array(
+							'base' => get_pagenum_link(1) . '%_%',
+							'format' => 'page/%#%',
+							'current' => $current_page,
+							'total' => $total_pages,
+							'prev_text' => '<< Anteriores',
+							'next_text' => 'Pr&oacute;ximos >>'
+							));
+							echo '</div>';
+						}
+					?>
+					<?php //else: ?>
+					<h2 class="title"><?php// _e( 'Sua pesquisa acabou sem resultados.', 'portfoliopress' ) ?></h2>
+					<?php //endif; ?>
+					</div><!-- .nagetation-single-pages -->
+
+				</div><!-- .post-relacioned -->
+
 			</section><!-- .body_content-single -->
-			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar( "single" ); ?>
+<?php //get_sidebar( "single" ); ?>
 <?php get_footer(); ?>
