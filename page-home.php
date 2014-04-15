@@ -141,7 +141,7 @@
 						'order'              => 'ASC',
 						'style'              => 'none',
 						'hide_empty'         => 0,
-						'child_of'           => 2,
+						'child_of'           => 6,
 						'title_li'           => __( '' ),
 						'show_option_none'   => __('No categories'),
 						'taxonomy'           => 'category',
@@ -163,7 +163,7 @@
 						'order'              => 'ASC',
 						'style'              => 'none',
 						'hide_empty'         => 0,
-						'child_of'           => 3,
+						'child_of'           => 7,
 						'title_li'           => __( '' ),
 						'show_option_none'   => __('No categories'),
 						'taxonomy'           => 'category',
@@ -185,7 +185,7 @@
 						'order'              => 'ASC',
 						'style'              => 'none',
 						'hide_empty'         => 0,
-						'child_of'           => 4,
+						'child_of'           => 8,
 						'title_li'           => __( '' ),
 						'show_option_none'   => __('No categories'),
 						'taxonomy'           => 'category',
@@ -207,7 +207,7 @@
 						'order'              => 'ASC',
 						'style'              => 'none',
 						'hide_empty'         => 0,
-						'child_of'           => 5,
+						'child_of'           => 9,
 						'title_li'           => __( '' ),
 						'show_option_none'   => __('No categories'),
 						'taxonomy'           => 'category',
@@ -233,33 +233,42 @@
 			<img src="<?php echo of_get_option('anuncio_img'); ?>" alt="Anúncio Casando sem Grana">
 		</a>
 	</div><!-- .anuncio -->
+
 	<div id="box-post">
+		<?php $id_post_destaque = of_get_option( 'destaque_post_home' ); ?>
 
-	<?php $id_post_destaque = of_get_option( 'destaque_post_home' ); ?>
-
-	<?php $post_destaque = get_post( of_get_option( 'destaque_post_home' ) ); ?>
+		<?php $post_destaque = get_post( of_get_option( 'destaque_post_home' ) ); ?>
 
 		<figure>
 			<div id="th-post">
-				<?php echo get_the_post_thumbnail( $id_post_destaque, 'post_destaque' ); ?>
+				<a href="<?php echo get_permalink( $id_post_destaque ); ?>">
+					<?php echo get_the_post_thumbnail( $id_post_destaque, 'post_destaque' ); ?>
+				</a>
 			</div>
 		</figure>
-		<h1 id="title-post"><?php echo $post_destaque->post_title; ?></h1>
-		<figcaption>
 
+		<h1 id="title-post">
+			<a href="<?php echo get_permalink( $id_post_destaque ); ?>">
+				<?php echo $post_destaque->post_title; ?>
+			</a>
+		</h1>
+
+		<figcaption>
 			<div class="exerpt-home-destaque">
 				<?php
-				$qtd_destaque = of_get_option( 'qtd_destaque' );
-				if ( empty ( $qtd_destaque ) ) {
-					$qtd_destaque = 50;
-				}
-				$quantas = 10; echo wp_trim_words( $post_destaque->post_content, $qtd_destaque ); ?>
+					$qtd_destaque = of_get_option( 'qtd_destaque' );
+					if ( empty ( $qtd_destaque ) ) {
+						$qtd_destaque = 50;
+					}
+					$quantas = 10; echo wp_trim_words( $post_destaque->post_content, $qtd_destaque );
+				?>
 				<?php // echo apply_filters( 'the_content', $post_destaque->post_content ); ?>
 			</div><!-- .exerpt-home-destaque -->
 
 		</figcaption>
 		<span><a href="" class="more-info"></a></span>
 	</div><!-- #box-post -->
+	
 </section><!-- #box-content -->
 
 <?php get_sidebar( "home" ); ?>
