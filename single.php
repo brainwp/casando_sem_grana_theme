@@ -246,6 +246,10 @@ get_header(); ?>
 										<div class="info-single-post">
 											<div class="date-single-post"><?php the_time('j F') ?></div><!-- .date-single-post -->
 										</div><!-- .info-single-post -->
+										<div class="relation-comments-author">
+											<div class="i-relations-comments"></div>
+											<span><?php comments_number(); ?></span>
+										</div>
 									</li> 
 								<?php } 
 								echo '</ul>'; 
