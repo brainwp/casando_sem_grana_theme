@@ -1,31 +1,8 @@
-
-/* Anima Toogle Menu - Home. */
 $(function() {
-
-    $("#toggler").hide();
-    $("div.hover-cat").hide();
-    $(".nav-menu-toogle").click(function() {
-        $("#toggler").slideToggle('show');
-    	//$("div.hover-cat").show();
+    $('.nav-menu-toogle li').click(function() {
+        $(this).find('ul.sub-category-hide').slideToggle('fast', function() {
+            $(this).find('ul.sub-category-hide').toggleClass('aberto');
+        });
+        return false;
     });
 });
-
-
-
-
-
-/*jQuery(document).ready(function(){
-
-	jQuery('.hover-cat').find('span').each(function(){
-
-		if( jQuery(this).hasClass('children')  ){
-
-			jQuery(this).parent().find('a').addClass('parent'); 
-
-		}
-
-	});
-
-})*/
-
-

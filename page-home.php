@@ -97,7 +97,8 @@
 </div><!-- #boxes -->
 
 <section class="body_menu-home">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+	
 	<nav class="nav-menu-toogle">
 		<ul>
 			<?php
@@ -111,120 +112,41 @@
 				'hierarchical'             => 1,
 				'exclude'                  => '1',
 				'include'                  => '',
-				'number'                   => '',
+				'number'                   => '4',
 				'taxonomy'                 => 'category',
 				'pad_counts'               => false );
 
 				$categories = get_categories( $args );
-
-
-				foreach( $categories as $category ) {
-
-					$cat_ID = $category->term_id; // Get ID the category.
-
-					if( $category->parent == 0 ){
-						echo '<div class="ring"><span class="img-cat parent-item-'.$cat_ID.'"></span><li>' . $category->name.'</li>';
-						echo '<div class="hover-cat"><span></span></div></div>';
-					}
-				}
+				foreach( $categories as $category ) :
+				$cat_ID = $category->term_id; // Get ID the category.
 			?>
+
+				<li class="active-toggle">
+					<div class="ring">
+						<span class="img-cat parent-item-<?php echo $cat_ID; ?>"></span>
+							<?php echo $category->name; ?>'
+						<div class="hover-cat"></div>
+					</div>
+
+					<?php	
+						$child_args = array( 'child_of' => $cat_ID, );
+						$child_categories = get_categories( $child_args );
+					?>
+				<ul class="sub-category-hide"><li>
+				<?php foreach( $child_categories as $child_category ) : ?>		
+					<a href="<?php echo get_category_link( $child_category->term_id );?>"><?php echo $child_category->name;?></a>
+				<?php endforeach; ?>
+				</li></ul>
+
+			</li>
+					
+	<?php endforeach; ?>
+
+				
 		</ul>
 	</nav><!-- .nav-menu-home -->
 
-	<nav id="toggler" class="menu-hide-home">
-		<ul>
-			<span class="hide-cat">
-				<?php
-					$args = array(
-						'show_option_all'    => '',
-						'orderby'            => 'ID',
-						'order'              => 'ASC',
-						'style'              => 'none',
-						'hide_empty'         => 0,
-						'child_of'           => 2,
-						'title_li'           => __( '' ),
-						'show_option_none'   => __('No categories'),
-						'taxonomy'           => 'category',
-					);
 
-					$my_categories = get_categories($args);
-				?>
-
-				<?php foreach( $my_categories as $category ): ?>
-					<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-				<?php endforeach; ?>
-			</span>
-
-			<span class="hide-cat">
-				<?php
-					$args = array(
-						'show_option_all'    => '',
-						'orderby'            => 'ID',
-						'order'              => 'ASC',
-						'style'              => 'none',
-						'hide_empty'         => 0,
-						'child_of'           => 3,
-						'title_li'           => __( '' ),
-						'show_option_none'   => __('No categories'),
-						'taxonomy'           => 'category',
-					);
-
-					$my_categories = get_categories($args);
-				?>
-
-				<?php foreach( $my_categories as $category ): ?>
-					<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-				<?php endforeach; ?>
-			</span>
-
-			<span class="hide-cat">
-				<?php
-					$args = array(
-						'show_option_all'    => '',
-						'orderby'            => 'ID',
-						'order'              => 'ASC',
-						'style'              => 'none',
-						'hide_empty'         => 0,
-						'child_of'           => 4,
-						'title_li'           => __( '' ),
-						'show_option_none'   => __('No categories'),
-						'taxonomy'           => 'category',
-					);
-
-					$my_categories = get_categories($args);
-				?>
-
-				<?php foreach( $my_categories as $category ): ?>
-					<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-				<?php endforeach; ?>
-			</span>
-
-			<span class="hide-cat">
-				<?php
-					$args = array(
-						'show_option_all'    => '',
-						'orderby'            => 'ID',
-						'order'              => 'ASC',
-						'style'              => 'none',
-						'hide_empty'         => 0,
-						'child_of'           => 5,
-						'title_li'           => __( '' ),
-						'show_option_none'   => __('No categories'),
-						'taxonomy'           => 'category',
-					);
-
-					$my_categories = get_categories($args);
-				?>
-
-				<?php foreach( $my_categories as $category ): ?>
-					<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-				<?php endforeach; ?>
-			</span>
-		</ul>
-	</nav>
-	<?php endwhile; else: ?>
-		<p><?php //_e('Sorry, no posts matched your criteria.'); ?></p>
-	<?php endif; ?>
 </section><!-- .body_menu-home -->
 
 <section id="box-content">
