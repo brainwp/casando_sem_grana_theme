@@ -61,18 +61,106 @@ get_header(); ?>
 					</li>
 				</ul>
 			</nav>
-			<nav id="toggler" class="">
+
+			<nav id="toggler" class="menu-hide-home">
 				<ul>
-					<li class="i-sub_cat">
-						<a href="">Sub Categorias</a>
-					</li>
+					<span class="hide-cat">
+						<?php
+							$args = array(
+								'show_option_all'    => '',
+								'orderby'            => 'ID',
+								'order'              => 'ASC',
+								'style'              => 'none',
+								'hide_empty'         => 0,
+								'child_of'           => 2,
+								'title_li'           => __( '' ),
+								'show_option_none'   => __('No categories'),
+								'taxonomy'           => 'category',
+							);
+
+							$my_categories = get_categories($args);
+						?>
+
+						<?php foreach( $my_categories as $category ): ?>
+							<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
+						<?php endforeach; ?>
+					</span>
+
+					<span class="hide-cat">
+						<?php
+							$args = array(
+								'show_option_all'    => '',
+								'orderby'            => 'ID',
+								'order'              => 'ASC',
+								'style'              => 'none',
+								'hide_empty'         => 0,
+								'child_of'           => 3,
+								'title_li'           => __( '' ),
+								'show_option_none'   => __('No categories'),
+								'taxonomy'           => 'category',
+							);
+
+							$my_categories = get_categories($args);
+						?>
+
+						<?php foreach( $my_categories as $category ): ?>
+							<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
+						<?php endforeach; ?>
+					</span>
+
+					<span class="hide-cat">
+						<?php
+							$args = array(
+								'show_option_all'    => '',
+								'orderby'            => 'ID',
+								'order'              => 'ASC',
+								'style'              => 'none',
+								'hide_empty'         => 0,
+								'child_of'           => 4,
+								'title_li'           => __( '' ),
+								'show_option_none'   => __('No categories'),
+								'taxonomy'           => 'category',
+							);
+
+							$my_categories = get_categories($args);
+						?>
+
+						<?php foreach( $my_categories as $category ): ?>
+							<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
+						<?php endforeach; ?>
+					</span>
+
+					<span class="hide-cat">
+						<?php
+							$args = array(
+								'show_option_all'    => '',
+								'orderby'            => 'ID',
+								'order'              => 'ASC',
+								'style'              => 'none',
+								'hide_empty'         => 0,
+								'child_of'           => 5,
+								'title_li'           => __( '' ),
+								'show_option_none'   => __('No categories'),
+								'taxonomy'           => 'category',
+							);
+
+							$my_categories = get_categories($args);
+						?>
+
+						<?php foreach( $my_categories as $category ): ?>
+							<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
+						<?php endforeach; ?>
+					</span>
 				</ul>
-			</nav>
+			</nav><!-- #toggler -->
 		</section><!-- .body_menu-list -->
 
 		<section class="body-breadcrumps">
 			<div id="title-sub_cat">
-				<span><?php the_title(); ?></span>
+				<span>
+					<?php the_breadcrumb(); ?>
+					<?php //the_title(); ?>
+				</span>
 			</div>
 		</section><!-- .body-breadcrumps -->
 
@@ -83,8 +171,14 @@ get_header(); ?>
 
 				<div class="post">
 					<figure>
-						<div class="th-content-post"></div>
-						<div class="date-post"></div>
+						<div class="th-content-post"><?php the_post_thumbnail(); ?></div>
+							<div class="date-post">
+								<div class="date-single-post">
+									<span><?php the_time('j') ?></span>
+									<?php the_time('F') ?>
+								</div>
+							</div><!-- .date-single-->
+
 					</figure><!-- .th-single-list -->
 
 					<div class="title-content-post">
@@ -115,24 +209,56 @@ get_header(); ?>
 				<div class="post-relacioned">
 					<h2 class="sub-title-content">Posts Relacionados</h2>
 					<nav class="content-posts">
-						<ul>
-							<li>
-								<figure>
-									<div class="thumbnail th-post th-single-post"></div>
-								</figure><!-- .th-single-post -->
 
-								<div class="title-single-post"></div><!-- .title-single-post -->
+					<?php 
+						$categories = get_the_category($post->ID);  
+						if ($categories) {  $category_ids = array();  
+							foreach($categories as $individual_category)  
+								$category_ids[] = $individual_category->term_id; 
+					 
+							$args=array( 
+								'category__in' => $category_ids, 
+								'post__not_in' => array($post->ID), 
+								'showposts'=>5, // Number of related posts that will be shown. 
+								'caller_get_posts'=>1 
+							); 
+							$my_query = new wp_query($args); 
+					 
+							if( $my_query->have_posts() ) {
+								echo '<ul>'; 
+								while ($my_query->have_posts()) { 
+									$my_query->the_post(); ?> 
+									<li>
+										<figure>
+											<div class="thumbnail th-post th-single-post">
+												<?php the_post_thumbnail(); ?>
+											</div>
+										</figure><!-- .th-single-post -->
 
-								<figcaption>
-									<div class="excerpt-single-post"></div>
-								</figcaption><!-- .excerpt-single-post -->
+										<div class="title-single-post">
+											<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+										</div><!-- .title-single-post -->
 
-								<div class="info-single-post">
-									<div class="date-single-post"></div><!-- .date-single-post -->
-								</div><!-- .info-single-post -->
+										<figcaption>
+											<div class="excerpt-single-post"><?php my_excerpt_caracter(); ?></div>
+										</figcaption><!-- .excerpt-single-post -->
 
-							</li>
-						</ul>
+										<div class="info-single-post">
+											<div class="date-single-post"><?php the_time('j F') ?></div><!-- .date-single-post -->
+										</div><!-- .info-single-post -->
+										<div class="relation-comments-author">
+											<div class="i-relations-comments"></div>
+											<span><?php comments_number(); ?></span>
+										</div>
+									</li> 
+								<?php } 
+								echo '</ul>'; 
+							}
+
+							wp_reset_query();
+						} 
+					?>
+
 					</nav><!-- .content-posts -->
 				</div><!-- .post-relacioned -->
 
@@ -144,8 +270,16 @@ get_header(); ?>
 			</div><!-- .content-single -->
 		</section><!-- .body_content-single -->
 
+		<section class="autor-sidebar">
+			<div class="i-single-autor"></div>
+			<span><?php the_author(); ?></span>
+			
+			<div class="i-single-comments"></div>
+			<span><?php comments_number( $zero, $one, $more ); ?></span>
+		</section><!-- .autor-sidebar -->
+
+<?php get_sidebar( "post" ); ?>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php // get_sidebar(); ?>
 <?php get_footer(); ?>
