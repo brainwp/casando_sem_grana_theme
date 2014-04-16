@@ -174,6 +174,7 @@ get_header(); ?>
 			<!-- <div class="clear"><hr></div> -->
 			<section class="body-breadcrumps">
 				<div id="title-sub_cat">
+					<span class="i-cat"></span>
 					<span><?php single_cat_title('',true); ?></span>
 				</div>
 			</section><!-- .body-breadcrumps -->
@@ -202,6 +203,7 @@ get_header(); ?>
 
 								<div class="info-single-post">
 									<div class="date-single-post"><?php the_time('j F') ?></div><!-- .date-single-post -->
+									<div class="number-comments"><span></span></div><!-- .number-comments -->
 								</div><!-- .info-single-post -->
 							</li>
 							<?php endwhile; // end of the loop. ?>

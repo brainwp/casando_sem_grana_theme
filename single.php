@@ -157,7 +157,10 @@ get_header(); ?>
 
 		<section class="body-breadcrumps">
 			<div id="title-sub_cat">
-				<span><?php the_title(); ?></span>
+				<span>
+					<?php the_breadcrumb(); ?>
+					<?php //the_title(); ?>
+				</span>
 			</div>
 		</section><!-- .body-breadcrumps -->
 
@@ -171,9 +174,10 @@ get_header(); ?>
 						<div class="th-content-post"><?php the_post_thumbnail(); ?></div>
 							<div class="date-post">
 								<div class="date-single-post">
-									<?php the_time('j F') ?>
-							</div>
-						</div><!-- .date-single-->
+									<span><?php the_time('j') ?></span>
+									<?php the_time('F') ?>
+								</div>
+							</div><!-- .date-single-->
 
 					</figure><!-- .th-single-list -->
 
@@ -262,8 +266,16 @@ get_header(); ?>
 			</div><!-- .content-single -->
 		</section><!-- .body_content-single -->
 
+		<section class="autor-sidebar">
+			<div class="i-single-autor"></div>
+			<span><?php the_author(); ?></span>
+			
+			<div class="i-single-comments"></div>
+			<span><?php comments_number( $zero, $one, $more ); ?></span>
+		</section><!-- .autor-sidebar -->
+
+<?php get_sidebar( "post" ); ?>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php get_sidebar( "post" ); ?>
 <?php get_footer(); ?>
