@@ -80,6 +80,7 @@ function casando_sem_grana_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	if ( function_exists( 'add_image_size' ) ) { 
 		add_image_size( 'post_destaque', 730, 9999 ); //730 pixels wide (and unlimited height)
+		add_image_size( 'post_category', 300, 9999 ); //300 pixels wide (and unlimited height)
 	}
 
 	// This theme uses wp_nav_menu() in one location.

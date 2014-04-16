@@ -179,36 +179,39 @@ get_header(); ?>
 				</div>
 			</section><!-- .body-breadcrumps -->
 
-			<section class="body_content-single body_content-page body_content-category"><!--  -->
-				
-				<div class="post-relacioned post-category">
-					<nav class="content-posts">
-
+			<section class="body_content-category">
 						<ul>
 							<?php while ( have_posts() ) : the_post(); ?>
-							<li>
-								<figure>
-									<div class="thumbnail th-post th-single-post">
-										<?php the_post_thumbnail(); ?>
-									</div>
-								</figure><!-- .th-single-post -->
+							<li class="post-category">
 
-								<div class="title-single-post">
+								<div class="date-category-post">
+										<?php the_time('j') ?><br />
+										<?php the_time('M') ?>
+								</div><!-- .date-category-post -->
+
+								<div class="thumb-category">
+									<?php the_post_thumbnail( 'post_category' ); ?>
+								</div>
+
+								<div class="title-category-post">
 									<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-								</div><!-- .title-single-post -->
+								</div><!-- .title-category-post -->
 
-								<figcaption>
-									<div class="excerpt-single-post"><?php my_excerpt_caracter(); ?></div>
-								</figcaption><!-- .excerpt-single-post -->
+								<div class="excerpt-category-post"><?php my_excerpt_caracter(); ?></div>
 
 								<div class="info-single-post">
-									<div class="date-single-post"><?php the_time('j F') ?></div><!-- .date-single-post -->
-									<div class="number-comments"><span></span></div><!-- .number-comments -->
+									<div class="number-comments">
+										<span>
+											<?php
+												$comments_count = wp_count_comments( $post->ID );
+												echo $comments_count->approved;
+											?>		
+										</span>
+									</div><!-- .number-comments -->
 								</div><!-- .info-single-post -->
 							</li>
 							<?php endwhile; // end of the loop. ?>
 						</ul>
-					</nav><!-- .content-posts -->
 
 					<div class="nagetation-single-pages">
 
@@ -235,12 +238,9 @@ get_header(); ?>
 					<?php //endif; ?>
 					</div><!-- .nagetation-single-pages -->
 
-				</div><!-- .post-relacioned -->
-
-			</section><!-- .body_content-single -->
+			</section><!-- .body_content-category -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php //get_sidebar( "single" ); ?>
 <?php get_footer(); ?>
