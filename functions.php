@@ -128,9 +128,9 @@ function casando_sem_grana_theme_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
-	newsletter_footer( array(
+	register_sidebar( array(
 		'name'          => __( 'Newsletter', 'casando_sem_grana_theme' ),
-		'id'            => 'newsletter-footer',
+		'id'            => 'ewsletter-footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -139,22 +139,14 @@ function casando_sem_grana_theme_widgets_init() {
 }
 add_action( 'widgets_init', 'casando_sem_grana_theme_widgets_init' );
 
-/**
- * Register widgetized area and update sidebar with default widgets.
- */
-function casando_sem_grana_theme_widgets_newsletter() {
-	newsletter_footer( array(
-		'name'          => __( 'Newsletter', 'casando_sem_grana_theme' ),
-		'id'            => 'newsletter-footer',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-}
-add_action( 'widgets_init', 'casando_sem_grana_theme_widgets_newsletter' );
 
 /**
+ * Register newsletter widget area.
+ */
+
+
+
+ /**
  * Enqueue scripts and styles.
  */
 function casando_sem_grana_theme_scripts() {

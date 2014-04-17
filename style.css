@@ -2062,3 +2062,42 @@ section.body-breadcrumps {
 	margin-top: 10px;
 	display: table;
 }
+
+/* Newsletter */
+#newsletter-footer {
+
+}
+.newsletter {
+	clear: both;
+    display: table;
+    margin-bottom: 50px;
+    margin-top: -40px;
+}
+.newsletter #subscribe-blog-blog_subscription-2 {
+	float: left;
+	height: 25px;
+    width: 200px;
+}
+.newsletter #subscribe-submit {
+	clear: both;
+    margin-top: -45px;
+}
+#subscribe-field {
+    border: 1px solid #5C1B3E;
+    height: 26px;
+    position: relative;
+    z-index: 0;
+}
+.newsletter #subscribe-submit input {
+    background: url("images/i-newsletter-footer.png") no-repeat scroll 10px 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    display: table;
+    float: right;
+    width: 44px;
+    height: 26px;
+    padding-right: 0;
+    position: relative;
+    z-index: 0;
+    box-shadow: none;
+}
+

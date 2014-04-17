@@ -20,6 +20,9 @@
 				<li>
 					<span id="img-nav-2"></span><span class="widget-footer-title">Newsletter</span>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget orci ut elit auctor ultrices ac eu massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+					<div class="newsletter">
+						<?php get_sidebar( "newsletter" ); ?>
+					</div>
 				</li>
 				<li>
 					<span id="img-nav-3"></span><span class="widget-footer-title">Contato</span>
