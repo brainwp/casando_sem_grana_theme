@@ -678,7 +678,7 @@ object {
 	right: 25px;
 	font-size: 0.75em;
 	line-height: 1.3em;
-	z-index: 999;
+	z-index: 99;
 }
 .box-rss a {
 	text-decoration: none;
@@ -702,36 +702,36 @@ object {
 	position: absolute;
 	top: 120px;
 	right: 105px;
-	z-index: 999;	
+	z-index: 99;	
 }
 
-.section-header {
+
+#masthead {
 	background-color: #F1F2F2;
     display: table;
     height: 312px;
     width: 100%;
-	z-index: -2;
+	z-index: 0;
 }
-.site-branding {
-	clear: both;
-    display: table;
-    position: absolute;
-    width: 100%;
-}
+
 .site-title {
 	display: table;
 	width: 100%;
+	clear: both;
+    display: table;
+    width: auto;
+	margin: 0 auto;
+	z-index: 99;
 }
 .site-title #logo {
 	display: table;
-	margin: 112px auto 53px auto;
 }
 #img-header-left {
-	float: left;
+	position: absolute;
 	background: url( "images/header-flor-left.png" ) no-repeat;
 	width: 635px;
 	height: 304px;
-	z-index: -1;
+	z-index: 1;
 
 }
 a.home {
@@ -739,13 +739,12 @@ a.home {
 }
 
 #img-header-right {
-  background: url("images/header-flor-right.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    bottom: 0;
+	position: absolute;
+  	background: url("images/header-flor-right.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     height: 178px;
-    position: absolute;
-    right: 0;
     width: 437px;
-	z-index: -1;
+	z-index: 1;
+	right: 0;
 }
 
 /* Plugin Slides */
@@ -869,7 +868,7 @@ a.home {
 	width: 100%;
 	padding: 40px 0;
 	background: url( "images/background-category.png" ) repeat-x;
-	margin: 30px 0;
+	margin: 30px 0 10px;
 }
 .body_menu-home ul li {
 	/* display: inline;
