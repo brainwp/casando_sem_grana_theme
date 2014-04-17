@@ -754,7 +754,6 @@ a.home {
 	width: 100%;
 	height: 390px;
 	margin: 20px 0;
-	/*width: 1000px;*/
 }
 #body_slides h1 {
 	margin: 40%;
@@ -767,9 +766,12 @@ a.home {
 	font-weight: bold;
 }
 .boxes-home {
-	max-width: 960px;
-	margin: 0 auto;
-	clear: both;
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    min-height: 200px;
+    padding: 0 0 0 20px;
+    width: auto;
 }
 .boxes-home #box-1 {
 	background: #efe689;
@@ -791,8 +793,10 @@ a.home {
     float: left;
     margin-top: 20px;
     padding: 0;
-    /* height: 110px; */
+	width: 68%;
+    min-height: 300px;
 }
+
 #box-content .anuncio {
 	clear: both;
 	width: 682px;
@@ -817,7 +821,7 @@ a.home {
 	overflow: hidden;
 }
 .boxes-home .box {
-	width: 24%;
+	width: 23.8%;
 	float: left;
 	margin: 0 1% 0 0;
 	-webkit-border-radius: 7px;
@@ -826,7 +830,7 @@ a.home {
 	padding: 25px 20px;
 	text-align: center;
 	color: #FFF;
-	height: 300px;
+	min-height: 200px;
 }
 .boxes-home .box img {
 	margin: 5px auto;

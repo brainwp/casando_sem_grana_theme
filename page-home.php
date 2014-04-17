@@ -10,29 +10,6 @@
 <?php echo do_shortcode ('[pointelleslider set="2" id="2"]') ?>
 </section><!-- #body_slides -->
 
-	<div id="boxes">
-		<article id="box-1" class="box">
-			<span class="img-bullet"></span>
-			<h1 class="title"></h1>
-			<div class="excerpt"></div>
-		</article>
-		<article id="box-2" class="box">
-			<span class="img-bullet"></span>
-			<h1 class="title"></h1>
-			<div class="excerpt"></div>
-		</article>
-		<article id="box-3" class="box">
-			<span class="img-bullet"></span>
-			<h1 class="title"></h1>
-			<div class="excerpt"></div>
-		</article>
-		<article id="box-4" class="box">
-			<span class="img-bullet"></span>
-			<h1 class="title"></h1>
-			<div class="excerpt"></div>
-		</article>
-	</div><!-- #boxes -->
-
 <?php
 	//Box 1
 	$icone_box_1 = of_get_option('icon_feature_upload_um');
