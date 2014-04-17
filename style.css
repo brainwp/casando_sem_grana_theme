@@ -769,7 +769,7 @@ a.home {
     clear: both;
     display: block;
     margin: 0 auto;
-    min-height: 200px;
+    min-height: 310px;
     padding: 0 0 0 20px;
     width: auto;
 }
@@ -787,11 +787,10 @@ a.home {
 }
 #box-content {
 	clear: both;
-	margin: 0;
+	margin: 20px 0 0 20px;
 	padding: 0;
     display: block;
     float: left;
-    margin-top: 20px;
     padding: 0;
 	width: 68%;
     min-height: 300px;
@@ -805,7 +804,7 @@ a.home {
 }
 #box-post {
 	clear: both;
-	max-width: 682px;
+	width: auto;
 	margin: 20px 0;
 	float: left;
 }
@@ -830,7 +829,7 @@ a.home {
 	padding: 25px 20px;
 	text-align: center;
 	color: #FFF;
-	min-height: 200px;
+	min-height: 310px;
 }
 .boxes-home .box img {
 	margin: 5px auto;
@@ -840,10 +839,10 @@ a.home {
 	margin-top: 5px;
 }
 .exerpt-home-destaque {
-	padding: 10px 20px 0 20px;
+	padding: 10px 20px 0 0;
 }
 #title-post {
-	padding: 0 20px;
+	padding: 0;
 }
 #title-post a {
 	text-decoration: none;
@@ -1704,9 +1703,8 @@ a.url {
 	display: table;
     float: left;
     height: auto;
-    margin-left: 40px;
-    margin-top: 20px;
-    width: 28%;
+    margin: 20px;
+    width: 26%;
 }
 
 h1.widget-title {
@@ -1772,8 +1770,7 @@ aside.widget_search {
 .search-form {
 	float: left;
 	height: auto;
-	/* margin: 0 0 0 20px; */
-    width: 250px;
+    width: auto;
 }
 
 h1.widget-title {
@@ -1806,10 +1803,9 @@ h1.widget-title {
     height: 34px;
     position: absolute;
     right: 28px;
-    /* right: -11px; */
     text-indent: -999px;
     width: 44px;
-    margin-right: -31px;
+    margin-right: -5px;
 }
 .search-results .widget-footer {
 	float: left;
