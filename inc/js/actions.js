@@ -1,3 +1,5 @@
+
+/* START | Menu de Categorias */
 $(function() {
     $('.nav-menu-toogle li').click(function() {
         $(this).find('ul.sub-category-hide').slideToggle('fast', function() {
@@ -6,3 +8,4 @@ $(function() {
         return false;
     });
 });
+/* END | Menu de Categorias */

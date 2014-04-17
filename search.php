@@ -42,48 +42,34 @@ get_header(); ?>
 			<section class="body_menu-list">
 				<nav class="nav-menu-toogle">
 					<ul>
-						<!-- <li class="father-category">
-							<a class="write-menu">Casamentos Reais</a>
-						</li>
-						<li class="father-category">
-							<a class="write-menu">O Grande Dia</a>
-						</li>
-						<li class="father-category">
-							<a class="write-menu">Tem mais</a>
-						</li>
-						<li class="father-category">
-							<a class="write-menu">Anuncie</a>
-						</li> -->
+						<?php
+							$args = array(
+							'type'                     => '',
+							'child_of'                 => 0,
+							'parent'                   => '',
+							'orderby'                  => 'ID',
+							'order'                    => 'ASC',
+							'hide_empty'               => 0,
+							'hierarchical'             => 1,
+							'exclude'                  => '1',
+							'include'                  => '',
+							'number'                   => '',
+							'taxonomy'                 => 'category',
+							'pad_counts'               => false );
 
-			<?php
-				$args = array(
-				'type'                     => '',
-				'child_of'                 => 0,
-				'parent'                   => '',
-				'orderby'                  => 'ID',
-				'order'                    => 'ASC',
-				'hide_empty'               => 0,
-				'hierarchical'             => 1,
-				'exclude'                  => '1',
-				'include'                  => '',
-				'number'                   => '',
-				'taxonomy'                 => 'category',
-				'pad_counts'               => false );
-
-				$categories = get_categories( $args );
+							$categories = get_categories( $args );
 
 
-				foreach( $categories as $category ) {
+							foreach( $categories as $category ) {
 
-					$cat_ID = $category->term_id; // Get ID the category.
+								$cat_ID = $category->term_id; // Get ID the category.
 
-					if( $category->parent == 0 ){
-						echo '<div class="ring"><span class="img-cat parent-item-'.$cat_ID.'"></span><li class="father-category">' . $category->name.'</li>';
-						echo '<div class="hover-cat"><span></span></div></div>';
-					}
-				}
-			?>
-
+								if( $category->parent == 0 ){
+									echo '<div class="ring"><span class="img-cat parent-item-'.$cat_ID.'"></span><li class="father-category">' . $category->name.'</li>';
+									echo '<div class="hover-cat"><span></span></div></div>';
+								}
+							}
+						?>
 					</ul>
 				</nav>
 
