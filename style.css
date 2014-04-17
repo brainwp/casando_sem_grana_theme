@@ -1651,7 +1651,7 @@ a.url {
 	background-color: #000;
 }
 .post-relacioned .content-posts ul li .date-single-post {
-    background: url("images/bullet-date-post-relations.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("images/bullet-date-post-relations1.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     bottom: 39px;
     color: #FFFFFF;
     float: right;
@@ -1829,6 +1829,24 @@ h1.widget-title {
 .menu-hide-home a:hover {
 	text-decoration: underline;
 }
+.not-found {
+	float: left;
+	margin: 20px;
+	width: 97%;
+}
+.not-found .search-form {
+	width: 98%;
+}
+.not-found header {
+	float: left;
+	width: 100%;
+}
+.not-found h1 {
+	float: left;
+}
+.not-found .search-form .search-submit {
+    right: 49px;
+}
 
 
 /* PAGE */
@@ -1840,6 +1858,12 @@ h1.widget-title {
 }
 .clear {
 	clear: both;
+}
+.clear-single {
+	border: 1px solid #CCCCCC;
+    clear: both;
+    margin: 0 auto;
+    width: 96%;
 }
 
 #body_search {

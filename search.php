@@ -180,9 +180,10 @@ get_header(); ?>
 				</nav>
 			</section><!-- .body_menu-list -->
 
-			<!-- <div id="title-sub_cat"><span><?php //the_title(); ?></span></div> -->
+			<div class="clear clear-single"></div>
 
 			<?php if ( have_posts() ) : ?>
+
 			<section id="body_search">	
 				<header id="title-sub_cat" class="page-header">
 					<h1 class="page-title"><?php printf( __( '<i>Search Results for: %s', 'casando_sem_grana_theme</i>' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
