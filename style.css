@@ -2148,6 +2148,7 @@ section.body-breadcrumps {
     position: relative;
     right: 548px;
     width: auto;
+	list-style: disc;
 }
 .body_menu-home .nav-menu-toogle ul li.active-toggle ul li {
 	background-color: #F1F2F2;
@@ -2156,7 +2157,6 @@ section.body-breadcrumps {
     width: auto;
 }
 .body_menu-home .nav-menu-toogle ul li.active-toggle ul li a {
-	list-style: disc;
 	font-weight: bold;
     padding: 20px;
 }

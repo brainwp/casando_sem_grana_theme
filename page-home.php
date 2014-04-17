@@ -10,29 +10,6 @@
 <?php echo do_shortcode ('[pointelleslider set="2" id="2"]') ?>
 </section><!-- #body_slides -->
 
-	<div id="boxes">
-		<article id="box-1" class="box">
-			<span class="img-bullet"></span>
-			<h1 class="title"></h1>
-			<div class="excerpt"></div>
-		</article>
-		<article id="box-2" class="box">
-			<span class="img-bullet"></span>
-			<h1 class="title"></h1>
-			<div class="excerpt"></div>
-		</article>
-		<article id="box-3" class="box">
-			<span class="img-bullet"></span>
-			<h1 class="title"></h1>
-			<div class="excerpt"></div>
-		</article>
-		<article id="box-4" class="box">
-			<span class="img-bullet"></span>
-			<h1 class="title"></h1>
-			<div class="excerpt"></div>
-		</article>
-	</div><!-- #boxes -->
-
 <?php
 	//Box 1
 	$icone_box_1 = of_get_option('icon_feature_upload_um');
@@ -97,7 +74,6 @@
 </div><!-- #boxes -->
 
 <section class="body_menu-home">
-
 	
 	<nav class="nav-menu-toogle">
 		<ul>
@@ -121,26 +97,28 @@
 				$cat_ID = $category->term_id; // Get ID the category.
 			?>
 				<li class="active-toggle">
-					<div class="ring">
-						<span class="img-cat parent-item-<?php echo $cat_ID; ?>"></span>
-							<?php echo $category->name; ?>'
-						<div class="hover-cat"></div>
-					</div>
+						<div class="ring">
+							<span class="img-cat parent-item-<?php echo $cat_ID; ?>"></span>
+								<?php echo $category->name; ?>'
+							<div class="hover-cat"></div>
+						</div>
 
-					<?php	
-						$child_args = array( 'child_of' => $cat_ID, );
-						$child_categories = get_categories( $child_args );
-					?>
-				<ul class="sub-category-hide"><li>
-				<?php foreach( $child_categories as $child_category ) : ?>		
-					<a href="<?php echo get_category_link( $child_category->term_id );?>"><?php echo $child_category->name;?></a>
-				<?php endforeach; ?>
-				</li></ul>
-
-			</li>
+						<?php	
+							$child_args = array( 'child_of' => $cat_ID, );
+							$child_categories = get_categories( $child_args );
+						?>
+					<ul class="sub-category-hide">
+						<li>
+							<?php foreach( $child_categories as $child_category ) : ?>		
+								<a href="<?php echo get_category_link( $child_category->term_id );?>">
+									<?php echo $child_category->name; ?>
+								</a>
+							<?php endforeach; ?>
+						</li>
+					</ul>
+				</li>
 					
 	<?php endforeach; ?>
-
 				
 		</ul>
 	</nav><!-- .nav-menu-home -->
