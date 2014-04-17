@@ -30,7 +30,7 @@
 					<h2 id="phone">Tel.:3456-7892</h2>
 				</li>
 				<li class="link-morando">
-					<span id="img-nav-4"></span>
+					<a href="http://" target="blank"><span id="img-nav-4"></span></a>
 					<p class="texto-morando">Conheça também o<br /><span>Morando Sem grana</span></p>
 				</li>
 			</ul>

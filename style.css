@@ -1862,6 +1862,9 @@ h1.widget-title {
 .menu-hide-home a:hover {
 	text-decoration: underline;
 }
+
+
+/* Page - 404 */
 .not-found {
 	float: left;
 	margin: 20px;
@@ -1872,13 +1875,30 @@ h1.widget-title {
 }
 .not-found header {
 	float: left;
-	width: 100%;
+    margin-top: 45px;
+    font-style: italic;
 }
 .not-found h1 {
-	float: left;
+    float: left;
+    font-weight: bold;
 }
 .not-found .search-form .search-submit {
     right: 49px;
+}
+.erro {
+	float: left;
+    background: url("images/i-404.png") no-repeat scroll 10px 0 rgba(0, 0, 0, 0);
+    width: 208px;
+    height: 221px;
+    margin: 0 30px 30px 0;
+    opacity: 0.8;
+}
+.error-404 .page-content {
+	float: left;
+	margin: 0;
+}
+.error-404 .page-content form .search-submit {
+	right: 105px;
 }
 
 

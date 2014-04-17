@@ -130,7 +130,7 @@ function casando_sem_grana_theme_widgets_init() {
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Newsletter', 'casando_sem_grana_theme' ),
-		'id'            => 'ewsletter-footer',
+		'id'            => 'newsletter-footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
