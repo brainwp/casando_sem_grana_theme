@@ -701,51 +701,41 @@ object {
 	height: 48px;
 	position: absolute;
 	top: 120px;
-	right: 105px;
+	right: 10%;
 	z-index: 99;	
 }
 
 
 #masthead {
-	background-color: #F1F2F2;
+	background: url("images/header-flor-right.png") no-repeat scroll right bottom #F1F2F2;
     display: table;
     height: 312px;
     width: 100%;
-	z-index: 0;
+	z-index: -2;
 }
 
-.site-title {
-	display: table;
+a#logo {
+	display: block;
+    margin: -200px auto 20px;
+    max-width: 691px;
+    padding: 0 20px;
+    z-index: 999;
+}
+
+#logo img {
 	width: 100%;
-	clear: both;
-    display: table;
-    width: auto;
-	margin: 0 auto;
-	z-index: 99;
+	max-height: 158px;
+    display: block;
 }
-.site-title #logo {
-	display: table;
-}
+
 #img-header-left {
-	position: absolute;
-	background: url( "images/header-flor-left.png" ) no-repeat;
+	background: url( "images/header-flor-left.png" ) no-repeat scroll 0 0 ;
 	width: 635px;
 	height: 304px;
-	z-index: 1;
+	z-index: -1;
 
 }
-a.home {
-	z-index: 2;
-}
 
-#img-header-right {
-	position: absolute;
-  	background: url("images/header-flor-right.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    height: 178px;
-    width: 437px;
-	z-index: 1;
-	right: 0;
-}
 
 /* Plugin Slides */
 #body_slides {

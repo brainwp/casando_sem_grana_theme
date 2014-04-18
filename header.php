@@ -27,18 +27,16 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
-	<header id="masthead" class="site-header" role="banner">		<section class="section-header">
+	<header id="masthead" class="site-header" role="banner">
 
 			<div id="img-header-left">
 			</div><!-- #img-header-left -->
-			
-					<h1 class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home">
-							<img id="logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-						</a>
-					</h1>
 
-			<div id="img-header-right"></div><!-- #img-right -->
+				<a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home">
+
+					<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+
+				</a>
 
 			<div class="box-rss">
 				<h2><a href="<?php echo home_url( '/feed' ); ?>" target="_blank"><?php bloginfo( 'description' ); ?></a></h2>
