@@ -1200,14 +1200,13 @@ h2#phone {
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: #fff;
-	float: left;
 }
 
 ul.social-icons {
 	margin: 0;
 	padding: 0;
 	float: right;
-	margin: 0 0 0 30px;
+	margin: 0 0 0 20px;
 	}
 
 .social-icons li{
@@ -1241,6 +1240,10 @@ ul.social-icons {
 	width: 25px;
 	height: 25px;
 	position: absolute;
+}
+
+img#wpstats {
+	display: none;
 }
 
 /* Archive */
