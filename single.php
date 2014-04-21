@@ -219,7 +219,7 @@ get_header(); ?>
 							$args=array( 
 								'category__in' => $category_ids, 
 								'post__not_in' => array($post->ID), 
-								'showposts'=>5, // Number of related posts that will be shown. 
+								'showposts'=>3, // Number of related posts that will be shown. 
 								'caller_get_posts'=>1 
 							); 
 							$my_query = new wp_query($args); 
@@ -228,29 +228,22 @@ get_header(); ?>
 								echo '<ul>'; 
 								while ($my_query->have_posts()) { 
 									$my_query->the_post(); ?> 
-									<li>
-										<figure>
-											<div class="thumbnail th-post th-single-post">
-												<?php the_post_thumbnail(); ?>
-											</div>
-										</figure><!-- .th-single-post -->
+									<li class="post-category">
 
-										<div class="title-single-post">
-											<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-										</div><!-- .title-single-post -->
+										<div class="date-category-post">
+												<?php the_time('j') ?><br />
+												<?php the_time('M') ?>
+										</div><!-- .date-category-post -->
 
-										<figcaption>
-											<div class="excerpt-single-post"><?php my_excerpt_caracter(); ?></div>
-										</figcaption><!-- .excerpt-single-post -->
-
-										<div class="info-single-post">
-											<div class="date-single-post"><?php the_time('j F') ?></div><!-- .date-single-post -->
-										</div><!-- .info-single-post -->
-										<div class="relation-comments-author">
-											<div class="i-relations-comments"></div>
-											<span><?php comments_number(); ?></span>
+										<div class="thumb-category">
+											<?php the_post_thumbnail( 'post_category' ); ?>
 										</div>
-									</li> 
+
+										<div class="title-category-post">
+											<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+										</div><!-- .title-category-post -->
+
+									</li>
 								<?php } 
 								echo '</ul>'; 
 							}
