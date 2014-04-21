@@ -191,13 +191,13 @@ get_header(); ?>
 
 					<div class="body_autor-post">
 						<figure>
-							<div class="thumbnail th-autor"></div>
+							<div class="thumbnail th-autor"><?php echo get_avatar( get_the_author_meta( 'ID' ), 140 ); ?></div>
 						</figure><!-- .th-autor -->
 						
 						<span>
 							<h2>Via: <?php the_author(); ?></h2><!-- .nome-autor -->
 							<a class="more" href="<?php the_permalink(); ?>"></a><!-- .more -->
-							<div class="excerpt-autor"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim </p></div>
+							<div class="excerpt-autor"><p><?php the_author_description(); ?></p></div>
 						</span>
 					</div><!-- .body_autor-post -->
 				</div><!-- .post -->
