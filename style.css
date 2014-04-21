@@ -1456,9 +1456,9 @@ section.body_menu-list {
     width: 94px;
 }
 .content-single .post .date-single-post span{
-	display: table;
+	display: inherit;
     font-size: 32px;
-    margin: 3px 6px;
+    margin: 5px auto 7px auto;
 }
 .title-single-post {
 	display: table;

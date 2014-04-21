@@ -175,7 +175,7 @@ get_header(); ?>
 							<div class="date-post">
 								<div class="date-single-post">
 									<span><?php the_time('j') ?></span>
-									<?php the_time('F') ?>
+									<?php the_time('M') ?>
 								</div>
 							</div><!-- .date-single-->
 
