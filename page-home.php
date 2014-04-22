@@ -74,7 +74,8 @@
 </div><!-- #boxes -->
 
 <section class="body_menu-home">
-	
+	<?php $to_loop = array();
+	$i = ''; ?>
 	<nav class="nav-menu-toogle">
 		<ul>
 			<?php
@@ -109,10 +110,10 @@
 						?>
 					<ul class="sub-category-hide">
 						<li>
+							
 							<?php foreach( $child_categories as $child_category ) : ?>		
-								<a href="<?php echo get_category_link( $child_category->term_id );?>">
-									<?php echo $child_category->name; ?>
-								</a>
+								<?php $to_loop[$i] .= $child_category->parent; ?>
+								<?php $i++; ?>
 							<?php endforeach; ?>
 						</li>
 					</ul>
@@ -124,6 +125,16 @@
 	</nav><!-- .nav-menu-home -->
 
 </section><!-- .body_menu-home -->
+
+<?php foreach( $to_loop as $to ) : ?>		
+	<?php  $categories = get_categories( "hide_empty=0&parent=$to" );
+
+        echo '<ul class="hide">';
+        foreach ( $categories as $cat ) {
+                echo '<li><a href="' . get_category_link( $cat->term_id ) . '" >' . $cat->name . '</a></li>';
+        }
+        echo '</ul>'; ?>
+<?php endforeach; ?>
 
 <section id="box-content">
 	<div class="anuncio">
