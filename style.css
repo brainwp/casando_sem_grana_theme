@@ -604,6 +604,52 @@ a:active {
 .bypostauthor {
 }
 
+
+.comment-author {
+}
+
+.fn {
+	float: left;	
+	margin-right: 10px;
+	color: #3c0402;
+	font-weight: bold;
+}
+
+.div-avatar {
+	float: left;
+	margin-right: 25px;
+}
+.comment-point {
+	float: left;
+	margin-right: 10px;
+	color: #babdc0;
+}
+
+.comment-meta {
+	display: block;
+	color: #babdc0;
+}
+
+.comment-body {
+	padding: 10px 0 30px 30px;
+}
+
+.comment-body p {
+	display: block;
+}
+
+.comment-text {
+	float: left;
+	width: 70%;
+	margin-bottom: 35px;
+}
+
+.comment-reply-title {
+	padding: 0 !important;
+	margin-bottom: 10px;
+	color: #3c0402;
+}
+
 /*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
@@ -1537,7 +1583,7 @@ section.body_content-single {
 	float: left;
     width: 653px;
     height: 490px;
-    background-color: #000;
+    overflow: hidden;
 }
 .content-single > .post-relacioned {
 	float: left;
@@ -1594,6 +1640,7 @@ section.body_content-single {
 .body_autor-post span h2 {
 	text-transform: uppercase;
 	color: #5C1B3E;
+	padding-left: 0 !important;
 }
 .body_autor-post span p {
 	color: #4c4c4c;
@@ -1635,6 +1682,7 @@ section.body_content-single {
 	float: left;
 	width: 100%;
 	color: #4c4c4c;
+	margin-top: 35px;
 }
 .coments-single-post a {
 	color: #4c4c4c;
@@ -1649,7 +1697,7 @@ section.body_content-single {
 .coments-single-post ol li.comment {
 	float: left;
     list-style: none outside none;
-    width: 65%;
+    width: 85%;
 }
 .comment-metadata {
 	float: left;
@@ -1663,11 +1711,6 @@ section.body_content-single {
 	font-size: 12px;
 	width: 50%;
 }
-.comment-body, .comment-author, .reply {
-}
-.comment-meta {
-	
-}
 a.url {
 	color: #5c1b3e;
 }
@@ -1675,7 +1718,7 @@ a.url {
 	display: none;
 }
 .comment-respond {
-	margin-left: 140px;
+	margin: 30px 0 0 194px;
 }
 .comment-form-comment textarea {
 	float: left;
