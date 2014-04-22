@@ -1772,6 +1772,15 @@ a.url {
     width: 44px;
 }
 
+/* SIDEBAR-HOME */
+#side-home {
+    float: left;
+    height: auto;
+    margin: 20px;
+    width: 25%;
+    overflow: hidden;
+}
+
 /* SIDEBAR-SINGLE */
 #side-single {
     float: left;

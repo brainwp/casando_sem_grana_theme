@@ -5,7 +5,7 @@
  * @package casando_sem_grana_theme
  */
 ?>
-<section id="side-single">	
+<section id="side-home">	
 	<div id="secondary" class="widget-area secondary-home" role="complementary">
 		<?php if ( ! dynamic_sidebar( 'sidebar-home' ) ) : ?>
 
@@ -25,4 +25,4 @@
 
 		<?php endif; // end sidebar widget area ?>
 	</div><!-- #secondary -->
-</section><!-- #side-single -->
+</section><!-- #side-home -->
