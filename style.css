@@ -1774,11 +1774,11 @@ a.url {
 
 /* SIDEBAR-SINGLE */
 #side-single {
-	display: table;
     float: left;
     height: auto;
     margin: 20px;
-    width: 26%;
+    width: 30%;
+    overflow: hidden;
 }
 #side-single .search-form {
     width: 95%;
@@ -1787,6 +1787,8 @@ h1.widget-title {
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: #5C1A3E;
+	text-align: center;
+	margin-bottom: 15px;
 }
 
 .widget-area ul {
@@ -1837,7 +1839,7 @@ h1.widget-title {
 	font-size: 18px;
 	font-weight: bold;
 	text-align: center;
-	background-color: #ccc;
+	text-transform: uppercase;
 }
 aside.widget_search {
 	display: table;
@@ -1849,10 +1851,11 @@ aside.widget_search {
     width: auto;
 }
 
-h1.widget-title {
+h1.widget-title, h1.widget-title a {
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: #5C1A3E;
+	text-decoration: none;
 }
 
 .widget-area ul {

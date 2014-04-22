@@ -129,6 +129,14 @@ function casando_sem_grana_theme_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
+		'name'          => __( 'Sidebar Post', 'casando_sem_grana_theme' ),
+		'id'            => 'sidebar-post',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
 		'name'          => __( 'Newsletter', 'casando_sem_grana_theme' ),
 		'id'            => 'newsletter-footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -353,7 +361,7 @@ function custom_comments( $comment, $args, $depth ) {
 
 	<div class="comment-text">
 		<?php comment_text(); ?>
-		
+
 	<div class="reply">
 		<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 	</div>
