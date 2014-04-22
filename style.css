@@ -2038,15 +2038,14 @@ div.pointelle-slider-control {
 	margin-bottom: 10px;
 }
 
-.content-posts .thumb-category {
+.content-posts .thumb-single {
 	width: 100%;
-	height: 130px;
+	height: 110px;
 	overflow: hidden;
 	margin-bottom: 10px;
 }
 
-.content-posts .thumb-category img {
-	margin-top: -25px;
+.content-posts .thumb-single img {
 }
 
 .body_content-category .date-category-post {

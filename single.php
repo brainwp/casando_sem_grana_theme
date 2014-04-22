@@ -235,7 +235,7 @@ get_header(); ?>
 												<?php the_time('M') ?>
 										</div><!-- .date-category-post -->
 
-										<div class="thumb-category">
+										<div class="thumb-single">
 											<?php the_post_thumbnail( 'post_category' ); ?>
 										</div>
 
