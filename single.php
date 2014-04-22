@@ -20,25 +20,25 @@ get_header(); ?>
 				<div class="box">
 					<!-- <span class="img-bullet"></span> -->
 					<li id="box-1">
-						<a id="img-1" class="img-menu-page" href=""></a><a>Por onde Começar?</a>
+						<a id="img-1" class="img-menu-page"></a><a href="<?php echo home_url(); ?>/category/por-onde-comecar">Por onde Começar?</a>
 					</li>
 				</div>
 				<div class="box">
 					<!-- <span class="img-bullet"></span> -->
 					<li id="box-2">
-						<a id="img-2" class="img-menu-page" href=""></a><a>Faça você mesmo</a>
+						<a id="img-2" class="img-menu-page"></a><a href="<?php echo home_url(); ?>/category/faca-voce-mesmo">Faça você mesmo</a>
 					</li>
 				</div>
 				<div class="box">
 					<!-- <span class="img-bullet"></span> -->
 					<li id="box-3">
-						<a id="img-3" class="img-menu-page" href=""></a><a>Lista de Casamento</a>
+						<a id="img-3" class="img-menu-page"></a><a href="<?php echo home_url(); ?>/category/lista-de-casamento">Lista de Casamento</a>
 					</li>
 				</div>
 				<div class="box">
 					<!-- <span class="img-bullet"></span> -->
 					<li id="box-4">
-						<a id="img-4" class="img-menu-page" href=""></a><a>Fornecedores Justos</a>
+						<a id="img-4" class="img-menu-page"></a><a href="<?php echo home_url(); ?>/category/fornecedores-justos">Fornecedores Justos</a>
 					</li>
 				</div>
 			</div><!-- #boxes -->

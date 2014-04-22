@@ -1324,6 +1324,7 @@ img#wpstats {
 }
 #body_menu-boxes #boxes .box > li a {
     color: #FFFFFF;
+    text-decoration: none;
 }
 #body_menu-boxes #boxes li#box-1 {
     border-radius: 7px;
