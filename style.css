@@ -1230,14 +1230,14 @@ ul.social-icons {
 
 .social-icons li.icon a#twitter-social{
 	background: url("images/social-icon-twitter.png") no-repeat scroll 0 0 transparent;
-	width: 25px;
+	width: 26px;
 	height: 25px;
 	position: absolute;
 }
 
 .social-icons li.icon a#facebook-social{
 	background: url("images/social-icon-facebook.png") no-repeat scroll 0 0 transparent;
-	width: 25px;
+	width: 26px;
 	height: 25px;
 	position: absolute;
 }
@@ -1725,7 +1725,9 @@ a.url {
     margin: 20px;
     width: 26%;
 }
-
+#side-single .search-form {
+    width: 95%;
+}
 h1.widget-title {
 	font-size: 1.2em;
 	text-transform: uppercase;
