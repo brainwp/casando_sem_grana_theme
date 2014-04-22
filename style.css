@@ -830,13 +830,21 @@ a#logo {
 	padding: 0;
     display: block;
     float: left;
-<<<<<<< HEAD
-=======
-    margin-top: 30px;
->>>>>>> jony_dev
     padding: 0;
 	width: 68%;
     min-height: 300px;
+}
+
+#box-blog {
+	clear: both;
+	margin: 20px 0 0 20px;
+	padding: 0;
+    display: block;
+    float: left;
+    padding: 0;
+	width: 64%;
+    min-height: 300px;
+    overflow: hidden;
 }
 
 #box-content .anuncio {
@@ -1624,6 +1632,9 @@ section.body_content-single {
 	font-size: 33px;
 	text-transform: uppercase;
 	padding: 0 25px;
+}
+.content-post {
+	max-width: 650px;
 }
 .content-post p {
 	padding: 0 25px;
