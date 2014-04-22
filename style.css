@@ -1915,7 +1915,7 @@ h1.widget-title {
 	margin: 0;
 }
 .error-404 .page-content form .search-submit {
-	right: 105px;
+	right: 87px;
 }
 
 
@@ -2137,7 +2137,7 @@ section.body-breadcrumps {
 	clear: both;
     display: table;
     margin-bottom: 50px;
-    margin-top: -40px;
+    margin-top: -20px;
 }
 .newsletter #subscribe-blog-blog_subscription-2 {
 	float: left;
