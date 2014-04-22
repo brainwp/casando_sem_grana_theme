@@ -1161,7 +1161,7 @@ h2#phone {
 #menu-creditos {
 	float: left;
 	width: 50%;
-	margin: 10px 20px;
+	margin: 25px 20px 10px 20px;
 }
 
 #menu-creditos ul {
@@ -1200,10 +1200,17 @@ h2#phone {
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: #fff;
+	padding: 10px 0;
+	margin: 10px 0 0 0;
+}
+
+ul.alignleft {
+	padding: 0;
+	float: right;
+	margin: -39px 0px 0px 20px !important;
 }
 
 ul.social-icons {
-	margin: 0;
 	padding: 0;
 	float: right;
 	margin: 0 0 0 20px;
@@ -1240,6 +1247,10 @@ ul.social-icons {
 	width: 26px;
 	height: 25px;
 	position: absolute;
+}
+
+#social-area .simple-social-icons ul li a, .simple-social-icons ul li a:hover {
+	border: 1px solid #FFF !important;
 }
 
 img#wpstats {
