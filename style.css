@@ -725,6 +725,7 @@ object {
 	font-size: 0.75em;
 	line-height: 1.3em;
 	z-index: 99;
+	font-family: 'Lato','sans-serif';
 }
 .box-rss a {
 	text-decoration: none;
@@ -734,7 +735,9 @@ object {
 .box-rss h2 {
 	margin: 10px 0 5px 0;
 	text-transform: uppercase;
-	font-size: 1.2em;
+	font-family: 'Lato','sans-serif';
+	font-size: 1.1em;
+    font-weight: bold;
 	display: block;
 	background: url('images/icon-rss.png') no-repeat left;
 	text-indent: 30px;
@@ -797,8 +800,9 @@ a#logo {
 /* Boxes Home */
 #boxes h3.title {
 	text-transform: uppercase;
-	font-size: 0.9em;
-	font-weight: bold;
+	font-family: 'Lato','sans-serif';
+	font-size: 1em;
+    font-weight: bold;
 }
 .boxes-home {
     clear: both;
@@ -874,11 +878,15 @@ a#logo {
 	margin: 5px auto;
 }
 .boxes-home .box .excerpt {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	margin-top: 5px;
+	font-family: 'Lato','sans-serif';
 }
 .exerpt-home-destaque {
 	padding: 10px 20px 0 0;
+	font-family: 'Lato','sans-serif';
+	font-weight: lighter;
+	font-size: 1.1em;
 }
 #title-post {
 	padding: 0;
@@ -886,6 +894,7 @@ a#logo {
 #title-post a {
 	text-decoration: none;
 	color: #000000;
+	font-family: 'Lato','sans-serif';
 }
 #title-post a:hover {
 	color: #8A8C8E;
@@ -1111,7 +1120,7 @@ div.hover-cat {
 	min-height: 50px;
 	clear: both;
 	overflow: hidden;
-	padding: 15px 0 5px 0;
+	padding: 10px 0;
 }
 
 #widget-footer {
@@ -1147,7 +1156,8 @@ ul#menu-footer li{
 }
 
 .texto-morando span {
-	font-size: 1.2em;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 #img-nav-1 {
@@ -1182,12 +1192,14 @@ ul#menu-footer li{
     display: block;
     height: 80px;
     width: 80px;
-	margin: 25px auto 0;
+	margin: 45px auto 0;
 }
 
 .widget-footer-title {
 	color: #681E39;
-	font-size: 1.1em;
+    font-family: 'Lato','sans-serif';
+    font-size: 1em;
+    font-weight: bold;
 	text-transform: uppercase;
 	position: absolute;
 	margin: 10px;
@@ -1197,17 +1209,24 @@ ul#menu-footer li p {
 	font-size: 0.8em;
 	color: #681E39;
 	clear: both;
+	font-family: "Lato"; sans-serif;
 }
 
 h2#phone {
 	font-size: 1.2em;
 	color: #681E39;
+	font-family: 'Lato','sans-serif';
+    font-weight: bold;
+	letter-spacing: 1px;
 }
 
 #menu-creditos {
 	float: left;
 	width: 50%;
-	margin: 25px 20px 10px 20px;
+    font-size: 0.8em;
+    margin: 10px 20px;
+	font-family: 'Lato','sans-serif';
+	text-transform: uppercase;
 }
 
 #menu-creditos ul {
@@ -1227,6 +1246,7 @@ h2#phone {
 	color: #FD90A3;
 	text-decoration: none;
 	text-transform: none;
+	text-transform: uppercase;
 }
 
 #menu-creditos span.direitos {
@@ -1243,7 +1263,8 @@ h2#phone {
 }
 
 #social-area .social-title {
-	font-size: 1.2em;
+	font-family: 'Lato','sans-serif';
+	font-size: 1.3em;
 	text-transform: uppercase;
 	color: #fff;
 	padding: 10px 0;
@@ -1845,10 +1866,10 @@ h1.widget-title {
 /* SIDEBAR-SINGLE */
 .widget h2.widget-title {
 	color: #5c1b3e;
-	font-size: 18px;
-	font-weight: bold;
+	font-size: 1.2em;
 	text-align: center;
 	text-transform: uppercase;
+	font-family: 'Lato','sans-serif';
 }
 aside.widget_search {
 	display: table;
@@ -2055,6 +2076,9 @@ div.pointelle-slider-nav h2, div.pointelle-active h2 {
 	text-transform: uppercase;
 	margin-top: 14px !important;
 	background: none !important;
+	font-family: 'Lato','sans-serif';
+	font-size: 1.1em;
+    font-weight: bold;
 }
 
 div.pointelle-active h2 {
