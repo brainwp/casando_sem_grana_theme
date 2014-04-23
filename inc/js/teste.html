@@ -1,0 +1,69 @@
+<table width="206" border="0" cellpadding="0" cellspacing="0" class="menu">
+                  <tr>
+                    <td width="190" height="26">
+                   <?php
+					include ("db.php");
+					
+					$idcat = $_GET['idcat'];
+					//CATEGORIA
+					$sql = mysql_query("SELECT * FROM categorias");
+					while($row = mysql_fetch_assoc($sql)){
+						$idcategoria = $row['id_categoria'];
+						$categoria = $row['descricao'];
+						
+					
+					?>
+           <div onclick="Show('menu<?=$idcategoria?>','menuMais<?=$idcategoria?>','menuMenos<?=$idcategoria?>');" style="cursor:pointer;">
+          <div id="menuMais<?=$idcategoria?>"  style="display:<?php if($idcat==$idcategoria){ ?>none <?php } else { ?>block<?php }?>;" />
+             <div align="left">
+             <table width="100%" border="0" cellpadding="1" cellspacing="1">
+                 <tr>
+                   <td width="8%" valign="top"></td>
+                   <td width="92%" valign="bottom"><b class="menu">
+				   <?php
+                   echo $categoria.' - '.$idcategoria;
+				   echo '<br>';
+				   echo '';
+				   ?></b>
+                   </td>
+                 </tr>
+               </table>
+             </div>
+          </div>
+          <div id="menuMenos<?=$idcategoria?>" style="display:<?php if($idcat==$idcategoria){ ?>block <?php } else { ?>none<?php } ?>;" />                    
+                <div align="left">
+                <table width="100%" border="0" cellpadding="1" cellspacing="1">
+                 <tr>
+                   <td width="8%" valign="top"><img src="imagens/setamenu.png" border="0"></td>
+                   <td width="92%" valign="bottom"><b class="menu"><?=$categoria?></b></td>
+                 </tr>
+               </table>
+                </div>
+          </div>
+      
+          <div id="menu<?=$idcategoria?>"  style="display:<?php if($idcat==$idcategoria){  ?>block;<?php } else {?>none;<?php } ?> padding-left:18px; font-size:11px;">
+                <div align="left" class="submenu">
+                	<?php
+					
+					//SUBCATEGORIA
+					$sql2 = mysql_query("SELECT * FROM subcategorias WHERE id_categoria = '".$idcategoria."'");
+					while($row2 = mysql_fetch_assoc($sql2)){
+						$idsubcategoria = $row2['id_subcategoria'];
+						$subcategoria = $row2['descricao'];
+						
+						echo '<a href="index4.php?idcat='.$idcategoria.'&idsub='.$idsubcategoria.'">'.$subcategoria.'</a>';
+						echo '<br>';
+					 }
+					?>
+                </div> 
+          </div>
+             <img src="imagens/linhabotao.jpg" width="216" height="1" />
+          <?php
+				  	}
+			?>
+                    </td>
+                    </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                </table>
