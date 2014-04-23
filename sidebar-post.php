@@ -15,7 +15,7 @@
 
 			<aside id="history" class="widget parceiros">
 				<h2 class="widget-title">Parceiros</h2>
-				<div id="th-history"><a href="" class="more-info"></a></div>
+				<div id="th-history"></div>
 			</aside><!-- #history -->			
 
 			<aside id="video" class="widget facebook">
