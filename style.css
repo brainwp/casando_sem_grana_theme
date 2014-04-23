@@ -788,6 +788,15 @@ a#logo {
 	width: 68%;
     min-height: 300px;
 }
+.boxes-internal {
+	margin-top: 15px;
+	min-height: 25px !important;
+}
+
+.boxes-internal .box-internal {
+	margin-bottom: 10px !important;
+	min-height: 25px !important;
+}
 
 #box-content .anuncio {
 	clear: both;
@@ -819,7 +828,8 @@ a#logo {
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
-	padding: 25px 20px;
+	/*padding: 25px 20px;*/
+	padding:20px 10px;
 	text-align: center;
 	color: #FFF;
 	min-height: 310px;

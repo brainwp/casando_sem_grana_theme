@@ -73,8 +73,7 @@
 	</a>
 </div><!-- #boxes -->
 
-<section class="body_menu-home">
-	
+<section class="body_menu-home">	
 	<nav class="nav-menu-toogle">
 		<ul>
 			<?php
