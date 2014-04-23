@@ -856,6 +856,8 @@ a#logo {
     text-decoration: none;
     text-transform: uppercase;
 	clear: both;
+	font-weight: bold;
+	list-style: disc;
 }
 .body_menu-home {
 	float: left;
@@ -917,9 +919,14 @@ ul.sub-category-hide li {
 	top: 77px;
 	margin: 0 auto 30px auto !important;
 	background-color: #EEEEEE;
+	padding: 5px 0 10px 0;
 }
-
 .body_menu-home .nav-menu-toogle {
+	display: table;
+    margin: 0 auto;
+    width: 100%;
+}
+.body_menu-list .nav-menu-toogle {
 	display: table;
     margin: 0 auto;
     width: 80%;
@@ -1318,7 +1325,9 @@ section.body_menu-list {
 	clear: both;
     float: left;
     width: 100%;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
+    padding: 0;
+    background: none;
 }
 .body_menu-list .nav-menu-toogle {
 	display: table;
@@ -1330,6 +1339,19 @@ section.body_menu-list {
     margin: 0 auto;
     width: 43%;
 }
+.body_menu-list #child-2, 
+.body_menu-list #child-3, 
+.body_menu-list #child-4, 
+.body_menu-list #child-5 {
+	top: 50px;
+	padding: 5px 0 10px 0;
+}
+.sub-category-hide a:hover, 
+.sub-category-hide a:hover, 
+.sub-category-hide a:hover, 
+.sub-category-hide a:hover {
+	text-decoration: underline;
+}
 .body_menu-list .nav-menu-toogle ul li.father-category {
 	float: left;
 	list-style: none;
@@ -1339,9 +1361,12 @@ section.body_menu-list {
 	/* -moz-border-radius:7px;
 	-webkit-border-radius:7px; */
 	border: 2px solid #bcbec0;
-	margin: 0 2px;
-    padding: 0 5px;
+	/*margin: 0 2px;*/
+    padding: 0 15px;
     color: #bcbec0;
+    width: auto;
+    margin: 6px 45px 0px -6%;
+    font-weight: bold;
 }
 #title-sub_cat {
 	border: 2px solid #BCBEC0;
@@ -2188,12 +2213,19 @@ section.body-breadcrumps {
 	/*display: table;*/
     float: right;
     margin: 0 auto;
-    width: 87%;
+    width: 82%;
+    position: relative;
+}
+.body_menu-list .nav-menu-toogle ul {
+	/*display: table;*/
+    float: right;
+    margin: 0 auto;
+    width: 70%;
     position: relative;
 }
 .body_menu-home .nav-menu-toogle ul li {
 	display: table;
-	margin-right: 5%;
+	margin-right: 5%;	
 }
 .selected {
 	display: block;
