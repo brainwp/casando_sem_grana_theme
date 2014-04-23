@@ -15,36 +15,7 @@ get_header(); ?>
 	<div id="primary" class="page content-area content-page">
 		<main id="main" class="site-main" role="main">
 
-			<section id="body_menu-boxes">
-				<div id="boxes">
-					<div class="box">
-						<!-- <span class="img-bullet"></span> -->
-						<li id="box-1">
-							<a id="img-1" class="img-menu-page" href=""></a><a>Por onde Começar?</a>
-						</li>
-					</div>
-					<div class="box">
-						<!-- <span class="img-bullet"></span> -->
-						<li id="box-2">
-							<a id="img-2" class="img-menu-page" href=""></a><a>Faça você mesmo</a>
-						</li>
-					</div>
-					<div class="box">
-						<!-- <span class="img-bullet"></span> -->
-						<li id="box-3">
-							<a id="img-3" class="img-menu-page" href=""></a><a>Lista de Casamento</a>
-						</li>
-					</div>
-					<div class="box">
-						<!-- <span class="img-bullet"></span> -->
-						<li id="box-4">
-							<a id="img-4" class="img-menu-page" href=""></a><a>Fornecedores Justos</a>
-						</li>
-					</div>
-				</div><!-- #boxes -->
-			</section><!-- #body_slides -->
-
-			<section class="body_menu-list">
+			<section class="body_menu-home body_menu-list">	
 				<nav class="nav-menu-toogle">
 					<ul>
 						<?php
@@ -58,117 +29,71 @@ get_header(); ?>
 							'hierarchical'             => 1,
 							'exclude'                  => '1',
 							'include'                  => '',
-							'number'                   => '',
+							'number'                   => '4',
 							'taxonomy'                 => 'category',
 							'pad_counts'               => false );
 
 							$categories = get_categories( $args );
-
-							foreach( $categories as $category ) {
-
-								$cat_ID = $category->term_id; // Get ID the category.
-
-								if( $category->parent == 0 ){
-									echo '<div class="ring"><span class="img-cat parent-item-'.$cat_ID.'"></span><li class="father-category">' . $category->name.'</li>';
-									echo '<div class="hover-cat"><span></span></div></div>';
-								}
-							}
+							foreach( $categories as $category ) :
+							$cat_ID = $category->term_id; // Get ID the category.
 						?>
+							<li data-category="<?php echo $cat_ID; ?>" class="active-toggle father-category">
+									<div class="">
+										<span class=""></span>
+											<?php echo $category->name; ?>'
+										<div class="hover-cat"></div>
+									</div>
+
+									<?php	
+										$child_args = array( 'child_of' => $cat_ID, 'hide_empty' => 0, );
+										$child_categories = get_categories( $child_args );
+										//var_dump($child_categories);
+									?>
+							</li>
+
+							<?php endforeach; ?>
 					</ul>
-				</nav>
 
-				<nav id="toggler" class="menu-hide-home">
-					<ul>
-						<span class="hide-cat">
-							<?php
-								$args = array(
-									'show_option_all'    => '',
-									'orderby'            => 'ID',
-									'order'              => 'ASC',
-									'style'              => 'none',
-									'hide_empty'         => 0,
-									'child_of'           => 2,
-									'title_li'           => __( '' ),
-									'show_option_none'   => __('No categories'),
-									'taxonomy'           => 'category',
-								);
+					<!-- START | Toggle SubCategorias -->
+					<?php
+						$child_categories = get_categories('&child_of=2&hide_empty'); // List subcategories of category '4' (even the ones with no posts in them)
+						echo '<ul id="child-2" class="sub-category-hide">';
+						foreach ($child_categories as $subcategory) {
+						  echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subcategory->term_id), apply_filters('get_term', $subcategory->name));
+						}
+						echo '</ul>';
+					?>
 
-								$my_categories = get_categories($args);
-							?>
+					<?php
+						$child_categories = get_categories('&child_of=3&hide_empty'); // List subcategories of category '4' (even the ones with no posts in them)
+						echo '<ul  id="child-3" class="sub-category-hide">';
+						foreach ($child_categories as $subcategory) {
+						  echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subcategory->term_id), apply_filters('get_term', $subcategory->name));
+						}
+						echo '</ul>';
+					?>
 
-							<?php foreach( $my_categories as $category ): ?>
-								<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-							<?php endforeach; ?>
-						</span>
+					<?php
+						$child_categories = get_categories('&child_of=4&hide_empty'); // List subcategories of category '4' (even the ones with no posts in them)
+						echo '<ul  id="child-4" class="sub-category-hide">';
+						foreach ($child_categories as $subcategory) {
+						  echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subcategory->term_id), apply_filters('get_term', $subcategory->name));
+						}
+						echo '</ul>';
+					?>
 
-						<span class="hide-cat">
-							<?php
-								$args = array(
-									'show_option_all'    => '',
-									'orderby'            => 'ID',
-									'order'              => 'ASC',
-									'style'              => 'none',
-									'hide_empty'         => 0,
-									'child_of'           => 3,
-									'title_li'           => __( '' ),
-									'show_option_none'   => __('No categories'),
-									'taxonomy'           => 'category',
-								);
-
-								$my_categories = get_categories($args);
-							?>
-
-							<?php foreach( $my_categories as $category ): ?>
-								<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-							<?php endforeach; ?>
-						</span>
-
-						<span class="hide-cat">
-							<?php
-								$args = array(
-									'show_option_all'    => '',
-									'orderby'            => 'ID',
-									'order'              => 'ASC',
-									'style'              => 'none',
-									'hide_empty'         => 0,
-									'child_of'           => 4,
-									'title_li'           => __( '' ),
-									'show_option_none'   => __('No categories'),
-									'taxonomy'           => 'category',
-								);
-
-								$my_categories = get_categories($args);
-							?>
-
-							<?php foreach( $my_categories as $category ): ?>
-								<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-							<?php endforeach; ?>
-						</span>
-
-						<span class="hide-cat">
-							<?php
-								$args = array(
-									'show_option_all'    => '',
-									'orderby'            => 'ID',
-									'order'              => 'ASC',
-									'style'              => 'none',
-									'hide_empty'         => 0,
-									'child_of'           => 5,
-									'title_li'           => __( '' ),
-									'show_option_none'   => __('No categories'),
-									'taxonomy'           => 'category',
-								);
-
-								$my_categories = get_categories($args);
-							?>
-
-							<?php foreach( $my_categories as $category ): ?>
-								<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-							<?php endforeach; ?>
-						</span>
-					</ul>
-				</nav>
-			</section><!-- .body_menu-list -->
+					<?php
+						$child_categories = get_categories('&child_of=5&hide_empty'); // List subcategories of category '4' (even the ones with no posts in them)
+						echo '<ul  id="child-5" class="sub-category-hide">';
+						foreach ($child_categories as $subcategory) {
+						  echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subcategory->term_id), apply_filters('get_term', $subcategory->name));
+						}
+						echo '</ul>';
+					?>
+					<!-- AND | Toggle SubCategorias -->					
+							
+				</nav><!-- .nav-menu-home -->
+			</section><!-- .body_menu-home -->
 			
 			<div class="clear"><hr></div>
 

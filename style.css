@@ -850,7 +850,7 @@ a#logo {
 	clear: both;
     color: #4C4C4C;
     cursor: pointer;
-    display: table;
+    /*display: table;*/
     font-size: 15px;
     /* margin: 0 auto; */
     text-decoration: none;
@@ -885,6 +885,12 @@ a#logo {
     text-transform: uppercase;
     width: 136px;
 }
+.body_menu-home ul li {
+    margin-left: 0!important;
+}
+.body_menu-home ul.sub-category-hide li {
+    padding: 0;
+}
 .body_menu-home .nav-menu-toogle ul li:hover {
     color: #c189b3;
     font-weight: bold;
@@ -907,7 +913,7 @@ a#logo {
 ul.sub-category-hide {
 }
 ul.sub-category-hide li {
-	display: inline;
+	/*display: inline;*/
 	list-style: disc;
 	float: left;
 	padding-left: 65px;
@@ -917,7 +923,7 @@ ul.sub-category-hide li {
 	width: 100%!important;
 	height: auto;
 	top: 77px;
-	margin: 0 auto 30px auto !important;
+	margin: 0 auto !important;
 	background-color: #EEEEEE;
 	padding: 5px 0 10px 0;
 }
@@ -997,7 +1003,7 @@ ul.sub-category-hide li {
 
 .body_menu-home ul .active-toggle {
 	float: left;
-	width: 25%;
+	width: 23%;
 	text-align: center;
 }
 
@@ -1325,7 +1331,7 @@ section.body_menu-list {
 	clear: both;
     float: left;
     width: 100%;
-    margin: 0 0 30px 0;
+    margin: 0 0 0 0;
     padding: 0;
     background: none;
 }
@@ -1343,7 +1349,7 @@ section.body_menu-list {
 .body_menu-list #child-3, 
 .body_menu-list #child-4, 
 .body_menu-list #child-5 {
-	top: 50px;
+	top: 15px;
 	padding: 5px 0 10px 0;
 }
 .sub-category-hide a:hover, 
@@ -1365,7 +1371,7 @@ section.body_menu-list {
     padding: 0 15px;
     color: #bcbec0;
     width: auto;
-    margin: 6px 45px 0px -6%;
+    margin: 6px 10px 0px -6%;
     font-weight: bold;
 }
 #title-sub_cat {
@@ -1375,7 +1381,7 @@ section.body_menu-list {
     float: left;
     padding: 10px 0;
     width: 100%;
-    margin: 30px 0;
+    margin: 0 0 15px 0;
 }
 #title-sub_cat span {
 	display: table;
@@ -2208,6 +2214,7 @@ section.body-breadcrumps {
 }
 .body_menu-home .nav-menu-toogle {
 	display: table;
+	margin-bottom: 15px;
 }
 .body_menu-home .nav-menu-toogle ul {
 	/*display: table;*/
@@ -2220,12 +2227,18 @@ section.body-breadcrumps {
 	/*display: table;*/
     float: right;
     margin: 0 auto;
-    width: 70%;
+    width: 77%;
     position: relative;
 }
-.body_menu-home .nav-menu-toogle ul li {
-	display: table;
-	margin-right: 5%;	
+.body_menu-list .nav-menu-toogle ul li {
+	/*display: table;
+	margin-right: 5%;*/
+}
+.body_menu-list .nav-menu-toogle ul li {
+	margin-right: 0;	
+}
+.body_menu-list .nav-menu-toogle ul li a {
+	list-style: disc;	
 }
 .selected {
 	display: block;
