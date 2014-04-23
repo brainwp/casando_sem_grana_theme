@@ -195,8 +195,8 @@ get_header(); ?>
 						</figure><!-- .th-autor -->
 						
 						<span>
-							<h2>Via: <?php the_author(); ?></h2><!-- .nome-autor -->
-							<a class="more" href="<?php the_permalink(); ?>"></a><!-- .more -->
+							<h2>Por <?php the_author(); ?></h2><!-- .nome-autor -->
+							<a class="more" href="<?php echo get_author_posts_url( get_the_author_id() ); ?>">Saiba Mais sobre o Autor</a><!-- .more -->	
 							<div class="excerpt-autor"><p><?php the_author_description(); ?></p></div>
 						</span>
 					</div><!-- .body_autor-post -->
