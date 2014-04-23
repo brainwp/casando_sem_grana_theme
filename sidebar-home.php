@@ -15,7 +15,7 @@
 
 			<aside id="history" class="widget">
 				<h2 class="widget-title">Conte-nos a sua História</h2>
-				<div id="th-history"><a href="" class="more-info"></a></div>
+				<div id="th-history"></div>
 			</aside><!-- #history -->
 
 			<aside id="video" class="widget">
@@ -25,4 +25,6 @@
 
 		<?php endif; // end sidebar widget area ?>
 	</div><!-- #secondary -->
+
 </section><!-- #side-home -->
+
