@@ -965,10 +965,22 @@ a#logo {
     margin-left: 35px;
     width: auto;
 }
-.sub-category-hide {
-	display: none;
+ul.sub-category-hide {
 }
-
+ul.sub-category-hide li {
+	display: inline;
+	list-style: disc;
+	float: left;
+	padding-left: 65px;
+}
+#child-2, #child-3, #child-4, #child-5 {
+	display: none;
+	width: 100%!important;
+	height: auto;
+	top: 77px;
+	margin: 0 auto 30px auto !important;
+	background-color: #EEEEEE;
+}
 
 .body_menu-home .nav-menu-toogle {
 	display: table;
@@ -2231,9 +2243,7 @@ section.body-breadcrumps {
 }
 
 /* Newsletter */
-#newsletter-footer {
-
-}
+#newsletter-footer {}
 .newsletter {
 	clear: both;
     display: table;
@@ -2276,7 +2286,7 @@ section.body-breadcrumps {
 	display: table;
 }
 .body_menu-home .nav-menu-toogle ul {
-	display: table;
+	/*display: table;*/
     float: right;
     margin: 0 auto;
     width: 87%;
@@ -2286,14 +2296,17 @@ section.body-breadcrumps {
 	display: table;
 	margin-right: 5%;
 }
+.selected {
+	display: block;
+}
 .body_menu-home .nav-menu-toogle ul li.active-toggle ul {
-    bottom: -76px;
+    /*bottom: -76px;*/
     clear: both;
     display: table;
     float: left;
     height: auto;
-    position: relative;
-    right: 548px;
+    /*position: relative;
+    right: 548px;*/
     width: auto;
 	list-style: disc;
 }
@@ -2310,4 +2323,7 @@ section.body-breadcrumps {
 .body_menu-home .nav-menu-toogle ul li.active-toggle ul li a:hover {
 	text-decoration: underline;
 }
+.teste {
 
+	float: left;
+}

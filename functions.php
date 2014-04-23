@@ -325,6 +325,7 @@ function the_breadcrumb() {
     echo '</ul>';
 }
 
+<<<<<<< HEAD
 function custom_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
 	extract($args, EXTR_SKIP);
@@ -372,3 +373,5 @@ function custom_comments( $comment, $args, $depth ) {
 	<?php endif; ?>
 <?php
 }
+=======
+>>>>>>> jony_dev
