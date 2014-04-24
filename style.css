@@ -2245,7 +2245,8 @@ section.body-breadcrumps {
 	margin-right: 5%;*/
 }
 .body_menu-list .nav-menu-toogle ul li {
-	margin-right: 0;	
+	margin-right: 39px;
+    width: auto;	
 }
 .body_menu-list .nav-menu-toogle ul li a {
 	list-style: disc;	
