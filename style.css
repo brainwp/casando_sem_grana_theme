@@ -2009,7 +2009,7 @@ h1.widget-title, h1.widget-title a {
     float: right;
     height: 34px;
     position: absolute;
-    right: 28px;
+    right: 43px;
     text-indent: -999px;
     width: 44px;
     margin-right: -25px;
@@ -2320,7 +2320,9 @@ section.body-breadcrumps {
 	margin-top: 10px;
 	display: table;
 }
-
+.child-cstegory a {
+	font-size: 30px !important;
+}
 /* Newsletter */
 #newsletter-footer {}
 .newsletter {
