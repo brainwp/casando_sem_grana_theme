@@ -972,7 +972,7 @@ a#logo {
     margin-left: 0!important;
 }
 .body_menu-home ul.sub-category-hide li {
-    padding: 0;
+    /*padding: 0;*/
 }
 .body_menu-home .nav-menu-toogle ul li:hover {
     color: #c189b3;
@@ -999,7 +999,7 @@ ul.sub-category-hide li {
 	/*display: inline;*/
 	list-style: disc;
 	float: left;
-	padding-left: 65px;
+	padding-left: 29px;
 }
 #child-2, #child-3, #child-4, #child-5 {
 	display: none;
@@ -2381,7 +2381,7 @@ section.body-breadcrumps {
 	list-style: disc;	
 }
 .body_menu-home .nav-menu-toogle ul li {
-	display: table;
+	/*display: table;*/
 	margin-right: 5%;
 	font-family: 'Lato','sans-serif';
     font-size: 1.1em;
