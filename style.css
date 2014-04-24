@@ -2458,6 +2458,42 @@ section.body-breadcrumps {
 	text-decoration: underline;
 }
 .teste {
-
 	float: left;
 }
+
+/* Navegação dos Posts */
+.navigation {
+	display: block;
+	clear: both;
+	padding: 10px 0;
+}
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	color: #fff;
+	text-decoration:none;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	background-color: #F0F0F0;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 12px 15px;
+	padding: 0.75rem 1rem;
+	color: #555;
+}
+
+.navigation li a:hover,
+.navigation li.active a {
+	background-color: #681e39;
+	color: #FFF;
+}
+/* end Navegação dos Posts */
