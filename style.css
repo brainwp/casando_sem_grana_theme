@@ -1001,6 +1001,10 @@ ul.sub-category-hide li {
     margin-left: 20px;
     padding-left: 60px;
 }
+ul.sub-category-hide li:first-child,
+ul.sub-category-hide li:last-child {
+    list-style: none;
+}
 #child-2, #child-3, #child-4, #child-5 {
 	display: none;
 	width: 100%!important;
@@ -1075,6 +1079,7 @@ ul.sub-category-hide li {
 }
 .body_menu-home .nav-menu-toogle div.ring:hover {
 	color: #c189b3;
+	font-size: 14px;
     font-weight: bold;
 	/* Firefox */
 	-moz-transform: scale(2) ;
@@ -1280,7 +1285,7 @@ h2#phone {
 #menu-creditos {
 	float: left;
 	width: 50%;
-    font-size: 0.8em;
+    font-size: 1em;
     margin: 35px 20px;
 	font-family: 'Lato','sans-serif';
 	text-transform: uppercase;
