@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
 <section id="body_slides">
-<?php echo do_shortcode ('[pointelleslider set="2" id="2"]') ?>
+<?php echo do_shortcode ('[pointelleslider id="2"]') ?>
 </section><!-- #body_slides -->
 
 <?php
@@ -193,7 +193,7 @@
 			</div><!-- .exerpt-home-destaque -->
 
 		</figcaption>
-		<span><a href="" class="more-info"></a></span>
+		<a href="<?php echo get_permalink( $id_post_destaque ); ?>" class="more-info">Leia Mais</a>
 	</div><!-- #box-post -->
 	
 </section><!-- #box-content -->

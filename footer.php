@@ -46,12 +46,13 @@
 			<span class="direitos">2014 - Todos os Direitos Reservados</span>
 			</nav>
 			<nav id="social-area">
-				<div class="social-title">Curta, compartilhe e siga!</h2>
-				<ul class="social-icons">
-					<li class="icon"><a id="feed-social" href="#"></a></li>
-					<li class="icon"><a id="twitter-social" href="#"></a></li>
-					<li class="icon"><a id="facebook-social" href="#"></a></li>
-				</ul>
+
+				<?php if ( ! dynamic_sidebar( 'redes-sociais-footer' ) ) : ?>
+					<?php if ( current_user_can( 'manage_options' ) ) {
+						echo "Verifique se o plugin Simple Social Icon está instalado, configurado e adicionado ao Widget Redes Sociais.";
+					} ?>
+				<?php endif; // end sidebar widget area ?>
+
 			</nav>
 		</section><!-- #info-footer -->
 
