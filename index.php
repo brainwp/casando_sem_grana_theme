@@ -48,7 +48,7 @@ get_header(); ?>
 						</div><!-- .exerpt-home-destaque -->
 
 					</figcaption>
-					<span><a href="" class="more-info"></a></span>
+					<span><a href="<?php the_permalink(); ?>" class="more-info"></a></span>
 				</div><!-- #box-post -->
 
 			<?php endwhile; ?>

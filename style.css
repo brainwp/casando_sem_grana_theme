@@ -867,6 +867,7 @@ a#logo {
 	width: auto;
 	margin: 20px 0;
 	float: left;
+	width: 100%;
 }
 #box-post h1#title-post {
     font-size: 1.5em;
