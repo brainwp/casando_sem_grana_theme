@@ -35,12 +35,9 @@ get_header(); ?>
 					<figure>
 						<div class="th-content-post">
 							<?php
-								// Must be inside a loop.
-
 								if ( has_post_thumbnail() ) {
 									the_post_thumbnail();
-								}
-								else {
+								} else {
 									echo '<img src="' . get_template_directory_uri( 'stylesheet_directory' ) . '/images/th-single-default.jpg" />';
 								}
 							?>
