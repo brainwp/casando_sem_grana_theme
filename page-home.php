@@ -10,6 +10,8 @@
 <?php echo do_shortcode ('[pointelleslider id="2"]') ?>
 </section><!-- #body_slides -->
 
+<div class="see-all"><a href="<?php echo home_url(); ?>/blog">Ver Todos</a></div>
+
 <?php
 	//Box 1
 	$icone_box_1 = of_get_option('icon_feature_upload_um');

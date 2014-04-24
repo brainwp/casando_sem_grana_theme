@@ -2144,6 +2144,7 @@ h1.widget-title, h1.widget-title a {
 	
 }
 
+
 /* SLIDER */
 div.pointelle-excerpt {
 	margin: 0 100px 30px 0;
@@ -2151,8 +2152,17 @@ div.pointelle-excerpt {
 	padding-top: 20px !important;
 }
 
-div.pointelle-excerpt h4, div.pointelle-excerpt h4 a, div.pointelle-excerpt p, .pointelle_slider p.more a, .pointelle_slider p.more a:hover {
+div.pointelle-excerpt h4, div.pointelle-excerpt h4 a {
 	color: #5c1b3e !important;
+}
+
+div.pointelle-excerpt p, .pointelle_slider p.more a, .pointelle_slider p.more a:hover {
+	color: #5c1b3e !important;
+}
+
+div.pointelle-excerpt h4, div.pointelle-excerpt h4 a {
+	color: #5c1b3e !important;
+	text-transform: uppercase;
 }
 
 div.pointelle-slider-nav {
@@ -2160,16 +2170,24 @@ div.pointelle-slider-nav {
 	height: 88px !important;
 }
 
-div.pointelle-slider-nav h2, div.pointelle-active h2 {
+div.pointelle-slider-nav h2 {
+	color: #333 !important;
 	text-transform: uppercase;
 	margin-top: 14px !important;
 	background: none !important;
 	font-family: 'Lato','sans-serif';
 	font-size: 1.1em;
-    font-weight: bold;
+	font-weight: 100 !important;
 }
 
 div.pointelle-active h2 {
+	color: #5c1b3e !important;
+	text-transform: uppercase;
+	margin-top: 14px !important;
+	background: none !important;
+	font-family: 'Lato','sans-serif';
+	font-size: 1.1em;
+    font-weight: bold !important;
 }
 
 span.pointelle-meta {
@@ -2184,6 +2202,9 @@ div.pointelle-active {
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
+	padding: 3px !important;
+	background: #FFF;
+	border: 1px solid #000 !important;
 }
 
 div.pointelle-slider-control {
@@ -2193,6 +2214,27 @@ div.pointelle-slider-control {
 .pointelle_nav_next, .pointelle_nav_prev {
 	display: none !important;
 }
+
+.see-all {
+	width: 315px;
+	border-top: 1px solid #5c1b3e ;
+	border-bottom: 1px solid #5c1b3e ;
+	padding: 8px;
+	position: absolute;
+	z-index: 9999999;
+	right: 20px;
+	top: 688px;
+	text-align: center;
+}
+
+.see-all a {
+	color: #5c1b3e;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* end SLIDER */
+
 .body_content-category {
 	width: 100%;
 	margin-bottom: 30px;
