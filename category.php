@@ -35,7 +35,14 @@ get_header(); ?>
 						</div><!-- .date-category-post -->
 
 						<div class="thumb-category">
-							<?php the_post_thumbnail( 'post_category' ); ?>
+							<?php
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'post_category' );
+								} else {
+									echo '<img src="' . get_template_directory_uri( 'stylesheet_directory' ) . '/images/th-category-default.jpg" />';
+								}
+							?>
+							<?php //the_post_thumbnail( 'post_category' ); ?>
 						</div>
 
 						<div class="title-category-post">

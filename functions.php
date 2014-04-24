@@ -300,13 +300,13 @@ function the_breadcrumb() {
             echo get_option('home');
             echo '">';
             echo 'Home';
-            echo "</a> /</li>";
+            echo " /</a></li>";
             if (is_category() || is_single()) {
                     echo '<li>';
-                    the_category('</li><li>/ ');
+                    the_category('</li><li class="child-cstegory">/ ');
                     if (is_single()) {
-                            echo " /</li><li>";
-                            the_title();
+                            echo "</li><li>";
+                            //the_title();
                             echo '</li>';
                     }
             } elseif (is_page()) {
