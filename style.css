@@ -1488,7 +1488,7 @@ section.body_menu-list {
     color: #bcbec0;
     width: auto;
     margin: 6px 10px 0px 1%;
-    font-weight: bold;
+    font-weight: normal;
 }
 #title-sub_cat {
 	border: 2px solid #BCBEC0;
@@ -1910,6 +1910,14 @@ a.url {
 #side-single .search-form {
     width: 95%;
 }
+.side-search {
+	width: 100%;
+}
+.side-search #secondary {
+	width: 90%;
+	display: table;
+	margin: 0 auto;
+}
 h1.widget-title {
 	font-size: 1.2em;
 	text-transform: uppercase;
@@ -2055,6 +2063,11 @@ h1.widget-title, h1.widget-title a {
     display: table;
     width: 43%;
 	margin: 0 auto;
+}
+.page-search section.body_menu-list .nav-menu-toogle ul {
+    display: table;
+	margin: 0 auto;
+    width: 81%;
 }
 .search-results .menu-hide-home {}
 .menu-hide-home a {
@@ -2430,4 +2443,15 @@ section.body-breadcrumps {
 .teste {
 
 	float: left;
+}
+.author-page .body_autor-post {
+	margin-bottom: 15px;
+}
+.author-page .archive-header {
+	margin-bottom: 15px;
+}
+.author-page .post {
+	width: 100%;
+	padding: 20px;
+	background-color: #f6f6f6;
 }

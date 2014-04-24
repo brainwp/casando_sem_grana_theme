@@ -109,5 +109,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar( "home" ); ?>
+<?php get_sidebar( "page" ); ?>
 <?php get_footer(); ?>
