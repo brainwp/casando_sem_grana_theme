@@ -2206,6 +2206,7 @@ div.pointelle-slider-control {
 .body_content-category {
 	width: 100%;
 	margin-bottom: 30px;
+	overflow: hidden;
 }
 
 .body_content-category .post-category {
