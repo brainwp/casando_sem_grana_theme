@@ -141,4 +141,4 @@
 		</nav><!-- .nav-menu-home -->
 	</section><!-- .body_menu-home -->
 	
-	<div class="clear"><hr></div>
+	<div class="clear"><!-- <hr> --></div>
