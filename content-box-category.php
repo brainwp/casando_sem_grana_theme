@@ -24,12 +24,11 @@
 		$link_box_4 = of_get_option('link_box_quatro');
 	?>
 
-	<div id="boxes" class="boxes-internal boxes-home">
+	<div id="boxes" class="boxes-internal boxes-home boxes-single">
 		<a id="box-1" href="<?php echo $link_box_1; ?>" target="_blank">	
 			<article id="box-1" class="box box-internal">
 				<img src="<?php echo $icone_box_1; ?>" alt="<?php echo $title_box_1; ?>" />
 				<h3 class="title"><?php echo $title_box_1; ?></h3>
-				<div class="excerpt"><?php echo $excerpt_box_1; ?></div>
 			</article>
 		</a>
 		<a href="<?php echo $link_box_2; ?>" target="_blank">	
@@ -38,7 +37,6 @@
 					<img src="<?php echo $icone_box_2; ?>" alt="<?php echo $title_box_2; ?>" />
 				</span>
 				<h3 class="title"><?php echo $title_box_2; ?></h3>
-				<div class="excerpt"><?php echo $excerpt_box_2; ?></div>
 		</article>
 	</a>
 	<a href="<?php echo $link_box_3; ?>" target="_blank">	
@@ -47,7 +45,6 @@
 				<img src="<?php echo $icone_box_3; ?>" alt="<?php echo $title_box_3; ?>" />
 			</span>
 			<h3 class="title"><?php echo $title_box_3; ?></h3>
-			<div class="excerpt"><?php echo $excerpt_box_3; ?></div>
 		</article>
 	</a>
 	<a href="<?php echo $link_box_4; ?>" target="_blank">	
@@ -56,7 +53,6 @@
 			<img src="<?php echo $icone_box_4; ?>" alt="<?php echo $title_box_4; ?>" />
 		</span>
 		<h3 class="title"><?php echo $title_box_4; ?></h3>
-		<div class="excerpt"><?php echo $excerpt_box_4; ?></div>
 		</article>
 	</a>
 </div><!-- #boxes -->
