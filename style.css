@@ -844,6 +844,28 @@ a#logo {
 	min-height: 25px !important;
 }
 
+.box-internal {
+	position: relative;
+}
+
+.boxes-single .box {
+	padding: 10px !important;
+}
+
+.box-internal img {
+	float: left;
+	width: 30px;
+	height: 30px;
+}
+
+.box-internal h3.title {
+    left: 66px;
+    top: 10px;
+    position: absolute;
+    text-align: left;
+    width: 64%;
+}
+
 #box-blog {
 	clear: both;
 	margin: 20px 0 0 20px;
@@ -894,7 +916,7 @@ a#logo {
 	min-height: 310px;
 }
 .boxes-home .box img {
-	margin: 5px auto;
+	margin: 5px 25px;
 }
 .boxes-home .box .excerpt {
 	font-size: 0.8em;
