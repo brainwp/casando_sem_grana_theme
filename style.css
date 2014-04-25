@@ -854,16 +854,17 @@ a#logo {
 
 .box-internal img {
 	float: left;
-	width: 30px;
-	height: 30px;
+	width: 34px;
+	height: 34px;
 }
 
 .box-internal h3.title {
-    left: 66px;
-    top: 10px;
+    left: 57px;
+    top: 17px;
     position: absolute;
     text-align: left;
-    width: 64%;
+    width: 65%;
+    font-size: 0.8em !important;
 }
 
 #box-blog {
@@ -916,7 +917,7 @@ a#logo {
 	min-height: 310px;
 }
 .boxes-home .box img {
-	margin: 5px 25px;
+	margin: 0 0 5px 5px;
 }
 .boxes-home .box .excerpt {
 	font-size: 0.8em;
@@ -947,7 +948,7 @@ a#logo {
 	color: #000000;
 	/*font-family: 'Lato','sans-serif';*/
 	font-family: 'Cuprum','sans-serif';
-	letter-spacing: 0.3em;
+	letter-spacing: 0.03em;
 	font-size: 1.2em;
 }
 #title-post a:hover {
@@ -1734,10 +1735,13 @@ section.body_content-single {
 	display: table;
 	margin: 25px auto;
 	color: #d7c61a;
-    font-size: 1.8em;
+    /*font-size: 1.8em;*/
     margin: 25px 0;
 	text-transform: uppercase;
 	padding: 0 25px;
+	font-family: "Cuprum", sans-serif;
+	font-size: 2em;
+	letter-spacing: 0.03em;
 }
 .content-post {
 	max-width: 650px;
@@ -1749,10 +1753,6 @@ section.body_content-single {
 }
 .content-single h1, .content-single h2,.content-single h3,.content-single h4,.content-single h5,.content-single h6 {
 	padding: 0 25px;
-	font-family: "Cuprum", sans-serif;
-	/*font-family: "Lato", sans-serif;*/
-	font-size: 2em;
-	letter-spacing: 0.3em;
 }
 .content-post a {
 	color: #3c0402;
@@ -2250,13 +2250,20 @@ div.pointelle-active {
 	background: url('images/arrow_bg.png') left no-repeat !important;
 }
 
-.pointelle_nav_thumb {
+div.pointelle-active img {
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
+	border: 1px solid #5C1B3E !important;
+}
+
+.pointelle_nav_thumb {
+	/*-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	border: 1px solid #000 !important;*/
 	padding: 3px !important;
 	background: #FFF;
-	border: 1px solid #000 !important;
 }
 
 div.pointelle-slider-control {
@@ -2363,9 +2370,9 @@ div.pointelle-slider-control {
 	color: #6E6D72;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-family: "Cuprum", sans-serif;
+	/*font-family: "Cuprum", sans-serif;
 	font-size: 1.2em;
-	letter-spacing: 0.3em;
+	letter-spacing: 0.3em;*/
 }
 
 .excerpt-category-post, .content-posts .excerpt-category-post {
