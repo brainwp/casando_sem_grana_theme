@@ -222,16 +222,32 @@ function optionsframework_options() {
 		'desc' => '',
 		'type' => 'info');
 
-	$options[] = array(
+	/*$options[] = array(
 		'name' => 'Selecione um Post',
 		'desc' => 'Escolha um Post para se destacar na Home',
 		'id' => 'destaque_post_home',
 		'type' => 'select',
-		'options' => $options_posts);
+		'options' => $options_posts);*/
+
+	$options[] = array(
+		'name' => 'Post Destaque 1',
+		'desc' => 'Adicione o Id do Post que deseja destacar',
+		'id' => 'post_destaque_1',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Post Destaque 2',
+		'desc' => 'Adicione o Id do Post que deseja destacar',
+		'id' => 'post_destaque_2',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
 
 	$options[] = array(
 		'name' => 'Quantidade de Palavras do Destaque da Home',
-		'desc' => 'Coloque aqui a quantidade de palavras que deseja que apareça no destaque da home. Caso não esteja setado aqui, o valor padrão é 50 palavras.',
+		'desc' => 'Coloque aqui a quantidade de palavras que deseja que apareça nos destaques da home. Caso não esteja setado aqui, o valor padrão é 50 palavras.',
 		'id' => 'qtd_destaque',
 		'std' => '',
 		'type' => 'text');
