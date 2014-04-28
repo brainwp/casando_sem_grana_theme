@@ -252,5 +252,91 @@ function optionsframework_options() {
 		'std' => '',
 		'type' => 'text');
 
+
+	$options[] = array(
+		'name' => 'Rodapé',
+		'type' => 'heading');
+
+$options[] = array(
+		'name' => 'Primeiro Bloco',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Título',
+		'desc' => 'Adicione o título para o primeiro destaque do Rodapé',
+		'id' => 'title_footer_um',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Resumo',
+		'desc' => 'Adicione um breve resumo para o primeiro destaque do Rodapé',
+		'id' => 'resumo_footer_um',
+		'std' => '',
+		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Link do Box 1',
+		'desc' => 'Adicione aqui a URL para onde o primeiro Box do Rodapé deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_footer_um',
+		'std' => '',
+		'type' => 'text');
+
+
+	$options[] = array(
+		'name' => 'Segundo Bloco',
+		'desc' => '',
+		'type' => 'info');
+
+
+	$options[] = array(
+		'name' => 'Título',
+		'desc' => 'Adicione o título para o segundo destaque do Rodapé',
+		'id' => 'title_footer_dois',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Resumo',
+		'desc' => 'Adicione um breve resumo para o segundo destaque do Rodapé',
+		'id' => 'resumo_footer_dois',
+		'std' => '',
+		'type' => 'textarea');
+
+
+	$options[] = array(
+		'name' => 'Terceiro Bloco',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Título',
+		'desc' => 'Adicione o título para o terceiro destaque do Rodapé',
+		'id' => 'title_footer_tres',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Resumo',
+		'desc' => 'Adicione um breve resumo para o terceiro destaque do Rodapé',
+		'id' => 'resumo_footer_tres',
+		'std' => '',
+		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Telefone',
+		'desc' => 'Adicione aqui o telefone de atendimento',
+		'id' => 'telefone_footer_tres',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Link do Box 3',
+		'desc' => 'Adicione aqui a URL para onde o terceiro Box do Rodapé deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_footer_tres',
+		'std' => '',
+		'type' => 'text');
+
 	return $options;
 }
