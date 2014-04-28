@@ -968,6 +968,7 @@ a#logo {
 	clear: both;
 	font-weight: bold;
 	list-style: disc;
+	font-family: "Cuprum", sans-serif;
 }
 .body_menu-home {
 	float: left;
@@ -1077,7 +1078,6 @@ ul.sub-category-hide li:first-child {
 	/* background: url( "images/ring-menu.png" ) no-repeat; */
 	position: relative;
 	margin-bottom: 10px;
-	font-size: 16px;
 	font-weight: normal;
 	/*margin-right: 66px;*/
 
@@ -1233,6 +1233,11 @@ ul#menu-footer li{
 	position: relative;
 	list-style: none outside none;
 }
+
+ul#menu-footer li a{
+	text-decoration: none;
+}
+
 
 .link-morando {
 	text-align: center;
@@ -2480,8 +2485,7 @@ section.body-breadcrumps {
     position: relative;
 }
 .body_menu-list .nav-menu-toogle ul li {
-	/*display: table;
-	margin-right: 5%;*/
+	display: table;
 }
 .body_menu-list .nav-menu-toogle ul li {
 	margin-right: 39px;
@@ -2491,9 +2495,8 @@ section.body-breadcrumps {
 	list-style: disc;	
 }
 .body_menu-home .nav-menu-toogle ul li {
-	/*display: table;*/
 	margin-right: 5%;
-	font-family: 'Cuprum','sans-serif';
+	font-family: 'Lato Sans','sans-serif';
     font-size: 1.1em;
     font-weight: bold;
 }
