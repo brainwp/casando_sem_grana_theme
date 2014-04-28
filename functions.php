@@ -88,6 +88,10 @@ function casando_sem_grana_theme_setup() {
 		'primary' => __( 'Primary Menu', 'casando_sem_grana_theme' ),
 	) );
 
+	register_nav_menus( array(
+		'secondary' => __( 'Menu do Rodape', 'casando_sem_grana_theme' ),
+	) );
+
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 

@@ -64,10 +64,10 @@
 			<nav id="menu-creditos">
 				<ul>
 					<li>Grupo CSG - Casando sem grana</li>
-					<li><a href="#">Termo de Uso</a></li>
-					<li><a href="#">Politica de Pricidade</a></li>
-				</ul><br />
-			<span class="direitos">2014 - Todos os Direitos Reservados</span>
+				</ul>
+				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
+			<br />			
+				<span class="direitos">2014 - Todos os Direitos Reservados</span>
 			</nav>
 			<nav id="social-area">
 
