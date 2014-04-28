@@ -82,7 +82,7 @@
 					<li data-category="<?php echo $cat_ID; ?>" class="active-toggle father-category">
 							<div class="">
 								<span class=""></span>
-									<?php echo $category->name; ?>'
+									<?php echo $category->name; ?>
 								<div class="hover-cat"></div>
 							</div>
 

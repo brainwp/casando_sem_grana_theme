@@ -33,7 +33,7 @@ get_header(); ?>
 						</div><!-- .content-post -->
 
 					</div><!-- .body_autor-post -->
-				</div><!-- .content-single -->
+				<!-- </div> --><!-- .content-single -->
 
 					<?php endwhile; else: ?>
 						<p><?php //_e('Sorry, no posts matched your criteria.'); ?></p>
@@ -45,5 +45,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar( "page" ); ?>
+<?php //get_sidebar( "page" ); ?>
 <?php get_footer(); ?>
