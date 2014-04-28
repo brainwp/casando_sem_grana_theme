@@ -18,7 +18,7 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'box-category' ); ?>
 
 			<section class="body_content-single">
-				<div class="content-single">
+				<div class="content-page">
 
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

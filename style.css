@@ -1704,8 +1704,7 @@ section.body_menu-list {
 /* SINGLE */
 section.body_content-single {
 	float: left;
-    width: 100%;
-    /*width: 65%;*/
+    width: 65%;
 }
 .body_content-single > .content-single {
 	display: table;
@@ -1734,9 +1733,7 @@ section.body_content-single {
 }
 .title-content-post h2 {
 	display: table;
-	margin: 25px auto;
 	color: #d7c61a;
-    /*font-size: 1.8em;*/
     margin: 25px 0;
 	text-transform: uppercase;
 	padding: 0 25px;
@@ -1744,10 +1741,14 @@ section.body_content-single {
 	font-size: 2em;
 	letter-spacing: 0.03em;
 }
-.content-post {
-	/*max-width: 650px;*/
+.content-page {
 	max-width: 1000px;
 }
+
+.content-post {
+	max-width: 650px;
+}
+
 .content-post p {
 	padding: 0 25px;
 	font-weight: lighter;
