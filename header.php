@@ -32,16 +32,12 @@
 
 			<div id="img-header-left">
 			</div><!-- #img-header-left -->
-
 				<a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home">
-
 					<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-
 				</a>
-
 			<div class="box-rss">
 				<h2><a href="<?php echo home_url( '/feed' ); ?>" target="_blank"><?php bloginfo( 'description' ); ?></a></h2>
-				<a href="<?php echo home_url( '/feed' ); ?>" target="_blank"><?php echo of_get_option('rss_info'); ?></a>
+				<a class="rss-info" href="<?php echo home_url( '/feed' ); ?>" target="_blank"><?php echo of_get_option('rss_info'); ?></a>
 			</div><!-- .box-rss -->
 
 			<a class="conh-morando" href="http://www.morandosemgrana.com.br" target="_blank">
