@@ -916,6 +916,7 @@ a#logo {
 }
 .boxes-home .box img {
 	margin: 0 0 5px 5px;
+	width: auto;
 }
 .boxes-home .box .excerpt {
 	font-size: 0.8em;
@@ -2603,6 +2604,30 @@ section.body-breadcrumps {
 		width: 94%;
 	}
 
+	ul#menu-footer li {
+		float: left;
+		list-style: none outside none;
+		margin: 2% 4%;
+		position: relative;
+		width: 92%;
+	}
+
+	#menu-creditos {
+		margin: 1% 4%;
+		width: 92%;
+	}
+
+	#social-area {
+		float: left;
+		margin: 2% 4%;
+		width: 92%;
+	}
+
+	#social-area .social-title {
+		font-size: 1em;
+
+	}
+
 }
 
 @media (max-width: 600px) {
@@ -2639,25 +2664,6 @@ section.body-breadcrumps {
 	.boxes-home .box {
 		margin: 0 0 2% 0;
 		width: 96%;
-	}
-
-	ul#menu-footer li {
-		float: left;
-		list-style: none outside none;
-		margin: 2% 4%;
-		position: relative;
-		width: 92%;
-	}
-
-	#menu-creditos {
-		margin: 1% 4%;
-		width: 92%;
-	}
-
-	#social-area {
-		float: left;
-		margin: 2% 4%;
-		width: 92%;
 	}
 
 }
