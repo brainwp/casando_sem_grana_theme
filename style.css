@@ -880,7 +880,7 @@ a#logo {
 	clear: both;
 	max-width: 682px;
 	width: auto;
-	height: 90px;
+	max-height: 80px;
 	background: #e17c0a;
 }
 #box-post {
@@ -912,7 +912,7 @@ a#logo {
 	padding:20px 10px;
 	text-align: center;
 	color: #FFF;
-	min-height: 310px;
+	min-height: 270px;
 }
 .boxes-home .box img {
 	margin: 0 0 5px 5px;
@@ -2208,7 +2208,7 @@ h1.widget-title, h1.widget-title a {
 
 /* SLIDER */
 .pointelle_slider {
-	width: auto !important;
+	xwidth: auto !important;
 }
 
 div.pointelle-excerpt {
@@ -2281,6 +2281,11 @@ div.pointelle-active img {
 
 div.pointelle-slider-control {
 	border: none !important;
+	xposition: relative;
+}
+
+div.pointelle_slides {
+	xposition: relative;
 }
 
 .pointelle_nav_next, .pointelle_nav_prev {
@@ -2592,6 +2597,7 @@ section.body-breadcrumps {
 	.boxes-home .box {
   		margin: 0 2% 2% 0;
   		width: 47.5%;
+		min-height: auto;
 	}
 
 	#box-content {
