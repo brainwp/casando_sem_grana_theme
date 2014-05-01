@@ -805,9 +805,9 @@ a#logo {
  	clear: both;
     display: table;
     margin: 0 auto;
-    min-height: 310px;
     padding: 0 0 0 20px;
     width: auto;
+	height: auto;
 }
 .boxes-home #box-1 {
 	background: #efe689;
@@ -834,6 +834,7 @@ a#logo {
 .boxes-internal {
 	margin-top: 15px;
 	min-height: 25px !important;
+	width: 100%;
 }
 
 .boxes-internal .box-internal {
@@ -908,7 +909,6 @@ a#logo {
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
-	/*padding: 25px 20px;*/
 	padding:20px 10px;
 	text-align: center;
 	color: #FFF;
@@ -1712,30 +1712,26 @@ section.body_content-single {
 	float: left;
     width: 65%;
 }
-.body_content-single > .content-single {
+.content-single {
 	display: table;
     margin: 0 auto;
-    width: 100%;
 }
-.content-single > .post {
+
+.post {
 	float: left;
-    width: 100%;
 }
-.content-single > .post .th-content-post {
+.post .th-content-post {
 	float: left;
-    width: 653px;
 	max-height: 490px;
 	overflow: hidden;
+	width: auto;
 }
-.content-single > .post-relacioned {
+.post-relacioned {
 	float: left;
 }
-.content-single > .coments-post {
-	float: left;
-}
+
 .title-content-post {
 	float: left;
-	width: 100%;
 }
 .title-content-post h2 {
 	display: table;
@@ -1758,8 +1754,13 @@ section.body_content-single {
 .content-post p {
 	padding: 0 25px;
 	font-weight: lighter;
-
 }
+
+.content-post p img {
+	max-width: 100%;
+	width: auto;
+}
+
 .content-single h1, .content-single h2,.content-single h3,.content-single h4,.content-single h5,.content-single h6 {
 	padding: 0 25px;
 }
@@ -2597,7 +2598,7 @@ section.body-breadcrumps {
 	.boxes-home .box {
   		margin: 0 2% 2% 0;
   		width: 47.5%;
-		min-height: auto;
+		min-height: auto !important;
 	}
 
 	#box-content {
@@ -2632,6 +2633,29 @@ section.body-breadcrumps {
 	#social-area .social-title {
 		font-size: 1em;
 
+	}
+
+.content-single .post .date-post {
+    float: right;
+    position: absolute;
+    right: 1%;
+    text-transform: uppercase;
+    top: 3%;
+}
+
+	section.body_content-single {
+		float: left;
+		width: 94%;
+		margin: 0 3%;
+	}
+
+	.autor-sidebar {
+		display: none;
+	}
+
+	#side-single {
+		width: 94%;
+		margin: 3%;
 	}
 
 }
