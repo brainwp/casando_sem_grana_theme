@@ -1597,7 +1597,7 @@ section.body_menu-list {
 .content-posts ul li:last-child {
 	margin-left: 15px;
 }
-/* .content-posts ul li figure { */
+
 .content-posts ul li .th-content-list {
 	float: left;
 	width: 276px;
@@ -2482,7 +2482,6 @@ section.body-breadcrumps {
 	margin-bottom: 15px;
 }
 .body_menu-home .nav-menu-toogle ul {
-	/*display: table;*/
     float: right;
     margin: 0 auto;
     width: 82%;
@@ -2490,10 +2489,8 @@ section.body-breadcrumps {
 }
 
 .body_menu-list .nav-menu-toogle ul {
-	/*display: table;*/
-    float: right;
     margin: 0 auto;
-    width: 81%;
+    width: 85%;
     position: relative;
 }
 .body_menu-list .nav-menu-toogle ul li {
@@ -2694,6 +2691,11 @@ section.body-breadcrumps {
 	.boxes-home .box {
 		margin: 0 0 2% 0;
 		width: 96%;
+	}
+
+	.body_menu-list .nav-menu-toogle ul {
+		float: left;
+		padding: 0 3%;
 	}
 
 }
