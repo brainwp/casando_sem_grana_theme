@@ -75,7 +75,8 @@
 	</a>
 </div><!-- #boxes -->
 
-<section class="body_menu-home">	
+<section class="body_menu-home">
+
 	<nav class="nav-menu-toogle">
 		<ul>
 			<?php
@@ -150,7 +151,7 @@
 			}
 			echo '</ul>';
 		?>
-		<!-- AND | Toggle SubCategorias -->					
+		<!-- AND | Toggle SubCategorias -->
 				
 	</nav><!-- .nav-menu-home -->
 
