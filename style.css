@@ -2743,6 +2743,7 @@ section.body-breadcrumps {
 		border: none;
 		/* position: fixed; */
 		width: 100%;
+		position: relative;
 	}
 	.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 		border-color: #dbdfdf;
@@ -2829,6 +2830,7 @@ section.body-breadcrumps {
 		border: none;
 		position: fixed;
 		width: 100%;
+		position: relative;
 	}
 	.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 		border-color: #dbdfdf;
