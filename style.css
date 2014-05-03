@@ -2704,7 +2704,7 @@ section.body-breadcrumps {
 }
 
 /* iPhone 3+4 landscape · width: 480px */
-@media (min-device-width: 480px) {
+@media (max-width: 600px ) and (min-device-width: 480px)  {
 	.conh-morando {
 	    display: none;
 	}
@@ -2738,10 +2738,10 @@ section.body-breadcrumps {
 	}
 	.navbar-inverse {
 		display: block;
-		/* background-color: transparent; */
+		background-color: transparent;
 		background-color: #d7d7d7; 
 		border: none;
-		/* position: fixed; */
+		position: fixed;
 		width: 100%;
 		position: relative;
 	}
@@ -2790,7 +2790,7 @@ section.body-breadcrumps {
 
 }
 
-@media (max-width: 360px) {
+@media (max-width: 360px ) and (min-device-width: 480px) {
 
 	.conh-morando {
 	    display: none;
@@ -2873,6 +2873,15 @@ section.body-breadcrumps {
 	}
 	.navbar-nav > li > a {
 		text-transform: uppercase;
-	}	
+	}
+
+}
+
+/* iPad portrait · width: 768px */
+@media (max-width: 768px ) and (min-device-width: 600px) {
+
+	.body_menu-home .nav-menu-toogle ul {
+	    width: 91%;
+	}
 
 }

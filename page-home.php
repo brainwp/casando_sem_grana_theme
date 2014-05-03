@@ -101,7 +101,7 @@
 				<li data-category="<?php echo $cat_ID; ?>" class="active-toggle">
 						<div class="ring">
 							<span class="img-cat parent-item-<?php echo $cat_ID; ?>"></span>
-								<?php echo $category->name; ?>'
+								<?php echo $category->name; ?>
 							<div class="hover-cat"></div>
 						</div>
 
