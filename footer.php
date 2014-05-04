@@ -27,7 +27,6 @@
 	$title_footer_3 = of_get_option('title_footer_tres');
 	$excerpt_footer_3 = of_get_option('resumo_footer_tres');
 	$link_footer_3 = of_get_option('link_footer_tres');
-	$telefone_footer_3 = of_get_option('telefone_footer_tres');
 
 ?>
 
