@@ -744,7 +744,7 @@ color: #6d6c71;
 }
 
 .conh-morando {
-	background: url('images/icon-morando.jpg') no-repeat;
+	background: url('images/icon-morando-branco.jpg') no-repeat;
 	width: 191px;
 	height: 48px;
 	position: absolute;
@@ -755,16 +755,16 @@ color: #6d6c71;
 
 
 #masthead {
-background: url("images/header-flor-right.png") no-repeat scroll right bottom #F1F2F2;
+	background: url("images/header-flor-right-branco.png") no-repeat scroll right bottom #FFF;
     display: table;
-max-height: 312px;
+	max-height: 312px;
     overflow: hidden;
     width: 100%;
-z-index: -2;
+	z-index: -2;
 }
 
 a#logo {
-display: block;
+	display: block;
     margin: -200px auto 20px;
     max-width: 691px;
     padding: 0 20px;
@@ -778,11 +778,10 @@ max-height: 158px;
 }
 
 #img-header-left {
-background: url( "images/header-flor-left.png" ) no-repeat scroll 0 0 ;
-width: 635px;
-height: 304px;
-z-index: -1;
-
+	background: url( "images/header-flor-left-branco.png" ) no-repeat scroll 0 0 ;
+	width: 635px;
+	height: 304px;
+	z-index: -1;
 }
 
 
