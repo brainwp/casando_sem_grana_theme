@@ -788,10 +788,10 @@ z-index: -1;
 
 /* Plugin Slides */
 #body_slides {
-float: left;
-width: auto;
-height: 420px;
-margin: 20px 0;
+	float: left;
+	width: auto;
+	/* height: 420px; */
+	margin: 20px 0;
 }
 #body_slides h1 {
 margin: 40%;
@@ -2297,16 +2297,16 @@ display: none !important;
 }
 
 .see-all {
-max-width: 315px;
-width: 100%;
-border-top: 1px solid #5c1b3e ;
-border-bottom: 1px solid #5c1b3e ;
-padding: 8px;
-margin: 20px;
-float:right;
-z-index: 9999;
-height: 40px;
-text-align: center;
+	border-bottom: 1px solid #5C1B3E;
+    border-top: 1px solid #5C1B3E;
+    float: right;
+    height: 40px;
+    margin: -60px 38px 0 0;
+    max-width: 290px;
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
 }
 
 .see-all a {
