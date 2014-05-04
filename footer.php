@@ -50,7 +50,7 @@
 						<span id="img-nav-3"></span><span class="widget-footer-title"><?php echo $title_footer_3; ?></span>
 						<p><?php echo $excerpt_footer_2 ; ?></p>
 					</a>		
-						<h2 id="phone">Tel.:<?php echo $telefone_footer_3 ; ?></h2>
+						
 				</li>
 				<li class="link-morando">
 					<a href="http://" target="blank"><span id="img-nav-4"></span></a>

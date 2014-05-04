@@ -713,18 +713,18 @@ max-width: 100%;
 
 /* HEADER */
 .box-rss {
-width: 35%;
-position: absolute;
-top: 10px;
-right: 25px;
-font-size: 0.75em;
-line-height: 1.3em;
-z-index: 99;
-font-family: 'Lato','sans-serif';
+	width: 35%;
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	font-size: 0.75em;
+	line-height: 1.3em;
+	z-index: 99;
+	font-family: 'Lato','sans-serif';
 }
 .box-rss a {
-text-decoration: none;
-color: #6d6c71;
+	text-decoration: none;
+	color: #6d6c71;
 }
 
 a.rss-info {
@@ -733,15 +733,14 @@ color: #6d6c71;
 }
 
 .box-rss h2 {
-margin: 10px 0 5px 0;
-text-transform: uppercase;
-font-family: 'Lato','sans-serif';
-font-size: 1.1em;
+	margin: 10px 0 5px 0;
+	text-transform: uppercase;
+	font-family: 'Lato','sans-serif';
+	font-size: 1.1em;
     font-weight: bold;
-display: block;
-background: url('images/icon-rss.png') no-repeat left;
-text-indent: 30px;
-padding: 13px 0 5px 0;
+	display: block;
+	background: url('images/icon-rss.png') no-repeat left;
+	padding: 10px 0 5px 36px;
 }
 
 .conh-morando {
@@ -2691,15 +2690,15 @@ margin: 100px auto 20px;
 }
 
 .box-rss {
-width: 55%;
+	width: 55%;
 }
 
 a.rss-info {
-display: none;
+	display: none;
 }
 .conh-morando {
-right: 10%;
-top: 60px;
+	right: 10%;
+	top: 60px;
 }
 
 .menu-toggle,
