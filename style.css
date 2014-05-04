@@ -790,7 +790,7 @@ a#logo {
 #body_slides {
 	float: left;
 	width: auto;
-	height: 420px;
+	max-height: 420px;
 	margin: 20px 0;
 }
 #body_slides h1 {
@@ -2211,9 +2211,6 @@ h1.widget-title, h1.widget-title a {
 
 
 /* SLIDER */
-.pointelle_slider {
-	xwidth: auto !important;
-}
 
 div.pointelle-excerpt {
 	margin: 0 100px 30px 0;
@@ -2260,7 +2257,7 @@ div.pointelle-active h2 {
 }
 
 span.pointelle-meta {
-	display: none !important;
+	display: block;
 }
 
 div.pointelle-active {
@@ -2285,11 +2282,10 @@ div.pointelle-active img {
 
 div.pointelle-slider-control {
 	border: none !important;
-	xposition: relative;
 }
 
 div.pointelle_slides {
-	xposition: relative;
+	width: auto;
 }
 
 .pointelle_nav_next, .pointelle_nav_prev {
