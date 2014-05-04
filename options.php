@@ -65,10 +65,17 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => '',
-		'desc' => 'Exibir o Bloco de Destaques na Home?',
+		'desc' => 'Exibir o Bloco de Destaques na Home? Caso não esteja marcado o site exibirá automaticamente os últimos posts publicados',
 		'id' => 'exibir_destaques_checkbox',
 		'std' => '1',
 		'type' => 'checkbox');
+
+	$options[] = array(
+		'name' => 'Quantidade de Posts',
+		'desc' => 'Esse campo defini quantos posts devem ser apresentados na Home caso a opção anterior esteja desmarcada',
+		'id' => 'qtd_posts',
+		'std' => '',
+		'type' => 'text');
 
 	$options[] = array(
 		'name' => 'Primeiro Bloco',
