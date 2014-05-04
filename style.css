@@ -744,13 +744,13 @@ color: #6d6c71;
 }
 
 .conh-morando {
-background: url('images/icon-morando.jpg') no-repeat;
-width: 191px;
-height: 48px;
-position: absolute;
-top: 120px;
-right: 10%;
-z-index: 99;	
+	background: url('images/icon-morando.jpg') no-repeat;
+	width: 191px;
+	height: 48px;
+	position: absolute;
+	top: 120px;
+	right: 47%;
+	z-index: 99;	
 }
 
 

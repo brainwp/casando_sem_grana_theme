@@ -136,10 +136,10 @@
 		<div class="box-rss">
 			<h2><a href="<?php echo home_url( '/feed' ); ?>" target="_blank"><?php bloginfo( 'description' ); ?></a></h2>
 			<a class="rss-info" href="<?php echo home_url( '/feed' ); ?>" target="_blank"><?php echo of_get_option('rss_info'); ?></a>
-		</div><!-- .box-rss -->
 
-		<a class="conh-morando" href="http://www.morandosemgrana.com.br" target="_blank">
-		</a><!-- .conh-morando -->
+			<a class="conh-morando" href="http://www.morandosemgrana.com.br" target="_blank"></a><!-- .conh-morando -->
+
+		</div><!-- .box-rss -->
 
 	</header><!-- #masthead -->
 
