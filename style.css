@@ -2653,7 +2653,6 @@ background-color: #f6f6f6;
 	width: 100$;
 	}
 
-<<<<<<< HEAD
 	.post {
 	float: left;
  	margin: 0 auto;
@@ -2705,7 +2704,15 @@ background-color: #f6f6f6;
 	#menu-creditos {
 	margin: 1% 4%;
 	width: 92%;
+	}
 
+	#info-footer {
+		padding: 20px 0 0;
+	}
+
+	#img-nav-4 {
+		margin: 0 auto;
+	}
 
 	#social-area {
 	float: left;
@@ -2715,42 +2722,15 @@ background-color: #f6f6f6;
 
 	#social-area .social-title {
 	font-size: 1em;
-
 	}
 
-
-	#info-footer {
-		padding: 20px 0 0;
-	}
-
-	#img-nav-4 {
-		margin: 0 auto;
-	section.body_content-single {
-	width: 100%;
-	margin: 0 auto;
-	}
-
-	#social-area {
-	float: left;
-	margin: 2% 4%;
-	width: 92%;
-	}
-
-	#side-single {
-	width: 94%;
-	margin: 3%;
-	}
 
 	.content-single .post .date-post {
+		float: right;
 		position: absolute;
 		right: 1%;
 		text-transform: uppercase;
 		top: 3%;
-	}
-
-@media (max-width: 1000px) {
-	.autor-sidebar, .search-form {
-		display: none;
 	}
 
 
@@ -2823,37 +2803,17 @@ background-color: #f6f6f6;
 	width: 94%;
 	}
 
-	.comment-respond {
-		margin: 3%;
-	}
-
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-	display: block;
-	}
-
-	.main-navigation ul {
-	display: none;
-	}
-
+.comment-respond {
+    margin: 3%;
+}
 
 }
 
 /* iPhone 3+4 landscape · width: 480px */
 @media (max-width: 600px ) and (min-device-width: 480px) {
 
-	.conh-morando {
-	display: none;
-	}
 	a#logo {
 	margin: 55px auto 20px;
-	}
-	.see-all {
-	display: table;
-	float: none;
-	margin: 4%;
-	text-align: center;
-	width: 92%;
 	}
 
 	.boxes-home {
@@ -2865,13 +2825,7 @@ background-color: #f6f6f6;
 	.search-form .search-submit {
 	top: 0;
 	}
-
 	#child-2, #child-3, #child-4, #child-5 {
-	display: none;
-	padding: 0;
-	}
-
-	#child-1751, #child-1753, #child-27, #child-206 {
 	display: none;
 	padding: 0;
 	}
@@ -2908,7 +2862,6 @@ background-color: #f6f6f6;
 	.navbar-nav {
 	margin: 0.5px -15px;
 	}
-
 	#child-2, #child-3, #child-4, #child-5 {
 	border-top: solid 1px #999;
 	}
@@ -2920,20 +2873,6 @@ background-color: #f6f6f6;
 
 	}
 	#child-2 li a:hover, #child-3 li a:hover, #child-4 li a:hover, #child-5 li a:hover {
-	color: #FFFFFF;
-	text-decoration: none;
-	}
-
-	#child-1751, #child-1753, #child-27, #child-206 {
-	border-top: solid 1px #999;
-	}
-	#child-1751 li, #child-1753 li, #child-27 li, #child-206 li {
-	margin: 12px;
-	}
-	#child-1751 li a, #child-1753 li a, #child-27 li a, #child-206 li a {
-	color: #999999;
-	}
-	#child-1751 li a:hover, #child-1753 li a:hover, #child-27 li a:hover, #child-206 li a:hover {
 	color: #FFFFFF;
 	text-decoration: none;
 	}
@@ -2951,6 +2890,12 @@ background-color: #f6f6f6;
 
 @media (max-width: 360px ) and (min-device-width: 480px) {
 
+
+	.conh-morando {
+	display: none;
+	}
+	a#logo {
+	margin: 55px auto 20px;
 
 	.boxes-home {
 	padding: 0 0 0 10px;
@@ -3012,73 +2957,6 @@ background-color: #f6f6f6;
 	color: #FFFFFF;
 	text-decoration: none;
 	}
-
-	.conh-morando {
-	display: none;
-	}
-	a#logo {
-	margin: 55px auto 20px;
-	}
-	.see-all {
-	display: table;
-	float: none;
-	margin: 4%;
-	text-align: center;
-	width: 92%;
-	}
-
-
-	#child-1751, #child-1753, #child-27, #child-206 {
-	display: none;
-	padding: 0;
-	}
-	ul.sub-category-hide li {
-	list-style: none;
-	text-transform: uppercase;
-	color: #999;
-	}
-	.navbar-inverse {
-	display: block;
-	/* background-color: transparent; */
-	background-color: #d7d7d7;
-	border: none;
-	position: fixed;
-	width: 100%;
-	position: relative;
-	}
-	.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-	border-color: #dbdfdf;
-	}
-	.body_menu-home {
-	display: none;
-	}
-	.box-rss h2 {
-	display: none;
-	}
-	.box-rss {
-	width: 80%;
-	top: 5px;
-	}
-	.box-rss h2 {
-	font-size: 0.9em;
-	}
-	.navbar-nav {
-	margin: 0.5px -15px;
-	}
-	#child-1751, #child-1753, #child-27, #child-206 {
-	border-top: solid 1px #999;
-	}
-	#child-1751 li, #child-1753 li, #child-27 li, #child-206 li {
-	margin: 12px;
-	}
-	#child-1751 li a, #child-1753 li a, #child-27 li a, #child-206 li a {
-	color: #999999;
-
-	}
-	#child-1751 li a:hover, #child-1753 li a:hover, #child-27 li a:hover, #child-206 li a:hover {
-	color: #FFFFFF;
-	text-decoration: none;
-	}
 	.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
 	background-color: #c1bfbf;
 	}
@@ -3099,4 +2977,3 @@ background-color: #f6f6f6;
 	}
 
 }
-
