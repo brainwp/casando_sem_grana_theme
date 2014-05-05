@@ -898,7 +898,6 @@ width: 100%;
 }
 #box-post h1#title-post {
     font-size: 1.5em;
-    font-weight: bold;
     margin: 25px 0 10px;
     /*text-transform: uppercase;*/
 }
@@ -1037,6 +1036,17 @@ float: left;
 ul.sub-category-hide li:first-child {
     list-style: none;
 }
+
+#child-2, #child-3, #child-4, #child-5 {
+display: none;
+width: 100%!important;
+height: auto;
+top: 77px;
+margin: 0 auto !important;
+background-color: #EEEEEE;
+padding: 5px 0 10px 0;
+}
+
 #child-1751, #child-1753, #child-27, #child-206 {
 display: none;
 width: 100%!important;
