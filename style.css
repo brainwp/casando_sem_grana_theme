@@ -896,7 +896,7 @@ width: 100%;
     font-size: 1.5em;
     font-weight: bold;
     margin: 25px 0 10px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 #th-post {
 max-width: 682px;
@@ -913,7 +913,7 @@ border-radius: 7px;
 padding:20px 10px;
 text-align: center;
 color: #FFF;
-min-height: 270px;
+min-height: 225px;
 }
 .boxes-home .box img {
 margin: 0 0 5px 5px;
@@ -945,9 +945,8 @@ padding: 0;
 }
 #title-post a {
 text-decoration: none;
-color: #000000;
-/*font-family: 'Lato','sans-serif';*/
-font-family: 'Cuprum','sans-serif';
+color: #333333;
+font-family: 'Lobster','sans-serif';
 letter-spacing: 0.03em;
 font-size: 1.2em;
 }
@@ -977,7 +976,7 @@ max-width: 1000px;
 padding: 40px 0;
 background: url("images/background-category.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
 margin: 20px 0;
-min-height: 300px;
+height: auto;
 }
 .body_menu-home ul li {
 /* display: inline;
@@ -1600,12 +1599,11 @@ margin-left: 15px;
 }
 
 .content-posts ul li .th-content-list {
-float: left;
-width: 276px;
-height: 190px;
-margin: 15px;
-
-background-color: #000;
+	float: left;
+	width: 276px;
+	height: 190px;
+	margin: 15px;
+	background-color: #000;
 }
 .content-posts ul li .title-content-list {
 float: left;
@@ -1735,14 +1733,14 @@ float: left;
 width: 100%;
 }
 .title-content-post h2 {
-display: table;
-color: #d7c61a;
-    margin: 25px 0;
-text-transform: uppercase;
-padding: 0 25px;
-font-family: "Cuprum", sans-serif;
-font-size: 2em;
-letter-spacing: 0.03em;
+	display: table;
+	color: #d7c61a;
+	margin: 25px 0;
+	/*text-transform: uppercase;*/
+	padding: 0 25px;
+	font-family: "Lobster", sans-serif;
+	font-size: 2em;
+	letter-spacing: 0.03em;
 }
 .content-page {
 max-width: 1000px;
@@ -1910,7 +1908,6 @@ float: left;
 width: 184px;
 height: 126px;
 margin: 10px;
-
 background-color: #000;
 }
 .post-relacioned .content-posts ul li .date-single-post {
@@ -2081,7 +2078,7 @@ clear: both;
 #body_search a {
 clear: both;
 text-decoration: none;
-color: #000;
+color: #333;
 }
 #body_search a:hover {
 clear: both;
@@ -2114,7 +2111,7 @@ margin: 0 auto;
 .search-results .menu-hide-home {}
 .menu-hide-home a {
 text-decoration: none;
-color: #000;
+color: #333;
 text-transform: uppercase;
 }
 .menu-hide-home a:hover {

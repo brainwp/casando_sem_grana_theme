@@ -18,6 +18,7 @@
 <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png" type="image/x-icon">
 <!-- GOOGLE FONTS -->
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Cuprum:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 <!-- <link rel="stylesheet" href="<?php //bloginfo( 'template_url' ); ?>/js/responsivemobilemenu/rmm-css/responsivemobilemenu.css" type="text/css"/>
 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
