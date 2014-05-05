@@ -10,7 +10,7 @@
 <?php echo do_shortcode ('[pointelleslider id="2"]') ?>
 </section><!-- #body_slides -->
 
-<div class="see-all"><a href="<?php echo home_url(); ?>/blog">Ver Todos</a></div>
+<div class="see-all"><a href="<?php echo home_url(); ?>/blog">Ver Todos os Posts</a></div>
 
 <?php
 	//Box 1
