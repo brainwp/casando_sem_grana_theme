@@ -64,20 +64,6 @@ function optionsframework_options() {
 		'type' => 'info');
 
 	$options[] = array(
-		'name' => '',
-		'desc' => 'Exibir o Bloco de Destaques na Home? Caso não esteja marcado o site exibirá automaticamente os últimos posts publicados',
-		'id' => 'exibir_destaques_checkbox',
-		'std' => '1',
-		'type' => 'checkbox');
-
-	$options[] = array(
-		'name' => 'Quantidade de Posts',
-		'desc' => 'Esse campo defini quantos posts devem ser apresentados na Home caso a opção anterior esteja desmarcada',
-		'id' => 'qtd_posts',
-		'std' => '',
-		'type' => 'text');
-
-	$options[] = array(
 		'name' => 'Primeiro Bloco',
 		'desc' => '',
 		'type' => 'info');
@@ -108,7 +94,6 @@ function optionsframework_options() {
 		'id' => 'link_box_um',
 		'std' => '',
 		'type' => 'text');
-
 
 	$options[] = array(
 		'name' => 'Segundo Bloco',
@@ -207,6 +192,18 @@ function optionsframework_options() {
 		'type' => 'text');
 
 	$options[] = array(
+		'name' => 'Menu de Categorias da Home',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Categorias do Menu',
+		'desc' => 'Adicione aqui o ID das quatro categorias que deseja adicionar ao menu da home separando-as com vírgulas, exemplo 1751,27,206,1753',
+		'id' => 'id_cats',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
 		'name' => 'Anúncio da Home',
 		'desc' => '',
 		'type' => 'info');
@@ -225,40 +222,23 @@ function optionsframework_options() {
 		'type' => 'text');
 
 	$options[] = array(
-		'name' => 'Post de Destaque da Home',
+		'name' => 'Posts da Home',
 		'desc' => '',
 		'type' => 'info');
 
-	/*$options[] = array(
-		'name' => 'Selecione um Post',
-		'desc' => 'Escolha um Post para se destacar na Home',
-		'id' => 'destaque_post_home',
-		'type' => 'select',
-		'options' => $options_posts);*/
-
 	$options[] = array(
-		'name' => 'Post Destaque 1',
-		'desc' => 'Adicione o Id do Post que deseja destacar',
-		'id' => 'post_destaque_1',
+		'name' => 'Quantidade de Posts',
+		'desc' => 'Esse campo define quantos posts devem ser apresentados na Home',
+		'id' => 'qtd_posts',
 		'std' => '',
-		'class' => 'mini',
 		'type' => 'text');
 
 	$options[] = array(
-		'name' => 'Post Destaque 2',
-		'desc' => 'Adicione o Id do Post que deseja destacar',
-		'id' => 'post_destaque_2',
-		'std' => '',
-		'class' => 'mini',
-		'type' => 'text');
-
-	$options[] = array(
-		'name' => 'Quantidade de Palavras do Destaque da Home',
-		'desc' => 'Coloque aqui a quantidade de palavras que deseja que apareça nos destaques da home. Caso não esteja setado aqui, o valor padrão é 50 palavras.',
+		'name' => 'Quantidade de Palavras dos Posts da Home',
+		'desc' => 'Coloque aqui a quantidade de palavras que deseja que apareça nos posts exibidos da home. Caso não esteja setado aqui, o valor padrão é 50 palavras',
 		'id' => 'qtd_destaque',
 		'std' => '',
 		'type' => 'text');
-
 
 	$options[] = array(
 		'name' => 'Rodapé',

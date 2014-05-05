@@ -7,6 +7,7 @@
 	<nav class="nav-menu-toogle">
 		<ul>
 			<?php
+				$id_cats = of_get_option( 'id_cats' );
 				$args = array(
 				'type'                     => '',
 				'child_of'                 => 0,
@@ -16,7 +17,7 @@
 				'hide_empty'               => 0,
 				'hierarchical'             => 1,
 				'exclude'                  => '1',
-				'include'                  => '',
+				'include'                  => $id_cats,
 				'number'                   => '4',
 				'taxonomy'                 => 'category',
 				'pad_counts'               => false );
