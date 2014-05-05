@@ -159,10 +159,10 @@ function casando_sem_grana_theme_widgets_init() {
 }
 add_action( 'widgets_init', 'casando_sem_grana_theme_widgets_init' );
 
-
 /**
- * Register newsletter widget area.
+ * Implementando Custom Post Type Portfolio
  */
+require get_template_directory() . '/inc/customposttype-portfolio.php';
 
 
 
@@ -185,7 +185,7 @@ add_action( 'wp_enqueue_scripts', 'casando_sem_grana_theme_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
