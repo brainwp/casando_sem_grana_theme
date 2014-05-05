@@ -17,21 +17,43 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
+		<section id="box-blog">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+				<div id="box-post">
+				
+					<figure>
+						<div id="th-post">
+							<a href="<?php the_permalink(); ?>">
+								<?php
+								if ( has_post_thumbnail() )
+									the_post_thumbnail('post_destaque');
+								else
+									echo '<img src="' . get_template_directory_uri() . '/images/default-post.jpg' . '" alt="" />';
+								?>
+							</a>
+						</div>
+					</figure>
+
+					<h1 id="title-post">
+						<a href="<?php the_permalink(); ?>">
+							<?php the_title(); ?>
+						</a>
+					</h1>
+
+					<figcaption>
+						<div class="exerpt-home-destaque">
+							<?php the_excerpt(); ?>
+						</div><!-- .exerpt-home-destaque -->
+
+					</figcaption>
+					<span><a href="<?php the_permalink(); ?>" class="more-info"></a></span>
+				</div><!-- #box-post -->
 
 			<?php endwhile; ?>
 
-			<?php casando_sem_grana_theme_paging_nav(); ?>
+			</section><!-- #box-content -->
 
 		<?php else : ?>
 
@@ -42,5 +64,8 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php get_sidebar( 'post' ); ?>
+
+<?php nav_posts(); ?>
+
 <?php get_footer(); ?>

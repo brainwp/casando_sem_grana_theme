@@ -88,6 +88,10 @@ function casando_sem_grana_theme_setup() {
 		'primary' => __( 'Primary Menu', 'casando_sem_grana_theme' ),
 	) );
 
+	register_nav_menus( array(
+		'secondary' => __( 'Menu do Rodape', 'casando_sem_grana_theme' ),
+	) );
+
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
@@ -300,13 +304,13 @@ function the_breadcrumb() {
             echo get_option('home');
             echo '">';
             echo 'Home';
-            echo "</a> /</li>";
+            echo " /</a></li>";
             if (is_category() || is_single()) {
                     echo '<li>';
-                    the_category('</li><li>/ ');
+                    the_category('</li><li class="child-cstegory">/ ');
                     if (is_single()) {
-                            echo " /</li><li>";
-                            the_title();
+                            echo "</li><li>";
+                            //the_title();
                             echo '</li>';
                     }
             } elseif (is_page()) {
@@ -337,7 +341,7 @@ function custom_comments( $comment, $args, $depth ) {
 		$add_below = 'div-comment';
 	}
 ?>
-	<<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
+	<<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID(); ?>">
 	<?php if ( 'div' != $args['style'] ) : ?>
 	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
 	<?php endif; ?>
@@ -370,5 +374,89 @@ function custom_comments( $comment, $args, $depth ) {
 	<?php if ( 'div' != $args['style'] ) : ?>
 	</div>
 	<?php endif; ?>
-<?php
+<?php } 
+
+
+function nav_posts() {
+
+	if( is_singular() )
+		return;
+
+	global $wp_query;
+
+	/** Stop execution if there's only 1 page */
+	if( $wp_query->max_num_pages <= 1 )
+		return;
+
+	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+	$max   = intval( $wp_query->max_num_pages );
+
+	/**	Add current page to the array */
+	if ( $paged >= 1 )
+		$links[] = $paged;
+
+	/**	Add the pages around the current page to the array */
+	if ( $paged >= 3 ) {
+		$links[] = $paged - 1;
+		$links[] = $paged - 2;
+	}
+
+	if ( ( $paged + 2 ) <= $max ) {
+		$links[] = $paged + 2;
+		$links[] = $paged + 1;
+	}
+
+	echo '<div class="navigation"><ul>' . "\n";
+
+	/**	Previous Post Link */
+	if ( get_previous_posts_link() )
+		printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+
+	/**	Link to first page, plus ellipses if necessary */
+	if ( ! in_array( 1, $links ) ) {
+		$class = 1 == $paged ? ' class="active"' : '';
+
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+
+		if ( ! in_array( 2, $links ) )
+			echo '<li>…</li>';
+	}
+
+	/**	Link to current page, plus 2 pages in either direction if necessary */
+	sort( $links );
+	foreach ( (array) $links as $link ) {
+		$class = $paged == $link ? ' class="active"' : '';
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+	}
+
+	/**	Link to last page, plus ellipses if necessary */
+	if ( ! in_array( $max, $links ) ) {
+		if ( ! in_array( $max - 1, $links ) )
+			echo '<li>…</li>' . "\n";
+
+		$class = $paged == $max ? ' class="active"' : '';
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+	}
+
+	/**	Next Post Link */
+	if ( get_next_posts_link() )
+		printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+
+	echo '</ul></div>' . "\n";
+
+}
+
+/* Add post ID to posts, pages admin columns */
+add_filter('manage_posts_columns', 'posts_columns_id', 5);
+add_action('manage_posts_custom_column', 'posts_custom_id_columns', 5, 2);
+add_filter('manage_pages_columns', 'posts_columns_id', 5);
+add_action('manage_pages_custom_column', 'posts_custom_id_columns', 5, 2);
+function posts_columns_id($defaults){
+    $defaults['wps_post_id'] = __('ID');
+    return $defaults;
+}
+function posts_custom_id_columns($column_name, $id){
+        if($column_name === 'wps_post_id'){
+                echo $id;
+    }
 }

@@ -65,10 +65,17 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => '',
-		'desc' => 'Exibir o Bloco de Destaques na Home?',
+		'desc' => 'Exibir o Bloco de Destaques na Home? Caso não esteja marcado o site exibirá automaticamente os últimos posts publicados',
 		'id' => 'exibir_destaques_checkbox',
 		'std' => '1',
 		'type' => 'checkbox');
+
+	$options[] = array(
+		'name' => 'Quantidade de Posts',
+		'desc' => 'Esse campo defini quantos posts devem ser apresentados na Home caso a opção anterior esteja desmarcada',
+		'id' => 'qtd_posts',
+		'std' => '',
+		'type' => 'text');
 
 	$options[] = array(
 		'name' => 'Primeiro Bloco',
@@ -222,17 +229,119 @@ function optionsframework_options() {
 		'desc' => '',
 		'type' => 'info');
 
-	$options[] = array(
+	/*$options[] = array(
 		'name' => 'Selecione um Post',
 		'desc' => 'Escolha um Post para se destacar na Home',
 		'id' => 'destaque_post_home',
 		'type' => 'select',
-		'options' => $options_posts);
+		'options' => $options_posts);*/
+
+	$options[] = array(
+		'name' => 'Post Destaque 1',
+		'desc' => 'Adicione o Id do Post que deseja destacar',
+		'id' => 'post_destaque_1',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Post Destaque 2',
+		'desc' => 'Adicione o Id do Post que deseja destacar',
+		'id' => 'post_destaque_2',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
 
 	$options[] = array(
 		'name' => 'Quantidade de Palavras do Destaque da Home',
-		'desc' => 'Coloque aqui a quantidade de palavras que deseja que apareça no destaque da home. Caso não esteja setado aqui, o valor padrão é 50 palavras.',
+		'desc' => 'Coloque aqui a quantidade de palavras que deseja que apareça nos destaques da home. Caso não esteja setado aqui, o valor padrão é 50 palavras.',
 		'id' => 'qtd_destaque',
+		'std' => '',
+		'type' => 'text');
+
+
+	$options[] = array(
+		'name' => 'Rodapé',
+		'type' => 'heading');
+
+$options[] = array(
+		'name' => 'Primeiro Bloco',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Título',
+		'desc' => 'Adicione o título para o primeiro destaque do Rodapé',
+		'id' => 'title_footer_um',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Resumo',
+		'desc' => 'Adicione um breve resumo para o primeiro destaque do Rodapé',
+		'id' => 'resumo_footer_um',
+		'std' => '',
+		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Link do Box 1',
+		'desc' => 'Adicione aqui a URL para onde o primeiro Box do Rodapé deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_footer_um',
+		'std' => '',
+		'type' => 'text');
+
+
+	$options[] = array(
+		'name' => 'Segundo Bloco',
+		'desc' => '',
+		'type' => 'info');
+
+
+	$options[] = array(
+		'name' => 'Título',
+		'desc' => 'Adicione o título para o segundo destaque do Rodapé',
+		'id' => 'title_footer_dois',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Resumo',
+		'desc' => 'Adicione um breve resumo para o segundo destaque do Rodapé',
+		'id' => 'resumo_footer_dois',
+		'std' => '',
+		'type' => 'textarea');
+
+
+	$options[] = array(
+		'name' => 'Terceiro Bloco',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Título',
+		'desc' => 'Adicione o título para o terceiro destaque do Rodapé',
+		'id' => 'title_footer_tres',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Resumo',
+		'desc' => 'Adicione um breve resumo para o terceiro destaque do Rodapé',
+		'id' => 'resumo_footer_tres',
+		'std' => '',
+		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Telefone',
+		'desc' => 'Adicione aqui o telefone de atendimento',
+		'id' => 'telefone_footer_tres',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Link do Box 3',
+		'desc' => 'Adicione aqui a URL para onde o terceiro Box do Rodapé deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_footer_tres',
 		'std' => '',
 		'type' => 'text');
 

@@ -5,9 +5,9 @@
  * @package casando_sem_grana_theme
  */
 ?>
-<section id="side-home">	
-	<div id="secondary" class="widget-area secondary-home" role="complementary">
-		<?php if ( ! dynamic_sidebar( 'sidebar-home' ) ) : ?>
+<section id="side-single">	
+	<div id="secondary" class="widget-area" role="complementary">
+		<?php if ( ! dynamic_sidebar( 'sidebar-page' ) ) : ?>
 
 			<aside id="search" class="widget widget_search">
 				<?php get_search_form(); ?>
@@ -25,6 +25,4 @@
 
 		<?php endif; // end sidebar widget area ?>
 	</div><!-- #secondary -->
-
-</section><!-- #side-home -->
-
+</section><!-- #side-single -->

@@ -11,23 +11,46 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+
+
+<?php
+	//Footer 1
+	$title_footer_1 = of_get_option('title_footer_um');
+	$excerpt_footer_1 = of_get_option('resumo_footer_um');
+	$link_footer_1 = of_get_option('link_footer_um');
+
+	//Footer 2
+	$title_footer_2 = of_get_option('title_footer_dois');
+	$excerpt_footer_2 = of_get_option('resumo_footer_dois');
+
+	//Footer 3
+	$title_footer_3 = of_get_option('title_footer_tres');
+	$excerpt_footer_3 = of_get_option('resumo_footer_tres');
+	$link_footer_3 = of_get_option('link_footer_tres');
+
+?>
+
 		<section id="widget-footer">
 			<ul id="menu-footer">
 				<li>
-					<span id="img-nav-1"></span><span class="widget-footer-title">Quem sou eu?</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget orci ut elit auctor ultrices ac eu massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+					<a href="<?php echo $link_footer_1; ?>" target="_blank">
+						<span id="img-nav-1"></span><span class="widget-footer-title"><?php echo $title_footer_1; ?></span>
+						<p><?php echo $excerpt_footer_1 ; ?></p>
+					</a>				
 				</li>
 				<li>
-					<span id="img-nav-2"></span><span class="widget-footer-title">Newsletter</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget orci ut elit auctor ultrices ac eu massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-					<div class="newsletter">
-						<?php get_sidebar( "newsletter" ); ?>
-					</div>
+						<span id="img-nav-2"></span><span class="widget-footer-title"><?php echo $title_footer_2; ?></span>
+						<p><?php echo $excerpt_footer_2 ; ?></p>
+						<div class="newsletter">
+							<?php get_sidebar( "newsletter" ); ?>
+						</div>
 				</li>
 				<li>
-					<span id="img-nav-3"></span><span class="widget-footer-title">Contato</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget orci ut elit auctor ultrices ac eu massa.</p>
-					<h2 id="phone">Tel.:3456-7892</h2>
+					<a href="<?php echo $link_footer_3; ?>" target="_blank">
+						<span id="img-nav-3"></span><span class="widget-footer-title"><?php echo $title_footer_3; ?></span>
+						<p><?php echo $excerpt_footer_2 ; ?></p>
+					</a>		
+						
 				</li>
 				<li class="link-morando">
 					<a href="http://" target="blank"><span id="img-nav-4"></span></a>
@@ -40,10 +63,10 @@
 			<nav id="menu-creditos">
 				<ul>
 					<li>Grupo CSG - Casando sem grana</li>
-					<li><a href="#">Termo de Uso</a></li>
-					<li><a href="#">Politica de Pricidade</a></li>
-				</ul><br />
-			<span class="direitos">2014 - Todos os Direitos Reservados</span>
+				</ul>
+				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
+			<br />			
+				<span class="direitos">2014 - Todos os Direitos Reservados</span>
 			</nav>
 			<nav id="social-area">
 

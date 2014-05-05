@@ -15,145 +15,7 @@ get_header(); ?>
 <div id="primary" class="page content-area">
 	<main id="main" class="site-main" role="main">
 
-		<section id="body_menu-boxes">
-			<div id="boxes">
-				<div class="box">
-					<!-- <span class="img-bullet"></span> -->
-					<li id="box-1">
-						<a id="img-1" class="img-menu-page"></a><a href="<?php echo home_url(); ?>/category/por-onde-comecar">Por onde Começar?</a>
-					</li>
-				</div>
-				<div class="box">
-					<!-- <span class="img-bullet"></span> -->
-					<li id="box-2">
-						<a id="img-2" class="img-menu-page"></a><a href="<?php echo home_url(); ?>/category/faca-voce-mesmo">Faça você mesmo</a>
-					</li>
-				</div>
-				<div class="box">
-					<!-- <span class="img-bullet"></span> -->
-					<li id="box-3">
-						<a id="img-3" class="img-menu-page"></a><a href="<?php echo home_url(); ?>/category/lista-de-casamento">Lista de Casamento</a>
-					</li>
-				</div>
-				<div class="box">
-					<!-- <span class="img-bullet"></span> -->
-					<li id="box-4">
-						<a id="img-4" class="img-menu-page"></a><a href="<?php echo home_url(); ?>/category/fornecedores-justos">Fornecedores Justos</a>
-					</li>
-				</div>
-			</div><!-- #boxes -->
-		</section><!-- #body_slides -->
-
-		<section class="body_menu-list">
-			<nav class="nav-menu-toogle">
-				<ul>
-					<li class="father-category">
-						<a class="write-menu">Casamentos Reais</a>
-					</li>
-					<li class="father-category">
-						<a class="write-menu">O Grande Dia</a>
-					</li>
-					<li class="father-category">
-						<a class="write-menu">Tem mais</a>
-					</li>
-					<li class="father-category">
-						<a class="write-menu">Anuncie</a>
-					</li>
-				</ul>
-			</nav>
-
-			<nav id="toggler" class="menu-hide-home">
-				<ul>
-					<span class="hide-cat">
-						<?php
-							$args = array(
-								'show_option_all'    => '',
-								'orderby'            => 'ID',
-								'order'              => 'ASC',
-								'style'              => 'none',
-								'hide_empty'         => 0,
-								'child_of'           => 2,
-								'title_li'           => __( '' ),
-								'show_option_none'   => __('No categories'),
-								'taxonomy'           => 'category',
-							);
-
-							$my_categories = get_categories($args);
-						?>
-
-						<?php foreach( $my_categories as $category ): ?>
-							<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-						<?php endforeach; ?>
-					</span>
-
-					<span class="hide-cat">
-						<?php
-							$args = array(
-								'show_option_all'    => '',
-								'orderby'            => 'ID',
-								'order'              => 'ASC',
-								'style'              => 'none',
-								'hide_empty'         => 0,
-								'child_of'           => 3,
-								'title_li'           => __( '' ),
-								'show_option_none'   => __('No categories'),
-								'taxonomy'           => 'category',
-							);
-
-							$my_categories = get_categories($args);
-						?>
-
-						<?php foreach( $my_categories as $category ): ?>
-							<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-						<?php endforeach; ?>
-					</span>
-
-					<span class="hide-cat">
-						<?php
-							$args = array(
-								'show_option_all'    => '',
-								'orderby'            => 'ID',
-								'order'              => 'ASC',
-								'style'              => 'none',
-								'hide_empty'         => 0,
-								'child_of'           => 4,
-								'title_li'           => __( '' ),
-								'show_option_none'   => __('No categories'),
-								'taxonomy'           => 'category',
-							);
-
-							$my_categories = get_categories($args);
-						?>
-
-						<?php foreach( $my_categories as $category ): ?>
-							<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-						<?php endforeach; ?>
-					</span>
-
-					<span class="hide-cat">
-						<?php
-							$args = array(
-								'show_option_all'    => '',
-								'orderby'            => 'ID',
-								'order'              => 'ASC',
-								'style'              => 'none',
-								'hide_empty'         => 0,
-								'child_of'           => 5,
-								'title_li'           => __( '' ),
-								'show_option_none'   => __('No categories'),
-								'taxonomy'           => 'category',
-							);
-
-							$my_categories = get_categories($args);
-						?>
-
-						<?php foreach( $my_categories as $category ): ?>
-							<li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></li>
-						<?php endforeach; ?>
-					</span>
-				</ul>
-			</nav><!-- #toggler -->
-		</section><!-- .body_menu-list -->
+		<?php get_template_part( 'content', 'box-category' ); ?>
 
 		<section class="body-breadcrumps">
 			<div id="title-sub_cat">
@@ -171,7 +33,15 @@ get_header(); ?>
 
 				<div class="post">
 					<figure>
-						<div class="th-content-post"><?php the_post_thumbnail(); ?></div>
+						<div class="th-content-post">
+							<?php
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail();
+								} else {
+									echo '<img src="' . get_template_directory_uri( 'stylesheet_directory' ) . '/images/default-post.jpg" />';
+								}
+							?>
+						</div><!-- .th-content-post -->
 							<div class="date-post">
 								<div class="date-single-post">
 									<span><?php the_time('j') ?></span>
@@ -195,8 +65,8 @@ get_header(); ?>
 						</figure><!-- .th-autor -->
 						
 						<span>
-							<h2>Via: <?php the_author(); ?></h2><!-- .nome-autor -->
-							<a class="more" href="<?php the_permalink(); ?>"></a><!-- .more -->
+							<h2>Por <?php the_author(); ?></h2><!-- .nome-autor -->
+							<a class="more" href="<?php echo get_author_posts_url( get_the_author_id() ); ?>">Saiba Mais sobre o Autor</a><!-- .more -->	
 							<div class="excerpt-autor"><p><?php the_author_description(); ?></p></div>
 						</span>
 					</div><!-- .body_autor-post -->
@@ -268,10 +138,11 @@ get_header(); ?>
 			<span><?php the_author(); ?></span>
 			
 			<div class="i-single-comments"></div>
-			<span><?php comments_number( $zero, $one, $more ); ?></span>
+			<span><?php comments_number(); ?></span>
 		</section><!-- .autor-sidebar -->
 
-<?php get_sidebar( "post" ); ?>
+		<?php get_sidebar( "post" ); ?>
+
 	</main><!-- #main -->
 </div><!-- #primary -->
 
