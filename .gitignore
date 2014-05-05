@@ -7,10 +7,5 @@ Vagrantfile
 *.swo
 *.zip
 *~
-<<<<<<< HEAD
-sftp-config.json
-=======
 
 sftp-config.json
-
->>>>>>> master
