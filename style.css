@@ -1523,22 +1523,29 @@ display: table;
 text-decoration: underline;
 }
 .body_menu-list .nav-menu-toogle ul li.father-category {
-float: left;
-list-style: none;
-display: inline;
-    background-color: #FFFFFF;
-border-radius:7px;
-/* -moz-border-radius:7px;
--webkit-border-radius:7px; */
-border: 2px solid #bcbec0;
-/*margin: 0 2px;*/
+	float: left;
+	list-style: none;
+	display: inline;
+	background-color: #FFFFFF;
+	border-radius:7px;
+	/* -moz-border-radius:7px;
+	-webkit-border-radius:7px; */
+	border: 2px solid #bcbec0;
+	/*margin: 0 2px;*/
     padding: 0 23px;
     font-weight: normal;
     color: #bcbec0;
     width: auto;
     margin: 6px 10px 0px 1%;
     font-weight: normal;
+    cursor: pointer;
 }
+
+.body_menu-list .nav-menu-toogle ul li.father-category:hover {
+	background: #F1F1F1;
+	color: #888;
+}
+
 #title-sub_cat {
 border: 2px solid #BCBEC0;
 border-right: none;
