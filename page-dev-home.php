@@ -1,16 +1,14 @@
 <?php
 	/*
-	Template Name: Home
+	Template Name: Dev Home
 	*/
 ?>
 
 <?php get_header(); ?>
 
 <section id="body_slides">
-<?php echo do_shortcode ('[pointelleslider id="2"]') ?>
+<?php echo do_shortcode ('[pointelleslider set="2" id="2"]') ?>
 </section><!-- #body_slides -->
-
-<div class="see-all"><a href="<?php echo home_url(); ?>/blog">Ver Todos os Posts</a></div>
 
 <?php
 	//Box 1
@@ -76,7 +74,8 @@
 </div><!-- #boxes -->
 
 <section class="body_menu-home">
-
+	<?php $to_loop = array();
+	$i = ''; ?>
 	<nav class="nav-menu-toogle">
 		<ul>
 			<?php
@@ -84,12 +83,13 @@
 				'type'                     => '',
 				'child_of'                 => 0,
 				'parent'                   => '',
-				'orderby'                  => 'name',
+				'orderby'                  => 'ID',
 				'order'                    => 'ASC',
 				'hide_empty'               => 0,
 				'hierarchical'             => 1,
-				'include'                  => '1751,27,206,1753',
-				'number'                   => '5',
+				'exclude'                  => '1',
+				'include'                  => '',
+				'number'                   => '4',
 				'taxonomy'                 => 'category',
 				'pad_counts'               => false );
 
@@ -97,64 +97,44 @@
 				foreach( $categories as $category ) :
 				$cat_ID = $category->term_id; // Get ID the category.
 			?>
-				<li data-category="<?php echo $cat_ID; ?>" class="active-toggle">
+				<li class="active-toggle">
 						<div class="ring">
 							<span class="img-cat parent-item-<?php echo $cat_ID; ?>"></span>
-								<?php echo $category->name; ?>
+								<?php echo $category->name; ?>'
 							<div class="hover-cat"></div>
 						</div>
 
 						<?php	
-							//$child_args = array( 'child_of' => $cat_ID, 'hide_empty' => 0, );
-							//$child_categories = get_categories( $child_args );
-							//var_dump($child_categories);
+							$child_args = array( 'child_of' => $cat_ID, );
+							$child_categories = get_categories( $child_args );
 						?>
+					<ul class="sub-category-hide">
+						<li>
+							
+							<?php foreach( $child_categories as $child_category ) : ?>		
+								<?php $to_loop[$i] .= $child_category->parent; ?>
+								<?php $i++; ?>
+							<?php endforeach; ?>
+						</li>
+					</ul>
 				</li>
-
-				<?php endforeach; ?>
-		</ul>
-
-		<!-- START | Toggle SubCategorias -->
-		<?php
-			$child_categories = get_categories('&child_of=2&hide_empty'); // List subcategories of category '2' (even the ones with no posts in them)
-			echo '<ul id="child-2" class="sub-category-hide">';
-			foreach ($child_categories as $subcategory) {
-			  echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subcategory->term_id), apply_filters('get_term', $subcategory->name));
-			}
-			echo '</ul>';
-		?>
-
-		<?php
-			$child_categories = get_categories('&child_of=3&hide_empty'); // List subcategories of category '3' (even the ones with no posts in them)
-			echo '<ul  id="child-3" class="sub-category-hide">';
-			foreach ($child_categories as $subcategory) {
-			  echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subcategory->term_id), apply_filters('get_term', $subcategory->name));
-			}
-			echo '</ul>';
-		?>
-
-		<?php
-			$child_categories = get_categories('&child_of=4&hide_empty'); // List subcategories of category '4' (even the ones with no posts in them)
-			echo '<ul  id="child-4" class="sub-category-hide">';
-			foreach ($child_categories as $subcategory) {
-			  echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subcategory->term_id), apply_filters('get_term', $subcategory->name));
-			}
-			echo '</ul>';
-		?>
-
-		<?php
-			$child_categories = get_categories('&child_of=5&hide_empty'); // List subcategories of category '5' (even the ones with no posts in them)
-			echo '<ul  id="child-5" class="sub-category-hide">';
-			foreach ($child_categories as $subcategory) {
-			  echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subcategory->term_id), apply_filters('get_term', $subcategory->name));
-			}
-			echo '</ul>';
-		?>
-		<!-- AND | Toggle SubCategorias -->
+					
+	<?php endforeach; ?>
 				
+		</ul>
 	</nav><!-- .nav-menu-home -->
 
 </section><!-- .body_menu-home -->
+
+<?php foreach( $to_loop as $to ) : ?>		
+	<?php  $categories = get_categories( "hide_empty=0&parent=$to" );
+
+        echo '<ul class="hide">';
+        foreach ( $categories as $cat ) {
+                echo '<li><a href="' . get_category_link( $cat->term_id ) . '" >' . $cat->name . '</a></li>';
+        }
+        echo '</ul>'; ?>
+<?php endforeach; ?>
 
 <section id="box-content">
 	<div class="anuncio">
@@ -163,11 +143,40 @@
 		</a>
 	</div><!-- .anuncio -->
 
-	<?php if ( of_get_option( 'exibir_destaques_checkbox' ) ) {
-		get_template_part( 'content', 'home-destaques');
-	} else {
-		get_template_part( 'content', 'home-posts' );
-	} ?>
+	<div id="box-post">
+		<?php $id_post_destaque = of_get_option( 'destaque_post_home' ); ?>
+
+		<?php $post_destaque = get_post( of_get_option( 'destaque_post_home' ) ); ?>
+
+		<figure>
+			<div id="th-post">
+				<a href="<?php echo get_permalink( $id_post_destaque ); ?>">
+					<?php echo get_the_post_thumbnail( $id_post_destaque, 'post_destaque' ); ?>
+				</a>
+			</div>
+		</figure>
+
+		<h1 id="title-post">
+			<a href="<?php echo get_permalink( $id_post_destaque ); ?>">
+				<?php echo $post_destaque->post_title; ?>
+			</a>
+		</h1>
+
+		<figcaption>
+			<div class="exerpt-home-destaque">
+				<?php
+					$qtd_destaque = of_get_option( 'qtd_destaque' );
+					if ( empty ( $qtd_destaque ) ) {
+						$qtd_destaque = 50;
+					}
+					$quantas = 10; echo wp_trim_words( $post_destaque->post_content, $qtd_destaque );
+				?>
+				<?php // echo apply_filters( 'the_content', $post_destaque->post_content ); ?>
+			</div><!-- .exerpt-home-destaque -->
+
+		</figcaption>
+		<span><a href="" class="more-info"></a></span>
+	</div><!-- #box-post -->
 	
 </section><!-- #box-content -->
 
