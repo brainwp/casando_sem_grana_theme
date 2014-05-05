@@ -65,33 +65,11 @@ get_header(); ?>
 					<?php endwhile; // end of the loop. ?>
 				</ul>
 
-				<div class="nagetation-single-pages">
-					<?php /* Display navigation to next/previous pages when applicable */ ?>
-					<?php
-						global $wp_query;
-						$total_pages = $wp_query->max_num_pages;
-						if ($total_pages > 1){
-							$current_page = max(1, get_query_var('paged'));
-							echo '<div class="page_nav">';
-							echo paginate_links(array(
-							'base' => get_pagenum_link(1) . '%_%',
-							'format' => 'page/%#%',
-							'current' => $current_page,
-							'total' => $total_pages,
-							'prev_text' => '<< Anteriores',
-							'next_text' => 'Pr&oacute;ximos >>'
-							));
-							echo '</div>';
-						}
-					?>
-					<?php //else: ?>
-						<h2 class="title"><?php// _e( 'Sua pesquisa acabou sem resultados.', 'portfoliopress' ) ?></h2>
-					<?php //endif; ?>
-				</div><!-- .nagetation-single-pages -->
-
 			</section><!-- .body_content-category -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
+<?php nav_posts(); ?>
 
 <?php get_footer(); ?>
