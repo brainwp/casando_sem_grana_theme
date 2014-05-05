@@ -7,4 +7,6 @@ Vagrantfile
 *.swo
 *.zip
 *~
+
 sftp-config.json
+
