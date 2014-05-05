@@ -159,12 +159,6 @@ function casando_sem_grana_theme_widgets_init() {
 }
 add_action( 'widgets_init', 'casando_sem_grana_theme_widgets_init' );
 
-/**
- * Implementando Custom Post Type Portfolio
- */
-require get_template_directory() . '/inc/customposttype-portfolio.php';
-
-
 
  /**
  * Enqueue scripts and styles.
