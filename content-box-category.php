@@ -93,8 +93,8 @@
 			
 				<!-- HTML impresso pelo loop acima -->	
 				<li data-category="<?php echo $cat_ID; ?>" class="active-toggle father-category">
-					<div class="ring">
-						<span class="img-cat parent-item-<?php echo $cat_ID; ?> parent-image-<?php echo $c; ?>"></span>
+					<div>
+						<span class="img-cat parent-item-<?php echo $cat_ID; ?>"></span>
 							<?php echo $category->name; ?>'
 						<div class="hover-cat"></div>
 					</div>
