@@ -2688,35 +2688,7 @@ background-color: #f6f6f6;
 	#menu-creditos {
 	margin: 1% 4%;
 	width: 92%;
-=======
-	.boxes-home .box {
-	   margin: 0 2% 2% 0;
-	   width: 47.5%;
-	min-height: auto !important;
-	}
 
-	#box-content {
-	margin: 3%;
-	width: 94%;
-	}
-
-	#side-home {
-	margin: 3%;
-	width: 94%;
-	}
-
-	ul#menu-footer li {
-	float: left;
-	list-style: none outside none;
-	margin: 2% 4%;
-	position: relative;
-	width: 92%;
-	}
-
-	#menu-creditos {
-	margin: 1% 4%;
-	width: 92%;
-	}
 
 	#social-area {
 	float: left;
@@ -2729,27 +2701,16 @@ background-color: #f6f6f6;
 
 	}
 
-	.content-single .post .date-post {
-	    float: right;
-	    position: absolute;
-	    right: 1%;
-	    text-transform: uppercase;
-	    top: 3%;
->>>>>>> eve
-	}
 
 	#info-footer {
 		padding: 20px 0 0;
 	}
 
-<<<<<<< HEAD
 	#img-nav-4 {
 		margin: 0 auto;
-=======
 	section.body_content-single {
 	width: 100%;
 	margin: 0 auto;
->>>>>>> eve
 	}
 
 	#social-area {
@@ -2758,29 +2719,21 @@ background-color: #f6f6f6;
 	width: 92%;
 	}
 
-<<<<<<< HEAD
-	#social-area .social-title {
-	font-size: 1em;
-=======
 	#side-single {
 	width: 94%;
 	margin: 3%;
->>>>>>> eve
 	}
 
-
-<<<<<<< HEAD
 	.content-single .post .date-post {
-		float: right;
 		position: absolute;
 		right: 1%;
 		text-transform: uppercase;
 		top: 3%;
-=======
+	}
+
 @media (max-width: 1000px) {
 	.autor-sidebar, .search-form {
 		display: none;
->>>>>>> eve
 	}
 
 
@@ -2820,7 +2773,6 @@ background-color: #f6f6f6;
 		right: 10%;
 		top: 60px;
 	}
-<<<<<<< HEAD
 
 	.pointelle_nav_next, .pointelle_nav_prev {
 	display: block;
@@ -2854,10 +2806,9 @@ background-color: #f6f6f6;
 	width: 94%;
 	}
 
-.comment-respond {
-    margin: 3%;
-}
-=======
+	.comment-respond {
+		margin: 3%;
+	}
 
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
@@ -2868,28 +2819,12 @@ background-color: #f6f6f6;
 	display: none;
 	}
 
-	.boxes-home .box {
-	margin: 0 0 2% 0;
-	width: 96%;
-	}
-
-	.body_menu-list .nav-menu-toogle ul {
-	float: left;
-	padding: 0 3%;
-	}
->>>>>>> eve
 
 }
 
 /* iPhone 3+4 landscape · width: 480px */
 @media (max-width: 600px ) and (min-device-width: 480px) {
-<<<<<<< HEAD
 
-	a#logo {
-	margin: 55px auto 20px;
-	}
-
-=======
 	.conh-morando {
 	display: none;
 	}
@@ -2903,7 +2838,7 @@ background-color: #f6f6f6;
 	text-align: center;
 	width: 92%;
 	}
->>>>>>> eve
+
 	.boxes-home {
 	padding: 0 0 0 10px;
 	}
@@ -2913,11 +2848,13 @@ background-color: #f6f6f6;
 	.search-form .search-submit {
 	top: 0;
 	}
-<<<<<<< HEAD
+
 	#child-2, #child-3, #child-4, #child-5 {
-=======
+	display: none;
+	padding: 0;
+	}
+
 	#child-1751, #child-1753, #child-27, #child-206 {
->>>>>>> eve
 	display: none;
 	padding: 0;
 	}
@@ -2954,7 +2891,7 @@ background-color: #f6f6f6;
 	.navbar-nav {
 	margin: 0.5px -15px;
 	}
-<<<<<<< HEAD
+
 	#child-2, #child-3, #child-4, #child-5 {
 	border-top: solid 1px #999;
 	}
@@ -2966,7 +2903,10 @@ background-color: #f6f6f6;
 
 	}
 	#child-2 li a:hover, #child-3 li a:hover, #child-4 li a:hover, #child-5 li a:hover {
-=======
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+
 	#child-1751, #child-1753, #child-27, #child-206 {
 	border-top: solid 1px #999;
 	}
@@ -2977,7 +2917,6 @@ background-color: #f6f6f6;
 	color: #999999;
 	}
 	#child-1751 li a:hover, #child-1753 li a:hover, #child-27 li a:hover, #child-206 li a:hover {
->>>>>>> eve
 	color: #FFFFFF;
 	text-decoration: none;
 	}
@@ -2995,13 +2934,6 @@ background-color: #f6f6f6;
 
 @media (max-width: 360px ) and (min-device-width: 480px) {
 
-<<<<<<< HEAD
-
-	.conh-morando {
-	display: none;
-	}
-	a#logo {
-	margin: 55px auto 20px;
 
 	.boxes-home {
 	padding: 0 0 0 10px;
@@ -3060,7 +2992,10 @@ background-color: #f6f6f6;
 
 	}
 	#child-2 li a:hover, #child-3 li a:hover, #child-4 li a:hover, #child-5 li a:hover {
-=======
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+
 	.conh-morando {
 	display: none;
 	}
@@ -3074,15 +3009,8 @@ background-color: #f6f6f6;
 	text-align: center;
 	width: 92%;
 	}
-	.boxes-home {
-	padding: 0 0 0 10px;
-	}
-	.search-form {
-	position: relative;
-	}
-	.search-form .search-submit {
-	top: 0;
-	}
+
+
 	#child-1751, #child-1753, #child-27, #child-206 {
 	display: none;
 	padding: 0;
@@ -3131,7 +3059,6 @@ background-color: #f6f6f6;
 
 	}
 	#child-1751 li a:hover, #child-1753 li a:hover, #child-27 li a:hover, #child-206 li a:hover {
->>>>>>> eve
 	color: #FFFFFF;
 	text-decoration: none;
 	}
