@@ -84,11 +84,7 @@
 		</a>
 	</div><!-- .anuncio -->
 
-	<?php if ( of_get_option( 'exibir_destaques_checkbox' ) ) {
-		get_template_part( 'content', 'home-destaques');
-	} else {
-		get_template_part( 'content', 'home-posts' );
-	} ?>
+	<?php get_template_part( 'content', 'home-posts' );	?>
 	
 </section><!-- #box-content -->
 

@@ -1184,17 +1184,17 @@ clear: both;
     margin: 0 auto;
 }
 
-.body_menu-home .nav-menu-toogle span.parent-item-1751 {
+.body_menu-home .nav-menu-toogle span.parent-image-1 {
 	background: url("images/menu-content-1.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
-.body_menu-home .nav-menu-toogle span.parent-item-1753 {
-background: url( "images/menu-content-2.png" ) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+.body_menu-home .nav-menu-toogle span.parent-image-2 {
+	background: url( "images/menu-content-2.png" ) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
-.body_menu-home .nav-menu-toogle span.parent-item-27 {
-background: url( "images/menu-content-3.png" ) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+.body_menu-home .nav-menu-toogle span.parent-image-3 {
+	background: url( "images/menu-content-3.png" ) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
-.body_menu-home .nav-menu-toogle span.parent-item-206 {
-background: url( "images/menu-content-4.png" ) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+.body_menu-home .nav-menu-toogle span.parent-image-4 {
+	background: url( "images/menu-content-4.png" ) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 .menu-hide-home {
 background-color: #f1f2f2;
