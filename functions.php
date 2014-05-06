@@ -271,7 +271,7 @@ function my_related_posts() {
 }
 	
 /* My Excerpt Post Relacionados */
-function my_excerpt_caracter( $limit = 25 ) {
+function my_excerpt_caracter( $limit = 80 ) {
 	if ( strlen( get_the_excerpt() ) > $limit ) {
 		$ini = strlen( get_the_excerpt() ) - $limit;
 		$excerpt = substr(get_the_excerpt(), 0, -( $ini ));

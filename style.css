@@ -78,8 +78,9 @@ overflow-y: scroll; /* Keeps page centered in all browsers regardless of content
 box-sizing: border-box;
 }
 body {
-background: #fff;
+		background: url("images/background.jpg") repeat scroll center top rgba(0, 0, 0, 0);
 }
+
 article,
 aside,
 details,
@@ -523,6 +524,10 @@ display: table;
 .site-content:after,
 .site-footer:after {
 clear: both;
+}
+
+a.comment-reply-link{
+	color: #681E39;
 }
 
 /*--------------------------------------------------------------
@@ -1587,7 +1592,7 @@ margin: 0 5px 0 0;
 #title-sub_cat #crumbs li a {
 text-decoration: none;
 color: #bcbec0;
-font-size: 1em;
+font-size: 20px;
 }
 #title-sub_cat #crumbs li a:hover {
 text-decoration: underline;
