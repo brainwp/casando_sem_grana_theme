@@ -55,9 +55,17 @@
 				);
 				$cats = get_categories( $args_f );
 
-				echo '<ul id="child-'.$item.'" class="sub-category-hide">';
+				echo '<ul id="child-' . $item . '" class="sub-category-hide">';
+				$co = 0;
 		        foreach ( $cats as $cat ) {
 					echo '<li><a href="' . get_category_link( $cat->term_id ) . '" >' . $cat->name . '</a></li>';
+
+					if ( $co == 4) {
+						echo '<span style="display:none;">•</span>';
+					} else {
+						echo '<span>•</span>';
+					}
+					$co++;
 		        }
 		        echo '</ul>';
 			
