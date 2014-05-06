@@ -2011,7 +2011,7 @@ background-color: #000;
     float: left;
     height: auto;
     margin: 20px;
-    min-width: 300px;
+    width: 300px;
     overflow: hidden;
 }
 
@@ -2712,10 +2712,18 @@ background-color: #f6f6f6;
 	.conh-morando {
     	top: 125px;
 	}
+	#box-content {
+	margin: 3%;
+	width: 94%;
+	}
 
+	#side-home {
+	margin: 3%;
+	width: 94%;
+	}
 	.content-post {
 	margin: 0 auto;
-	width: 100$;
+	width: 100%;
 	}
 
 	.post {
@@ -2746,16 +2754,6 @@ background-color: #f6f6f6;
 	   margin: 0 2% 2% 0;
 	   width: 47.5%;
 		min-height: auto !important;
-	}
-
-	#box-content {
-	margin: 3%;
-	width: 94%;
-	}
-
-	#side-home {
-	margin: 3%;
-	width: 94%;
 	}
 
 	ul#menu-footer li {
