@@ -36,7 +36,7 @@ get_header(); ?>
 						<div class="th-content-post">
 							<?php
 								if ( has_post_thumbnail() ) {
-									the_post_thumbnail();
+									the_post_thumbnail('post_destaque');
 								} else {
 									echo '<img src="' . get_template_directory_uri( 'stylesheet_directory' ) . '/images/default-post.jpg" />';
 								}
