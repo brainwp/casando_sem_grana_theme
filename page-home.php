@@ -86,5 +86,5 @@ get_header(); ?>
 	
 </section><!-- #box-content -->
 
-<?php get_sidebar( "home" ); ?>
+<?php get_sidebar( 'home' ); ?>
 <?php get_footer(); ?>

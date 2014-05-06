@@ -64,7 +64,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar( 'post' ); ?>
+<?php get_sidebar(); ?>
 
 <?php nav_posts(); ?>
 

@@ -141,7 +141,7 @@ get_header(); ?>
 			<span><?php comments_number(); ?></span>
 		</section><!-- .autor-sidebar -->
 
-		<?php get_sidebar( "post" ); ?>
+		<?php get_sidebar(); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
