@@ -2,9 +2,7 @@
 	/*
 	Template Name: Home
 	*/
-?>
-
-<?php get_header(); ?>
+get_header(); ?>
 
 <section id="body_slides">
 <?php echo do_shortcode ('[pointelleslider id="2"]') ?>

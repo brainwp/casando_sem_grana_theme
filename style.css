@@ -1740,9 +1740,15 @@ margin-right: -26px;
 
 /* SINGLE */
 section.body_content-single {
-float: left;
+	float: left;
     width: 65%;
 }
+
+section.body_content-full {
+	float: left;
+    width: 100%;
+}
+
 .content-single {
     margin: 0 auto;
 }
@@ -1781,6 +1787,10 @@ max-width: 1000px;
 
 .content-post {
 max-width: 650px;
+}
+
+.content-full {
+max-width: 1000px;
 }
 
 .content-post p {
