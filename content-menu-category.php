@@ -36,7 +36,7 @@
 				<li data-category="<?php echo $cat_ID; ?>" class="active-toggle">
 					<div class="ring">
 						<span class="img-cat parent-item-<?php echo $cat_ID; ?> parent-image-<?php echo $c; ?>"></span>
-							<?php echo $category->name; ?>
+							<span><?php echo $category->name; ?></span>
 						<div class="hover-cat"></div>
 					</div>
 					
