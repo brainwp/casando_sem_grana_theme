@@ -10,6 +10,8 @@ get_header(); ?>
 
 <div class="see-all"><a href="<?php echo home_url(); ?>/blog">Ver Todos os Posts</a></div>
 
+	<?php get_template_part( 'content', 'menu-category' ); ?>
+
 <?php
 	//Box 1
 	$icone_box_1 = of_get_option('icon_feature_upload_um');
@@ -72,8 +74,6 @@ get_header(); ?>
 		</article>
 	</a>
 </div><!-- #boxes -->
-
-	<?php get_template_part( 'content', 'menu-category' ); ?>
 
 <section id="box-content">
 	<div class="anuncio">

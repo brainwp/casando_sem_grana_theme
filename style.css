@@ -823,12 +823,12 @@ font-size: 1em;
     font-weight: bold;
 }
 .boxes-home {
-  clear: both;
+  	clear: both;
     display: table;
     margin: 0 auto;
-    padding: 0 0 0 20px;
+    padding: 20px 0 0 20px;
     width: auto;
-height: auto;
+	height: auto;
 }
 .boxes-home #box-1 {
 background: #efe689;
@@ -923,16 +923,16 @@ max-height: 250px;
 overflow: hidden;
 }
 .boxes-home .box {
-width: 23.8%;
-float: left;
-margin: 0 1% 0 0;
--webkit-border-radius: 7px;
--moz-border-radius: 7px;
-border-radius: 7px;
-padding:20px 10px;
-text-align: center;
-color: #FFF;
-min-height: 225px;
+	width: 23.8%;
+	float: left;
+	margin: 0 1% 0 0;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	padding:20px 10px;
+	text-align: center;
+	color: #FFF;
+	height: 270px;
 }
 .boxes-home .box img {
 margin: 0 0 5px 5px;
@@ -2593,7 +2593,7 @@ margin-bottom: 15px;
 }
 .body_menu-home .nav-menu-toogle ul {
     float: right;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     width: 82%;
     position: relative;
 }
