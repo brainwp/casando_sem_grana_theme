@@ -8,3 +8,4 @@ Vagrantfile
 *.zip
 *~
 sftp-config.json
+desktop.ini
