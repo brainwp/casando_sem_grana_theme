@@ -62,6 +62,7 @@
 
 					if ( $co == 4) {
 						echo '<span style="display:none;">•</span>';
+						$co = 0;
 					} else {
 						echo '<span>•</span>';
 					}
