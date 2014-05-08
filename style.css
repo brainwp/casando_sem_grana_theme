@@ -732,6 +732,13 @@ max-width: 100%;
 
 
 /* HEADER */
+.elemento-header {
+	width: 100%;
+	height: 300px;
+	background: url("images/bg-elemento-header.png") no-repeat center transparent;
+	position: absolute;
+	top: 0;
+}
 .box-rss {
 	width: 40%;
 	position: absolute;
