@@ -197,10 +197,43 @@ function optionsframework_options() {
 		'type' => 'info');
 
 	$options[] = array(
-		'name' => 'Categorias do Menu',
-		'desc' => 'Adicione aqui o ID das quatro categorias que deseja adicionar ao menu da home separando-as com vírgulas, exemplo 1751,27,206,1753',
-		'id' => 'id_cats',
-		'std' => '',
+		'name' => 'Primeira Categoria',
+		'desc' => 'Adicione aqui o ID da primeira categoria que deseja adicionar ao menu',
+		'id' => 'cat_1',
+		'std' => '1',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Segunda Categoria',
+		'desc' => 'Adicione aqui o ID da segunda categoria que deseja adicionar ao menu',
+		'id' => 'cat_2',
+		'std' => '2',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Terceira Categoria',
+		'desc' => 'Adicione aqui o ID da terceira categoria que deseja adicionar ao menu',
+		'id' => 'cat_3',
+		'std' => '3',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Quarta Categoria',
+		'desc' => 'Adicione aqui o ID da quarta categoria que deseja adicionar ao menu',
+		'id' => 'cat_4',
+		'std' => '4',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Quinta Categoria',
+		'desc' => 'Adicione aqui o ID da quinta categoria que deseja adicionar ao menu',
+		'id' => 'cat_5',
+		'std' => '5',
+		'class' => 'mini',
 		'type' => 'text');
 
 	$options[] = array(

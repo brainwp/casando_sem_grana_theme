@@ -1,19 +1,26 @@
 <section class="body_menu-home">
 	<?php
-		$to_loop = array();
+		$cat1 = of_get_option( 'cat_1' );
+		$cat2 = of_get_option( 'cat_2' );
+		$cat3 = of_get_option( 'cat_3' );
+		$cat4 = of_get_option( 'cat_4' );
+		$cat5 = of_get_option( 'cat_5' );
+
+		$the_ids = array('0' => $cat1, '1' => $cat2, '2' => $cat3, '3' => $cat4, '4' => $cat5 );
+
 		$i = 0;
 		$c = 1;
 	?>
 	<nav class="nav-menu-toogle">
 		<ul>
+			
+			<?php foreach ( $the_ids as $the_id ) { ?>
+
 			<?php
-				$id_cats = of_get_option( 'id_cats' );
 				$args = array(
-				'orderby'                  => 'ID',
-				'order'                    => 'ASC',
-				'hide_empty'               => 0,
-				'include'                  => $id_cats,
-				'taxonomy'                 => 'category'
+					'hide_empty' => 0,
+					'include' => $the_id,
+					'taxonomy' => 'category'
 				);
 
 				// Pega as categorias Pai
@@ -23,9 +30,8 @@
 				foreach( $categories as $category ) :
 				// Guarda o ID das categorias Pai
 				$cat_ID = $category->term_id;
-				
 			?>
-			
+
 				<!-- HTML impresso pelo loop acima -->	
 				<li data-category="<?php echo $cat_ID; ?>" class="active-toggle">
 					<div class="ring">
@@ -36,22 +42,22 @@
 					<?php $c++; ?>
 				</li>
 
+			<?php endforeach; ?>
 
-	<?php endforeach; ?>
+			<?php } ?>
 				
 		</ul>
 			<!-- HTML impresso para as categorias Filhas -->
-			<?php $array_id = explode(',', $id_cats); ?>
 
-			<?php foreach ( $array_id as $item ) { ?>
+			<?php foreach ( $the_ids as $item ) { ?>
 
 				<?php
 				$args_f = array(
-					'orderby'                  => 'ID',
-					'order'                    => 'ASC',
-					'hide_empty'               => 0,
-					'parent'                  => $item,
-					'taxonomy'                 => 'category'
+					'orderby' => 'ID',
+					'order' => 'ASC',
+					'hide_empty' => 0,
+					'parent' => $item,
+					'taxonomy'	=> 'category'
 				);
 				$cats = get_categories( $args_f );
 
