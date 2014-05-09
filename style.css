@@ -1852,7 +1852,8 @@ max-width: 650px;
 }
 
 .content-full {
-max-width: 1000px;
+	margin: 0 auto;
+	max-width: 945px;
 }
 
 .content-post p {
