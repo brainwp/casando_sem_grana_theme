@@ -139,7 +139,7 @@ get_header(); ?>
 			</div><!-- .content-single -->
 		</section><!-- .body_content-single -->
 
-		<?php get_sidebar( 'single' ); ?>
+		<?php get_sidebar(); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
