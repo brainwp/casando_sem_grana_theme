@@ -2807,8 +2807,12 @@ background-color: #f6f6f6;
 	    float: none;
 	}
 
+}
 
-
+@media (max-width: 700px) {
+	.body_content-category .post-category {
+		width: 45%;
+	}
 }
 
 @media (max-width: 600px) {
@@ -2865,9 +2869,12 @@ background-color: #f6f6f6;
 	width: 94%;
 	}
 
-.comment-respond {
-    margin: 3%;
-}
+	.comment-respond {
+	    margin: 3%;
+	}
+	#box-content .anuncio {
+		display: none;
+	}
 
 }
 
@@ -2946,6 +2953,12 @@ background-color: #f6f6f6;
 	}
 	.navbar-nav > li > a {
 	text-transform: uppercase;
+	}
+	.body_content-category ul {
+		margin: 0 auto;
+	}
+	.body_content-category .post-category {
+		width: 80%;
 	}
 
 }
