@@ -26,6 +26,12 @@ get_header(); ?>
 			</div>
 		</section><!-- .body-breadcrumps -->
 
+	<div class="anuncio">
+		<a href="<?php echo of_get_option('anuncio_link'); ?>" target="_blank">
+			<img src="<?php echo of_get_option('anuncio_img'); ?>" alt="Anúncio Casando sem Grana">
+		</a>
+	</div><!-- .anuncio -->
+
 		<section class="body_content-single">
 			<div class="content-single">
 
@@ -133,15 +139,7 @@ get_header(); ?>
 			</div><!-- .content-single -->
 		</section><!-- .body_content-single -->
 
-		<section class="autor-sidebar">
-			<div class="i-single-autor"></div>
-			<span><?php the_author(); ?></span>
-			
-			<div class="i-single-comments"></div>
-			<span><?php comments_number(); ?></span>
-		</section><!-- .autor-sidebar -->
-
-		<?php get_sidebar(); ?>
+		<?php get_sidebar( 'single' ); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->

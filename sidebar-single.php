@@ -5,7 +5,16 @@
  * @package casando_sem_grana_theme
  */
 ?>
-<section id="side-single">	
+<section id="side-single">
+
+	<section class="autor-sidebar">
+		<div class="i-single-autor"></div>
+		<span><?php the_author(); ?></span>
+		
+		<div class="i-single-comments"></div>
+		<span><?php comments_number(); ?></span>
+	</section><!-- .autor-sidebar -->
+
 	<div id="secondary" class="widget-area" role="complementary">
 		<?php if ( ! dynamic_sidebar( 'sidebar-single' ) ) : ?>
 

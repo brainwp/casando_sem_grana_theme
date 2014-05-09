@@ -243,7 +243,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => 'Imagem do Anúncio',
-		'desc' => 'Faça o upload da imagem do anúncio. A medida deve ser de 640x90px',
+		'desc' => 'Faça o upload da imagem do anúncio. A medida deve ser de 728x90px',
 		'id' => 'anuncio_img',
 		'type' => 'upload');
 

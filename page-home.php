@@ -75,12 +75,13 @@ get_header(); ?>
 	</a>
 </div><!-- #boxes -->
 
-<section id="box-content">
 	<div class="anuncio">
 		<a href="<?php echo of_get_option('anuncio_link'); ?>" target="_blank">
 			<img src="<?php echo of_get_option('anuncio_img'); ?>" alt="Anúncio Casando sem Grana">
 		</a>
 	</div><!-- .anuncio -->
+
+<section id="box-content">
 
 	<?php get_template_part( 'content', 'home-posts' );	?>
 	
