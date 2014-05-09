@@ -353,16 +353,14 @@ width: 98%;
 5.1 Links
 --------------------------------------------------------------*/
 a {
-/* color: royalblue; */
-cursor: pointer;
+	color: #5C1B3E;
+	font-weight: bold;
 }
 a:visited {
-color: purple;
 }
 a:hover,
 a:focus,
 a:active {
-color: midnightblue;
 }
 
 /*--------------------------------------------------------------
@@ -888,7 +886,7 @@ width: 64%;
     left: 57px;
     top: 20px;
     position: absolute;
-    text-align: left;
+    text-align: center;
     width: 65%;
     font-size: 0.8em !important;
 }
@@ -1088,8 +1086,7 @@ ul.sub-category-hide li:first-child, .body_menu-home ul.sub-category-hide li {
 	-moz-border-radius: 7px;
 	-webkit-border-radius: 7px;
 	border: 2px solid #bcbec0;
-    padding: 5px 5px;
-    font-weight: normal;
+    padding: 14px 5px;
     color: #bcbec0;
     width: 18%;
     margin: 6px 1% 0;
@@ -1097,6 +1094,10 @@ ul.sub-category-hide li:first-child, .body_menu-home ul.sub-category-hide li {
     cursor: pointer;
     line-height: 1;
     height: auto;
+}
+
+.body_menu-home.body_menu-list .nav-menu-toogle ul li.father-category:first-child {
+	padding: 5px 5px;
 }
 
 .body_menu-home.body_menu-list .nav-menu-toogle ul li.father-category:last-child {
@@ -1261,6 +1262,9 @@ clear: both;
 }
 .body_menu-home .nav-menu-toogle span.parent-image-4 {
 	background: url( "images/menu-content-4.png" ) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.body_menu-home .nav-menu-toogle span.parent-image-5 {
+	background: url( "images/menu-content-5.png" ) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 span.name-category {
 	font-family: 'Lato','sans-serif';
@@ -1697,6 +1701,25 @@ background: url("images/bullet-date-post.png") no-repeat scroll 0 0 rgba(0, 0, 0
 .content-single .post figure {
 	position: relative;
 }
+
+.content-single .post .gallery figure {
+	float: left;
+    margin: 5px 0;
+    width: auto;
+}
+
+.content-single .post .gallery figure img, .content-single .post img {
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.content-single .post .gallery {
+	margin: 20px 0 40px;
+	overflow: hidden;
+	padding-left: 20px;
+}
+
 .content-single .post .date-post {
 	text-transform: uppercase;
     position: absolute;
@@ -2700,6 +2723,11 @@ padding: 20px;
 background-color: #f6f6f6;
 }
 
+.addthis_toolbox {
+    padding: 40px 20px;
+	width: 90%;
+}
+
 @media (max-width: 1000px) {
 	.autor-sidebar, .search-form {
 	display: none;
@@ -2740,6 +2768,9 @@ background-color: #f6f6f6;
 
 
 @media (max-width: 800px) {
+	.jj-nav-post {
+		display: none !important;
+	}
 
 	.conh-morando {
 		display: none;
@@ -2879,7 +2910,7 @@ background-color: #f6f6f6;
 }
 
 /* iPhone 3+4 landscape · width: 480px */
-@media (max-width: 600px ) and (min-device-width: 480px) {
+@media (max-width: 600px) and (min-device-width: 480px) {
 
 	a#logo {
 	margin: 55px auto 20px;

@@ -62,11 +62,11 @@
 		<section id="info-footer">
 			<nav id="menu-creditos">
 				<ul>
-					<li>Grupo CSG - Casando sem grana</li>
+					<li>Casando sem grana</li>
 				</ul>
 				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
 			<br />			
-				<span class="direitos">2014 - Todos os Direitos Reservados</span>
+				<span class="direitos">Todos os Direitos Reservados</span>
 			</nav>
 			<nav id="social-area">
 
