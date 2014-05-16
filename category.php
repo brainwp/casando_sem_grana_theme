@@ -35,6 +35,7 @@ get_header(); ?>
 						</div><!-- .date-category-post -->
 
 						<div class="thumb-category">
+							<a href="<?php the_permalink() ?>" rel="bookmark" title="Link para <?php the_title_attribute(); ?>">
 							<?php
 								if ( has_post_thumbnail() ) {
 									the_post_thumbnail( 'post_category' );
@@ -42,11 +43,11 @@ get_header(); ?>
 									echo '<img src="' . get_template_directory_uri( 'stylesheet_directory' ) . '/images/th-category-default.jpg" />';
 								}
 							?>
-							<?php //the_post_thumbnail( 'post_category' ); ?>
+							</a>
 						</div>
 
 						<div class="title-category-post">
-							<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+							<a href="<?php the_permalink() ?>" rel="bookmark" title="Link para <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 						</div><!-- .title-category-post -->
 
 						<div class="excerpt-category-post"><?php my_excerpt_caracter(); ?></div>
