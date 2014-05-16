@@ -236,6 +236,8 @@ dd {
 margin: 0 1.5em 1.5em;
 }
 img {
+	height: auto;
+    width: 100%;
 }
 figure {
 margin: 0;
@@ -906,7 +908,7 @@ width: 64%;
 
 .site-content .anuncio {
 	width: 100%;
-	height: 90px;
+	height: auto;
 	margin:  20px auto 0;
 	text-align: center;
 }
@@ -916,6 +918,17 @@ width: 64%;
 	max-width: 728px;
 	width: auto;
 	max-height: 80px;
+}
+
+#box-content .anuncio {
+	clear: both;
+	max-width: 682px;
+	width: auto;
+	max-height: 80px;
+	background: #e17c0a;
+}
+.anuncio img {
+	width: 100%;
 }
 
 #box-post {
@@ -2841,7 +2854,7 @@ background-color: #f6f6f6;
 	#side-single {
 	    margin: 40px auto 20px;
 	    max-width: 300px;
-	    width: 30%;
+	    width: 100%;
 	    float: none;
 	}
 
