@@ -904,11 +904,14 @@ width: 64%;
 }
 
 #box-content .anuncio {
-clear: both;
-max-width: 682px;
-width: auto;
-max-height: 80px;
-background: #e17c0a;
+	clear: both;
+	max-width: 682px;
+	width: auto;
+	max-height: 80px;
+	background: #e17c0a;
+}
+.anuncio img {
+	width: 100%;
 }
 #box-post {
 clear: both;
