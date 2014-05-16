@@ -4,5 +4,5 @@ jQuery(document).ready(function() {
         if (jQuery(this).height() > max)
 		max = jQuery(this).height(); 
     });
-    jQuery(".father-category").height(max);
+    /*jQuery(".father-category").height(max);*/
 });

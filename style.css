@@ -1117,7 +1117,7 @@ ul.sub-category-hide li:first-child, .body_menu-home ul.sub-category-hide li {
 }
 
 .body_menu-home.body_menu-list .nav-menu-toogle ul li.father-category:first-child {
-	padding: 5px 5px;
+	/*padding: 5px 5px;*/
 }
 
 .body_menu-home.body_menu-list .nav-menu-toogle ul li.father-category:last-child {
@@ -2640,7 +2640,7 @@ display: table;
 
 .body_menu-list .nav-menu-toogle ul {
     margin: 0 auto;
-    width: 90%;
+    width: 97%;
     position: relative;
 }
 .body_menu-list .nav-menu-toogle ul li a {
