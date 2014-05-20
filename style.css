@@ -116,7 +116,8 @@ outline: thin dotted;
 }
 a:hover,
 a:active {
-outline: 0;
+	outline: 0;
+	color: #6f0128;
 }
 a img {
 border: 0;
@@ -355,7 +356,7 @@ width: 98%;
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: #5C1B3E;
+	color: #961945;
 	font-weight: bold;
 }
 a:visited {
@@ -363,6 +364,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
+	text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -1866,10 +1868,6 @@ width: auto;
 .content-single h1, .content-single h2,.content-single h3,.content-single h4,.content-single h5,.content-single h6 {
 padding: 0 25px;
 }
-.content-post a {
-color: #3c0402;
-text-decoration: none;
-}
 .body_autor-post {
 	float: left;
 	width: 100%;
@@ -2041,6 +2039,21 @@ background-color: #000;
 }
 
 /* SIDEBAR-SINGLE */
+#secondary img {
+	height: auto;
+    width: auto;
+}
+.widget_instagram_recent_media img {
+	max-width: 120px;
+	float: left;
+}
+
+.widget_instagram_recent_media {
+	margin-bottom: 25px;
+	overflow: hidden;
+	padding: 0 0 15px 19px;
+}
+
 #side-single {
     float: left;
     height: auto;
