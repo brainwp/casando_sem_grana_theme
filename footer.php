@@ -48,7 +48,7 @@
 				<li>
 					<a href="<?php echo $link_footer_3; ?>">
 						<span id="img-nav-3"></span><span class="widget-footer-title"><?php echo $title_footer_3; ?></span>
-						<p><?php echo $excerpt_footer_2 ; ?></p>
+						<p><?php echo $excerpt_footer_3 ; ?></p>
 					</a>		
 						
 				</li>
