@@ -1858,6 +1858,9 @@ width: 100%;
 	font-size: 2em;
 	letter-spacing: 0.03em;
 }
+.content-post h2 {
+	margin-bottom: 15px;
+}
 .content-page {
 max-width: 1000px;
 }
@@ -3029,37 +3032,36 @@ background-color: #f6f6f6;
 
 @media (max-width: 360px ) and (min-device-width: 480px) {
 	.conh-morando {
-	display: none;
+		display: none;
 	}
 	a#logo {
-	margin: 55px auto 20px;
+		margin: 30px auto 20px;
 	}
 	.boxes-home {
-	padding: 0 0 0 10px;
+		padding: 0 0 0 10px;
 	}
 	.search-form {
-	position: relative;
+		position: relative;
 	}
 	.search-form .search-submit {
-	top: 0;
+		top: 0;
 	}
 	#child-2, #child-3, #child-4, #child-5 {
-	display: none;
-	padding: 0;
+		display: none;
+		padding: 0;
 	}
 	ul.sub-category-hide li {
-	list-style: none;
-	text-transform: uppercase;
-	color: #999;
+		list-style: none;
+		text-transform: uppercase;
+		color: #999;
 	}
 	.navbar-inverse {
-	display: block;
-	/* background-color: transparent; */
-	background-color: #d7d7d7;
-	border: none;
-	position: fixed;
-	width: 100%;
-	position: relative;
+		display: block;
+		background-color: #d7d7d7;
+		border: none;
+		position: fixed;
+		width: 100%;
+		position: relative;
 	}
 	.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 	border-color: #dbdfdf;
@@ -3103,7 +3105,9 @@ background-color: #f6f6f6;
 	.navbar-nav > li > a {
 	text-transform: uppercase;
 	}
-
+	#title-sub_cat #crumbs {
+		width: 85%;
+	}
 	.coments-single-post h2.sub-title-content {
 		text-align: center;
 	}
@@ -3124,6 +3128,8 @@ background-color: #f6f6f6;
 		margin: 10px 0 0 0
 	}
 	.comment-text p {
+		font-size: 0.9em;
+		color: #444;
 		margin-bottom: 1em;
 	}
 	.comment-body {
