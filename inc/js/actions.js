@@ -21,5 +21,8 @@ $(function() {
 		$('.sub-category-hide').hide(300);
 		//$('ul#child-' + $(this).data('category')).slideToggle('slow');
 	});
+	$('.sub-category-hide .esconder').click(function(){
+		$('.sub-category-hide').hide(300);
+	})
 });
 /* Mobile END | Menu de Categorias */
