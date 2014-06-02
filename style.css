@@ -3104,6 +3104,44 @@ background-color: #f6f6f6;
 	text-transform: uppercase;
 	}
 
+	.coments-single-post h2.sub-title-content {
+		text-align: center;
+	}
+	.coments-single-post ol li.comment {
+		width: 94%;
+		margin: 0 3% 30px;
+	}
+	.coments-single-post img.avatar {
+		height: 50px;
+		margin-right: 0;
+	}
+	.coments-single-post ol, .coments-single-post ul {
+		margin: 0 0 1.5em 0;
+	}
+	.comment-text {
+		width: 100%;
+		overflow: hidden;
+		margin: 10px 0 0 0
+	}
+	.comment-text p {
+		margin-bottom: 1em;
+	}
+	.comment-body {
+		padding: 0;
+	}
+
+	.post-relacioned .content-posts ul li {
+		width: 100%;
+		margin: 10px 0 10px 0;
+	}
+	.post-relacioned h2.sub-title-content {
+		text-align: center;
+	}
+
+	#social-area .social-title {
+		max-width: 60%;
+	}
+
 }
 
 /* iPad portrait · width: 768px */
