@@ -62,6 +62,7 @@
 				$cats = get_categories( $args_f );
 
 				echo '<ul id="child-' . $item . '" class="sub-category-hide">';
+				echo '<div class="esconder"></div>';
 		        foreach ( $cats as $cat ) {
 					echo '<li><a href="' . get_category_link( $cat->term_id ) . '" >' . $cat->name . '</a></li>';
 		        }

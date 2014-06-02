@@ -1051,6 +1051,15 @@ float: left;*/
     color: #c189b3;
     font-weight: bold;
 }
+.esconder {
+	background: url("images/fechar.png") no-repeat scroll;
+	cursor: pointer;
+	height: 30px;
+    left: 10px;
+    position: absolute;
+    top: 18px;
+    width: 30px;
+}
 #toggler ul {
 float: left;
 width: 100%;
