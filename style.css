@@ -2720,9 +2720,10 @@ float: left;
 
 /* Navegação dos Posts */
 .navigation {
-display: block;
-clear: both;
-padding: 10px 0;
+	display: block;
+	clear: both;
+	padding: 10px 0;
+	text-align: center;
 }
 .navigation li a,
 .navigation li a:hover,

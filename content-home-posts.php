@@ -5,9 +5,10 @@
 		$qtd_posts = '2';
 	}
 
-$custom_query = new WP_Query('posts_per_page= ' . $qtd_posts . ' &order=DESC');
-
-while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+	$temp = $wp_query;
+ 	$wp_query= null;
+  	$wp_query = new WP_Query('posts_per_page= ' . $qtd_posts . ' &order=DESC&paged=' . $paged); 
+	while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
 	<div id="box-post">
 		<figure>
@@ -34,5 +35,13 @@ while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 	</div><!-- #box-post -->
 
 <?php endwhile; ?>
+
+<?php if(function_exists('wp_navi')) { ?>
+<?php wp_navi(); ?>   
+<?php } else { ?>      
+<div class="navigation"><p><?php posts_nav_link('&#8734;','&laquo;&laquo; Previous Posts','Older Posts &raquo;&raquo;'); ?></p></div>
+<?php } ?> 
+
+	<?php $wp_query = null; $wp_query = $temp; ?>
 
 <?php wp_reset_postdata(); ?>
