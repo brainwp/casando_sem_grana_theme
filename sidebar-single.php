@@ -9,10 +9,10 @@
 
 	<section class="autor-sidebar">
 		<div class="i-single-autor"></div>
-		<span><?php the_author(); ?></span>
+		<span><a class="link-anchor" href="#body_autor-post"><?php the_author(); ?></a></span>
 		
 		<div class="i-single-comments"></div>
-		<span><?php comments_number(); ?></span>
+		<span><a class="link-anchor" href="#coments-single-post"><?php comments_number(); ?></a></span>
 	</section><!-- .autor-sidebar -->
 
 	<div id="secondary" class="widget-area" role="complementary">

@@ -5,4 +5,8 @@ jQuery(document).ready(function() {
 		max = jQuery(this).height(); 
     });
     /*jQuery(".father-category").height(max);*/
+    jQuery(".link-anchor").on("click",function(event){
+	event.preventDefault();
+        jQuery("html,body").animate({scrollTop:jQuery(this.hash).offset().top}, 1000);
+	})
 });

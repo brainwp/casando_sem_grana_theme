@@ -65,7 +65,7 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div><!-- .content-post -->
 
-					<div class="body_autor-post">
+					<div id="body_autor-post" class="body_autor-post">
 						<figure>
 							<div class="thumbnail th-autor"><?php echo get_avatar( get_the_author_meta( 'ID' ), 140 ); ?></div>
 						</figure><!-- .th-autor -->
@@ -131,7 +131,7 @@ get_header(); ?>
 					</nav><!-- .content-posts -->
 				</div><!-- .post-relacioned -->
 
-				<div class="coments-single-post">
+				<div id="coments-single-post" class="coments-single-post">
 					<h2 class="sub-title-content">Comentários</h2>
 					<?php comments_template(); ?>
 				</div><!-- .coments-single-post -->
@@ -139,7 +139,7 @@ get_header(); ?>
 			</div><!-- .content-single -->
 		</section><!-- .body_content-single -->
 
-		<?php get_sidebar(); ?>
+		<?php get_sidebar( 'single' ); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
