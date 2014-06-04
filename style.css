@@ -1706,8 +1706,9 @@ section.body_menu-list {
 }
 /* SINGLE */
 section.body_content-single {
-	float: left;
-	width: 66%;
+    float: left;
+    margin-left: 2%;
+    width: 60%;
 }
 section.body_content-full {
 	float: left;
