@@ -156,6 +156,7 @@ add_action( 'widgets_init', 'casando_sem_grana_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function casando_sem_grana_theme_scripts() {
+	wp_enqueue_script ( 'jquery' );
 	wp_enqueue_style( 'casando_sem_grana_theme-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'casando_sem_grana_theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -163,6 +164,8 @@ function casando_sem_grana_theme_scripts() {
 	wp_enqueue_script( 'casando_scripts', get_template_directory_uri() . '/js/scripts.js' );
 
 	wp_enqueue_script( 'casando_sem_grana_theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	wp_enqueue_script( 'actions', get_stylesheet_directory_uri() . '/inc/js/actions.js' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -208,11 +211,6 @@ $args = array(
 );
 add_theme_support( 'custom-header', $args );
 
- /**
- * Get actions.js.
- */
-
-wp_enqueue_script( 'actions', get_stylesheet_directory_uri() . '/inc/js/actions.js', array( 'jquery' ) );
 
 function admin_casando_scripts() {
 	wp_enqueue_script( 'categories-admin', get_stylesheet_directory_uri() . '/inc/js/categories-admin.js.js', array( 'jquery' ) );

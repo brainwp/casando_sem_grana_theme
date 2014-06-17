@@ -20,23 +20,27 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Cuprum:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
-<!-- <link rel="stylesheet" href="<?php //bloginfo( 'template_url' ); ?>/js/responsivemobilemenu/rmm-css/responsivemobilemenu.css" type="text/css"/>
-<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-<script type="text/javascript" src="<?php //bloginfo( 'template_url' ); ?>/js/responsivemobilemenu/rmm-js/responsivemobilemenu.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/> -->
-
 <meta name="viewport" content="width=device-width">
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<?php wp_head(); ?>
+
 <script src="<?php bloginfo( 'template_url' ); ?>/js/bootstrap/js/bootstrap.js"type="text/javascript"></script>
 <link href="<?php bloginfo( 'template_url' ); ?>/js/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
 
-<!-- <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
+<script>
+	(function (url) {
+	var	isSSL = document.location.protocol === 'https:',
+	r7adUrl = (isSSL ? 'https:' : 'http:') + '//adv.r7.com/script?href=',
+	pageUrl = (typeof url === 'undefined' ? document.location.href : url);
+	document.write('<scr' + 'ipt src="' + r7adUrl + pageUrl + '"><\/scr' + 'ipt>');
+	}());
+</script>
 
-<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+
+<script type="text/javascript" src="http://barra.r7.com/bariso.js"></script>
 
 <div class="elemento-header"></div>
 
