@@ -1008,7 +1008,7 @@ a#logo {
 	background: url("images/fechar.png") no-repeat scroll;
 	cursor: pointer;
 	height: 30px;
-	left: 10px;
+	right: 20px;
 	position: absolute;
 	top: 18px;
 	width: 30px;
