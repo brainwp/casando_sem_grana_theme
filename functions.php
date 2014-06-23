@@ -117,16 +117,16 @@ add_action( 'after_setup_theme', 'casando_sem_grana_theme_setup' );
  */
 function casando_sem_grana_theme_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'casando_sem_grana_theme' ),
-		'id'            => 'sidebar-1',
+		'name'          => __( 'Sidebar Home', 'casando_sem_grana_theme' ),
+		'id'            => 'sidebar-home',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Sidebar Home', 'casando_sem_grana_theme' ),
-		'id'            => 'sidebar-home',
+		'name'          => __( 'Sidebar Single', 'casando_sem_grana_theme' ),
+		'id'            => 'sidebar-single',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
