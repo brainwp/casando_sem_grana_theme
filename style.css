@@ -850,7 +850,7 @@ a#logo {
 }
 .box-internal h3.title {
 	left: 57px;
-	top: 20px;
+	top: 0;
 	position: absolute;
 	text-align: center;
 	width: 65%;
