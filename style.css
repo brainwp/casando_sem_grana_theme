@@ -2654,7 +2654,7 @@ section.body-breadcrumps {
 		width: 45%;
 	}
 }
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
 	#img-header-left {
 		display: none;
 	}
@@ -2684,6 +2684,14 @@ section.body-breadcrumps {
 	.boxes-home .box {
 		margin: 0 0 2% 0;
 		width: 96%;
+		height: auto;
+		padding: 30px 10px;
+	}
+	.navigation {
+		text-align: none;
+	}
+	.box-internal h3.title {
+	    top: 19px;
 	}
 	.body_menu-list .nav-menu-toogle ul {
 		float: left;
