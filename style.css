@@ -2690,12 +2690,12 @@ section.body-breadcrumps {
 	.navigation {
 		text-align: none;
 	}
-	.box-internal h3.title {
-	    top: 19px;
-	}
 	.body_menu-list .nav-menu-toogle ul {
 		float: left;
 		padding: 0 3%;
+	}
+	.newsletter #subscribe-submit input {
+		margin-top: 9px;
 	}
 	.see-all {
 		max-width: none;
