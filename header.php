@@ -83,7 +83,7 @@
 				?>
 
 				<li data-category="<?php echo $cat_ID; ?>" class="dropdown active-toggle">
-		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category->name; ?><b class="caret"></b></a>
+		        	<a href="<?php echo get_category_link( $category->term_id ); ?>" class="dropdown-toggle"><?php echo $category->name; ?><b class="caret"></b></a>
 						<?php	
 							$child_args = array( 'child_of' => $cat_ID, 'hide_empty' => 0, );
 							$child_categories = get_categories( $child_args );
